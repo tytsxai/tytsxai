@@ -2,7 +2,7 @@ mixed-port: 7890
 allow-lan: true
 mode: rule
 log-level: warning
-external-controller: 127.0.0.1:9090  # 添加本地控制端口
+external-controller: 127.0.0.1:9090  # 本地控制端口
 
 proxies:
   - name: "🇸🇬 SG-H2 [REALITY] | 新加坡-H2协议"
