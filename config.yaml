@@ -1,13 +1,11 @@
-# 配置全局代理
 mixed-port: 7890
-allow-lan: false  # 安全建议关闭
+allow-lan: false
 mode: rule
-log-level: info   # 便于排查问题
-external-controller: 127.0.0.1:9090  # 本地控制端口
+log-level: info
+external-controller: 127.0.0.1:9090
 
-# 代理节点配置
 proxies:
-  - name: "🇸🇬 新加坡节点-H2协议"  # 主用节点
+  - name: "🇸🇬 新加坡节点-H2协议"
     type: vless
     server: 45.76.151.163
     port: 8433
@@ -20,7 +18,7 @@ proxies:
     client-fingerprint: chrome
     udp: true
 
-  - name: "🇸🇬 新加坡节点-TCP协议"  # 备用节点
+  - name: "🇸🇬 新加坡节点-TCP协议"
     type: vless
     server: 45.76.151.163
     port: 443
@@ -34,7 +32,6 @@ proxies:
     client-fingerprint: chrome
     udp: true
 
-# 代理分组配置（合并后的部分）
 proxy-groups:
   - name: "🚀 Proxy"
     type: url-test
@@ -42,70 +39,40 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇸🇬 新加坡节点-H2协议"  # 主用节点
-      - "🇸🇬 新加坡节点-TCP协议"  # 备用节点
+      - "🇸🇬 新加坡节点-H2协议"
+      - "🇸🇬 新加坡节点-TCP协议"
 
-  - name: "📺 Streaming"
-    type: select
-    proxies:
-      - "🚀 Proxy"
-      - DIRECT
-
-# 规则配置
 rules:
-  # ========== 最高优先级规则 ========== 
-  # 微信核心防护（新增支付和CDN）
   - DOMAIN,weixin.qq.com,DIRECT
   - DOMAIN-SUFFIX,wechatpay.com,DIRECT
-  - DOMAIN-SUFFIX,tenpay.com,DIRECT
   - DOMAIN-SUFFIX,qq.com,DIRECT
   - DOMAIN-KEYWORD,wechat,DIRECT
-  - DOMAIN-SUFFIX,wechatcdn.com,DIRECT
   
-  # 金融支付（新增银联和支付宝安全域名）
   - DOMAIN-SUFFIX,alipay.com,DIRECT
   - DOMAIN-SUFFIX,unionpay.com,DIRECT
-  - DOMAIN-SUFFIX,icbc.com.cn,DIRECT
-  - DOMAIN-SUFFIX,abchina.com,DIRECT
 
-  # ========== 国内常规直连 ========== 
   - GEOIP,CN,DIRECT
   - DOMAIN-SUFFIX,cn,DIRECT
-  # 新增民生类域名
-  - DOMAIN-SUFFIX,12306.cn,DIRECT
-  - DOMAIN-SUFFIX,95559.com.cn,DIRECT
-  # 新增政务类
   - DOMAIN-SUFFIX,gov.cn,DIRECT
-  - DOMAIN-SUFFIX,12345.gov.cn,DIRECT
 
-  # ========== 国际代理规则 ========== 
-  # 流媒体服务（新增HBO和Apple TV）
-  - DOMAIN-SUFFIX,netflix.com,📺 Streaming
-  - DOMAIN-SUFFIX,disneyplus.com,📺 Streaming
-  - DOMAIN-SUFFIX,hbo.com,📺 Streaming
-  - DOMAIN-SUFFIX,appletv.com,📺 Streaming
-  
-  # 社交平台（新增Telegram和Discord）
+  - DOMAIN-SUFFIX,netflix.com,🚀 Proxy
+  - DOMAIN-SUFFIX,disneyplus.com,🚀 Proxy
   - DOMAIN-SUFFIX,twitter.com,🚀 Proxy
   - DOMAIN-SUFFIX,facebook.com,🚀 Proxy
-  - DOMAIN-SUFFIX,t.me,🚀 Proxy
-  - DOMAIN-SUFFIX,discord.com,🚀 Proxy
 
-  # 兜底规则
   - GEOIP,!CN,🚀 Proxy
   - MATCH,🚀 Proxy
 
-# DNS防泄漏配置
 dns:
   enable: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:
-    - 114.114.114.114  # 国内DNS解析
+    - 114.114.114.114
     - 223.5.5.5
   fallback:
-    - tls://1.1.1.1:853  # 国际域名通过代理DNS解析
+    - tls://1.1.1.1:853
     - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
