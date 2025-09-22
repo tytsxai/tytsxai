@@ -1,15 +1,15 @@
 mixed-port: 7890
-allow-lan: false
+allow-lan: true  # 允许局域网设备连接
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090  # 允许外部设备控制
 
 proxies:
   - name: "🇸🇬 新加坡节点-H2协议"
     type: vless
     server: 45.76.151.163
     port: 8433
-    uuid: b7325875-bfe1-489b-b7d9-be5751122311
+    uuid: 设备1的UUID  # 为设备1分配UUID
     network: h2
     tls: true
     servername: www.ebay.com
@@ -22,7 +22,7 @@ proxies:
     type: vless
     server: 45.76.151.163
     port: 443
-    uuid: 77c1cf6a-a5ee-4a4a-96e7-035b8e3c735f
+    uuid: 设备2的UUID  # 为设备2分配UUID
     network: tcp
     tls: true
     flow: xtls-rprx-vision
