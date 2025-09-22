@@ -1,16 +1,14 @@
-## Hi there 👋
-
-<!--
-**tytsxai/tytsxai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+proxies:
+  - name: "233boy-reality-45.76.151.163"
+    type: vless
+    server: 45.76.151.163
+    port: 443
+    uuid: 77c1cf6a-a5ee-4a4a-96e7-035b8e3c735f
+    network: tcp
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.cloudflare.com
+    reality-opts:
+      public-key: ljMggWpzFVu77YGm4zWf3dZYEACmZvTQzEeFlGD3zHQ
+      short-id: ""
+    client-fingerprint: chrome
