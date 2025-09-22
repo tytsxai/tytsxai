@@ -34,7 +34,7 @@ proxies:
     client-fingerprint: chrome
     udp: true
 
-# 代理分组配置
+# 代理分组配置（合并后的部分）
 proxy-groups:
   - name: "🚀 Proxy"
     type: url-test
@@ -109,11 +109,3 @@ dns:
     - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
-
-# 流媒体分组
-proxy-groups:
-  - name: "📺 Streaming"
-    type: select
-    proxies:
-      - "🇸🇬 新加坡节点-H2协议"
-      - "🇸🇬 新加坡节点-TCP协议"
