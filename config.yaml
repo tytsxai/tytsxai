@@ -4,36 +4,83 @@ mode: rule
 log-level: warning
 
 proxies:
-  - name: "VLESS-REALITY-443"
+  - name: "Reality-H2-8433"
+    type: vless
+    server: 45.76.151.163
+    port: 8433
+    uuid: b7325875-bfe1-489b-b7d9-be5751122311
+    network: h2
+    tls: true
+    servername: www.ebay.com
+    reality-opts:
+      public-key: lKd-UyuvlJ1ufA9Sjyul3po0uN8ESbMQCaxcYj4mRFY
+      short-id: "6ba851d9"   # ⚠️ 替换为服务端真实 short-id
+    client-fingerprint: chrome
+    udp: true
+
+  - name: "Reality-TCP-443"
     type: vless
     server: 45.76.151.163
     port: 443
     uuid: 77c1cf6a-a5ee-4a4a-96e7-035b8e3c735f
     network: tcp
+    tls: true
+    flow: xtls-rprx-vision
+    servername: www.cloudflare.com
     reality-opts:
       public-key: ljMggWpzFVu77YGm4zWf3dZYEACmZvTQzEeFlGD3zHQ
-      short-id: "123abc"   # ⚠️ 建议改成服务端真实 short_id
-      spider-x: ""
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    flow: xtls-rprx-vision
+      short-id: "9f2c3a7e"   # ⚠️ 替换为服务端真实 short-id
     client-fingerprint: chrome
+    udp: true
 
 proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - "VLESS-REALITY-443"
-      - DIRECT
-
-  - name: "♻️ 自动选择"
-    type: url-test
-    proxies:
-      - "VLESS-REALITY-443"
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+      - "Reality-H2-8433"
+      - "Reality-TCP-443"
 
 rules:
+  # 国内常见直连
   - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wechat.com,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,iqiyi.com,DIRECT
+  - DOMAIN-SUFFIX,youku.com,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,kuaishou.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-KEYWORD,weibo,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+
+  # Telegram 分流
+  - DOMAIN-SUFFIX,telegram.org,🚀 节点选择
+  - DOMAIN-SUFFIX,telegra.ph,🚀 节点选择
+  - IP-CIDR,91.108.4.0/22,🚀 节点选择,no-resolve
+  - IP-CIDR,91.108.56.0/22,🚀 节点选择,no-resolve
+  - IP-CIDR,149.154.160.0/20,🚀 节点选择,no-resolve
+
+  # 广告拦截（精简版）
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,umeng,REJECT
+  - DOMAIN-SUFFIX,appsflyer.com,REJECT
+  - DOMAIN-SUFFIX,vungle.com,REJECT
+
+  # 本地/内网直连
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+
+  # 兜底
   - MATCH,🚀 节点选择
