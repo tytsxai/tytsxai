@@ -7,8 +7,8 @@ proxies:
     network: tcp
     tls: true
     flow: xtls-rprx-vision
-    servername: www.cloudflare.com
+    servername: 45.76.151.163  # 使用 IP 地址作为 SNI
     reality-opts:
       public-key: ljMggWpzFVu77YGm4zWf3dZYEACmZvTQzEeFlGD3zHQ
-      short-id: ""
+      short-id: ""  # 你可以设置自己的 short-id（如果有的话）
     client-fingerprint: chrome
