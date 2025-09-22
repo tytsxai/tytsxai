@@ -1,14 +1,39 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: warning
+
 proxies:
-  - name: "233boy-reality-45.76.151.163"
+  - name: "VLESS-REALITY-443"
     type: vless
     server: 45.76.151.163
     port: 443
     uuid: 77c1cf6a-a5ee-4a4a-96e7-035b8e3c735f
     network: tcp
-    tls: true
-    flow: xtls-rprx-vision
-    servername: 45.76.151.163  # 使用服务器的 IP 地址作为 SNI
     reality-opts:
       public-key: ljMggWpzFVu77YGm4zWf3dZYEACmZvTQzEeFlGD3zHQ
-      short-id: ""
+      short-id: "123abc"   # ⚠️ 建议改成服务端真实 short_id
+      spider-x: ""
+    udp: true
+    tls: true
+    servername: www.cloudflare.com
+    flow: xtls-rprx-vision
     client-fingerprint: chrome
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "VLESS-REALITY-443"
+      - DIRECT
+
+  - name: "♻️ 自动选择"
+    type: url-test
+    proxies:
+      - "VLESS-REALITY-443"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 节点选择
