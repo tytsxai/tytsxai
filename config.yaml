@@ -39,8 +39,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "🇸🇬 新加坡节点-H2协议"
       - "🇸🇬 新加坡节点-TCP协议"
+      - "🇸🇬 新加坡节点-H2协议"
 
 rules:
   - DOMAIN,weixin.qq.com,DIRECT
