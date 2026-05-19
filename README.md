@@ -92,22 +92,23 @@ open_to:
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=tytsxai&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" alt="GitHub Streak" />
-</p>
+## 🏆 GitHub Achievements
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=tytsxai&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=10&margin-h=10" alt="GitHub Trophies" />
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/stars/tytsxai?style=for-the-badge&label=Total%20Stars&color=f5a623&logo=github" alt="stars" />
+  <img src="https://img.shields.io/github/followers/tytsxai?style=for-the-badge&label=Followers&color=58a6ff&logo=github" alt="followers" />
   <a href="https://github.com/tytsxai?tab=repositories">
-    <img src="https://img.shields.io/badge/Public%20Repos-50-58a6ff?style=for-the-badge&logo=github&logoColor=white" alt="repos" />
+    <img src="https://img.shields.io/badge/Public%20Repos-50-2ea44f?style=for-the-badge&logo=github&logoColor=white" alt="repos" />
   </a>
-  <img src="https://img.shields.io/badge/Languages-TS%20%C2%B7%20JS%20%C2%B7%20Python-3178c6?style=for-the-badge" alt="langs" />
-  <img src="https://img.shields.io/badge/Focus-AI%20%C2%B7%20Automation-7c3aed?style=for-the-badge" alt="focus" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Languages-TypeScript%20%C2%B7%20Python%20%C2%B7%20JavaScript-3178c6?style=for-the-badge" alt="languages" />
+  <img src="https://img.shields.io/badge/Focus-AI%20%C2%B7%20Automation%20%C2%B7%20DevTools-7c3aed?style=for-the-badge" alt="focus" />
 </p>
 
 ---
