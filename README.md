@@ -18,6 +18,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Open%20to%20Collaborate-2ea44f?style=flat-square&logo=github" alt="status" />
   <img src="https://komarev.com/ghpvc/?username=tytsxai&label=Profile%20views&color=blueviolet&style=flat-square" alt="profile views" />
+  <a href="https://x.com/cangqilai888"><img src="https://img.shields.io/badge/X-@cangqilai888-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
   <img src="https://img.shields.io/github/followers/tytsxai?label=Followers&style=flat-square&color=58a6ff" alt="followers" />
   <img src="https://img.shields.io/github/stars/tytsxai?label=Stars&style=flat-square&color=f5a623" alt="stars" />
 </p>
@@ -185,6 +186,9 @@ open_to:
   </a>
   <a href="mailto:wwtvn1937@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://x.com/cangqilai888">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" />
   </a>
   <img src="https://img.shields.io/badge/Open%20to-Collaboration-2ea44f?style=for-the-badge" alt="Open to Collaboration" />
 </p>
