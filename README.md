@@ -202,3 +202,7 @@ open_to:
 <p align="center">
   <sub>⚡ Crafted with curiosity · Last updated May 2026</sub>
 </p>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tytsxai/tytsxai&type=Date)](https://www.star-history.com/#tytsxai/tytsxai&Date)
