@@ -1,6 +1,6 @@
 <!-- ============================================================ -->
-<!--  qilai (tytsxai) — GitHub Profile README                      -->
-<!--  Full-stack Engineer · AI Application Builder                 -->
+<!-- qilai (tytsxai) — GitHub Profile README -->
+<!-- Full-stack Engineer · AI Application Builder -->
 <!-- ============================================================ -->
 
 <h1 align="center">
@@ -19,15 +19,16 @@
   <img src="https://img.shields.io/badge/Status-Open%20to%20Collaborate-2ea44f?style=flat-square&logo=github" alt="status" />
   <img src="https://komarev.com/ghpvc/?username=tytsxai&label=Profile%20views&color=blueviolet&style=flat-square" alt="profile views" />
   <a href="https://x.com/cangqilai888"><img src="https://img.shields.io/badge/X-@cangqilai888-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
-  <img src="https://img.shields.io/github/followers/tytsxai?label=Followers&style=flat-square&color=58a6ff" alt="followers" />
-  <img src="https://img.shields.io/github/stars/tytsxai?label=Stars&style=flat-square&color=f5a623" alt="stars" />
+  <a href="https://www.v2ex.com/member/qilai"><img src="https://img.shields.io/badge/V2EX-qilai-000000?style=flat-square&logo=v" alt="V2EX" /></a>
+  <img src="https://img.shields.io/github/followers/tytsxai?label=Followers&style=flat-square&color=4c1&logo=github" alt="followers" />
+  <img src="https://img.shields.io/github/stars/tytsxai?label=Stars&style=flat-square&color=yellow&logo=github" alt="stars" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/tytsxai?tab=repositories">📦 Repositories</a> ·
-  <a href="https://github.com/tytsxai?tab=stars">⭐ Stars</a> ·
-  <a href="https://github.com/tytsxai?tab=followers">👥 Followers</a> ·
-  <a href="mailto:wwtvn1937@gmail.com">📬 Contact</a>
+  📦 <a href="https://github.com/tytsxai?tab=repositories">Repositories</a> ·
+  ⭐ <a href="https://github.com/tytsxai?tab=stars">Stars</a> ·
+  👥 <a href="https://github.com/tytsxai?tab=followers">Followers</a> ·
+  📬 <a href="mailto:wwtvn1937@gmail.com">Contact</a>
 </p>
 
 ---
@@ -35,9 +36,9 @@
 ## 🙋‍♂️ About Me
 
 ```yaml
-name:       qilai
-role:       Full-stack Engineer · AI Application Builder
-location:   China · GMT+8
+name:        qilai
+role:        Full-stack Engineer · AI Application Builder
+location:    China · GMT+8
 focus:
   - End-to-end product engineering (idea → ship → iterate)
   - LLM-powered applications & agentic workflows
@@ -55,9 +56,14 @@ open_to:
   - Technical discussions
 ```
 
----
+## 🚀 Now / Recent
 
-## 🛠️ Tech Stack
+- 🛠️  Iterating on **social-copilot** — an AI-driven browser extension that suggests smart replies for chat apps
+- 🤖  Refining **bazi-master** — a global divination platform combining ancient systems with modern LLM interpretation
+- 🧹  Maintaining **bilibili-cleaner** & **IDM-Activation-Script-Chinese** — tools that scratch real itches
+- 📚  Reading & writing more about LLM evaluation, agentic patterns, and DX
+
+## 🧰 Tech Stack
 
 **Languages**
 
@@ -74,22 +80,24 @@ open_to:
 **Backend & Data**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,fastapi,postgres,redis,prisma,mongodb" alt="backend" />
+  <img src="https://skillicons.dev/icons?i=nodejs,nestjs,supabase,postgres,redis,prisma,mongodb" alt="backend" />
 </p>
 
 **AI / LLM**
 
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![Vector DB](https://img.shields.io/badge/Vector%20DB-FF6B6B?style=flat-square&logo=databricks&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-7C3AED?style=flat-square)
-![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-8B5CF6?style=flat-square)
+<p>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Claude-CC785C?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vector_DB-0E1117?style=for-the-badge&logo=qdrant&logoColor=white" />
+  <img src="https://img.shields.io/badge/RAG-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Prompt_Engineering-purple?style=for-the-badge" />
+</p>
 
 **DevOps & Cloud**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,aws,vercel,nginx,linux" alt="devops" />
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,aws,vercel,netlify,linux" alt="devops" />
 </p>
 
 **Tools**
@@ -104,40 +112,48 @@ open_to:
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h4>🚀 <a href="https://github.com/tytsxai/IDM-Activation-Script-Chinese">IDM-Activation-Script-Chinese</a></h4>
-      <p>一键冻结/激活/重置 IDM 试用期 · Windows 批处理 · 204⭐</p>
-      <p>
-        <img src="https://img.shields.io/badge/-Batchfile-4eaa25?style=flat-square" />
-        <img src="https://img.shields.io/github/stars/tytsxai/IDM-Activation-Script-Chinese?style=flat-square&color=f5a623" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>🔮 <a href="https://github.com/tytsxai/bazi-master">bazi-master</a></h4>
-      <p>全球化命理平台 · BaZi × Tarot × AI · React + Express + PostgreSQL</p>
-      <p>
-        <img src="https://img.shields.io/badge/-TypeScript-3178c6?style=flat-square" />
-        <img src="https://img.shields.io/github/stars/tytsxai/bazi-master?style=flat-square&color=f5a623" />
-      </p>
-    </td>
+    <td valign="top" width="50%">
+
+### 🚀 [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese)
+
+IDM 中文版一键激活/重置工具,优雅解决 Internet Download Manager 试用期管理。
+
+![Stars](https://img.shields.io/github/stars/tytsxai/IDM-Activation-Script-Chinese?style=flat-square&color=yellow)
+![Language](https://img.shields.io/badge/lang-Batchfile-blue?style=flat-square)
+
+</td>
+    <td valign="top" width="50%">
+
+### 🔮 [bazi-master](https://github.com/tytsxai/bazi-master)
+
+全球化命理平台 · BaZi · Tarot · I Ching · Zodiac · AI 解读 · React + Express + Postgres。
+
+![Stars](https://img.shields.io/github/stars/tytsxai/bazi-master?style=flat-square&color=yellow)
+![Language](https://img.shields.io/badge/lang-JavaScript-yellow?style=flat-square)
+
+</td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h4>🧹 <a href="https://github.com/tytsxai/bilibili-cleaner">bilibili-cleaner</a></h4>
-      <p>B 站账号批量清理工具 · 扫码登录 + Web UI</p>
-      <p>
-        <img src="https://img.shields.io/badge/-Python-3776ab?style=flat-square" />
-        <img src="https://img.shields.io/github/stars/tytsxai/bilibili-cleaner?style=flat-square&color=f5a623" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>💬 <a href="https://github.com/tytsxai/social-copilot">social-copilot</a></h4>
-      <p>AI 驱动的社交助手浏览器扩展 · 智能回复建议</p>
-      <p>
-        <img src="https://img.shields.io/badge/-TypeScript-3178c6?style=flat-square" />
-        <img src="https://img.shields.io/github/stars/tytsxai/social-copilot?style=flat-square&color=f5a623" />
-      </p>
-    </td>
+    <td valign="top" width="50%">
+
+### 🧹 [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner)
+
+B 站账号批量清理工具 · 关注/收藏/动态/历史记录一键管理 · 扫码登录 + Web UI。
+
+![Stars](https://img.shields.io/github/stars/tytsxai/bilibili-cleaner?style=flat-square&color=yellow)
+![Language](https://img.shields.io/badge/lang-Python-blue?style=flat-square)
+
+</td>
+    <td valign="top" width="50%">
+
+### 💬 [social-copilot](https://github.com/tytsxai/social-copilot)
+
+AI 驱动的社交助手浏览器扩展 · 为聊天应用提供智能回复建议。
+
+![Stars](https://img.shields.io/github/stars/tytsxai/social-copilot?style=flat-square&color=yellow)
+![Language](https://img.shields.io/badge/lang-TypeScript-blue?style=flat-square)
+
+</td>
   </tr>
 </table>
 
@@ -146,39 +162,33 @@ open_to:
 ## 🏆 GitHub Achievements
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=tytsxai&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=10&margin-h=10" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=tytsxai&theme=algolia&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="trophies" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/tytsxai?style=for-the-badge&label=Total%20Stars&color=f5a623&logo=github" alt="stars" />
-  <img src="https://img.shields.io/github/followers/tytsxai?style=for-the-badge&label=Followers&color=58a6ff&logo=github" alt="followers" />
-  <a href="https://github.com/tytsxai?tab=repositories">
-    <img src="https://img.shields.io/badge/Public%20Repos-50-2ea44f?style=for-the-badge&logo=github&logoColor=white" alt="repos" />
-  </a>
+  <img src="https://img.shields.io/github/stars/tytsxai?style=for-the-badge&logo=github&label=Total%20Stars&color=ffca28" alt="total stars" />
+  <img src="https://img.shields.io/github/followers/tytsxai?style=for-the-badge&logo=github&label=Followers&color=4c1" alt="followers" />
+  <img src="https://img.shields.io/badge/Public%20Repos-50-blue?style=for-the-badge&logo=github" alt="public repos" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Languages-TypeScript%20%C2%B7%20Python%20%C2%B7%20JavaScript-3178c6?style=for-the-badge" alt="languages" />
-  <img src="https://img.shields.io/badge/Focus-AI%20%C2%B7%20Automation%20%C2%B7%20DevTools-7c3aed?style=for-the-badge" alt="focus" />
+  <img src="https://img.shields.io/badge/Languages-TypeScript%20·%20Python%20·%20JavaScript-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Focus-AI%20·%20Automation%20·%20DevTools-purple?style=flat-square" />
 </p>
 
 ---
 
 ## 💡 Engineering Principles
 
-> 🎯 **Pragmatic over Perfect** — Ship value, not lines of code.
-
-> 🧱 **Simple over Clever** — Future-you will thank present-you.
-
-> 🔁 **Iterate over Speculate** — Real users beat hypothetical ones.
-
-> 🤖 **Automate the Tedious** — Time is the only non-renewable resource.
-
-> 📚 **Always Be Learning** — The half-life of tech is shrinking.
+- 🎯 **Pragmatic over Perfect** — Ship value, not lines of code.
+- 🧱 **Simple over Clever** — Future-you will thank present-you.
+- 🔁 **Iterate over Speculate** — Real users beat hypothetical ones.
+- 🤖 **Automate the Tedious** — Time is the only non-renewable resource.
+- 🌱 **Compound Productivity** — Tools that build tools that build tools.
 
 ---
 
-## 🌐 Connect
+## 📬 Connect
 
 <p align="left">
   <a href="https://github.com/tytsxai">
@@ -190,10 +200,21 @@ open_to:
   <a href="https://x.com/cangqilai888">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)" />
   </a>
+  <a href="https://www.v2ex.com/member/qilai">
+    <img src="https://img.shields.io/badge/V2EX-qilai-000000?style=for-the-badge&logo=v" alt="V2EX" />
+  </a>
   <img src="https://img.shields.io/badge/Open%20to-Collaboration-2ea44f?style=for-the-badge" alt="Open to Collaboration" />
 </p>
 
 ---
+
+## ⭐ Star History
+
+<p align="center">
+  <a href="https://github.com/tytsxai/IDM-Activation-Script-Chinese">
+    <img src="https://api.star-history.com/svg?repos=tytsxai/IDM-Activation-Script-Chinese,tytsxai/bazi-master,tytsxai/bilibili-cleaner&type=Date" alt="Star History" width="700" />
+  </a>
+</p>
 
 <p align="center">
   <i>✨ "Code is poetry. Automation is freedom. Shipping is everything." ✨</i>
@@ -202,7 +223,3 @@ open_to:
 <p align="center">
   <sub>⚡ Crafted with curiosity · Last updated May 2026</sub>
 </p>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=tytsxai/tytsxai&type=Date)](https://www.star-history.com/#tytsxai/tytsxai&Date)
