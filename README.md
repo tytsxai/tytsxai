@@ -22,6 +22,13 @@
   <img src="https://img.shields.io/github/stars/tytsxai?label=Stars&style=flat-square&color=f5a623" alt="stars" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/tytsxai?tab=repositories">📦 Repositories</a> ·
+  <a href="https://github.com/tytsxai?tab=stars">⭐ Stars</a> ·
+  <a href="https://github.com/tytsxai?tab=followers">👥 Followers</a> ·
+  <a href="mailto:wwtvn1937@gmail.com">📬 Contact</a>
+</p>
+
 ---
 
 ## 🙋‍♂️ About Me
@@ -92,6 +99,49 @@ open_to:
 
 ---
 
+## 📌 Featured Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🚀 <a href="https://github.com/tytsxai/IDM-Activation-Script-Chinese">IDM-Activation-Script-Chinese</a></h4>
+      <p>一键冻结/激活/重置 IDM 试用期 · Windows 批处理 · 204⭐</p>
+      <p>
+        <img src="https://img.shields.io/badge/-Batchfile-4eaa25?style=flat-square" />
+        <img src="https://img.shields.io/github/stars/tytsxai/IDM-Activation-Script-Chinese?style=flat-square&color=f5a623" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🔮 <a href="https://github.com/tytsxai/bazi-master">bazi-master</a></h4>
+      <p>全球化命理平台 · BaZi × Tarot × AI · React + Express + PostgreSQL</p>
+      <p>
+        <img src="https://img.shields.io/badge/-TypeScript-3178c6?style=flat-square" />
+        <img src="https://img.shields.io/github/stars/tytsxai/bazi-master?style=flat-square&color=f5a623" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🧹 <a href="https://github.com/tytsxai/bilibili-cleaner">bilibili-cleaner</a></h4>
+      <p>B 站账号批量清理工具 · 扫码登录 + Web UI</p>
+      <p>
+        <img src="https://img.shields.io/badge/-Python-3776ab?style=flat-square" />
+        <img src="https://img.shields.io/github/stars/tytsxai/bilibili-cleaner?style=flat-square&color=f5a623" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>💬 <a href="https://github.com/tytsxai/social-copilot">social-copilot</a></h4>
+      <p>AI 驱动的社交助手浏览器扩展 · 智能回复建议</p>
+      <p>
+        <img src="https://img.shields.io/badge/-TypeScript-3178c6?style=flat-square" />
+        <img src="https://img.shields.io/github/stars/tytsxai/social-copilot?style=flat-square&color=f5a623" />
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🏆 GitHub Achievements
 
 <p align="center">
@@ -146,5 +196,5 @@ open_to:
 </p>
 
 <p align="center">
-  <sub>⚡ Crafted with curiosity · Last updated 2026</sub>
+  <sub>⚡ Crafted with curiosity · Last updated May 2026</sub>
 </p>
