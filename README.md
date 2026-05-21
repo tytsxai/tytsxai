@@ -108,57 +108,6 @@ open_to:
 
 ---
 
-## 📌 Featured Projects
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-### 🚀 [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese)
-
-IDM 中文版一键激活/重置工具,优雅解决 Internet Download Manager 试用期管理。
-
-![Stars](https://img.shields.io/github/stars/tytsxai/IDM-Activation-Script-Chinese?style=flat-square&color=yellow)
-![Language](https://img.shields.io/badge/lang-Batchfile-blue?style=flat-square)
-
-</td>
-    <td valign="top" width="50%">
-
-### 🔮 [bazi-master](https://github.com/tytsxai/bazi-master)
-
-全球化命理平台 · BaZi · Tarot · I Ching · Zodiac · AI 解读 · React + Express + Postgres。
-
-![Stars](https://img.shields.io/github/stars/tytsxai/bazi-master?style=flat-square&color=yellow)
-![Language](https://img.shields.io/badge/lang-JavaScript-yellow?style=flat-square)
-
-</td>
-  </tr>
-  <tr>
-    <td valign="top" width="50%">
-
-### 🧹 [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner)
-
-B 站账号批量清理工具 · 关注/收藏/动态/历史记录一键管理 · 扫码登录 + Web UI。
-
-![Stars](https://img.shields.io/github/stars/tytsxai/bilibili-cleaner?style=flat-square&color=yellow)
-![Language](https://img.shields.io/badge/lang-Python-blue?style=flat-square)
-
-</td>
-    <td valign="top" width="50%">
-
-### 💬 [social-copilot](https://github.com/tytsxai/social-copilot)
-
-AI 驱动的社交助手浏览器扩展 · 为聊天应用提供智能回复建议。
-
-![Stars](https://img.shields.io/github/stars/tytsxai/social-copilot?style=flat-square&color=yellow)
-![Language](https://img.shields.io/badge/lang-TypeScript-blue?style=flat-square)
-
-</td>
-  </tr>
-</table>
-
----
-
 ## 🏆 GitHub Achievements
 
 <p align="center">
