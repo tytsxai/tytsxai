@@ -91,6 +91,10 @@ open_to:
 
 ## 🧰 Tech Stack
 
+**Primary stack**
+
+TypeScript / Python / React / FastAPI / PostgreSQL / Docker / OpenAI · Claude / Agent Harness / Local-first Automation
+
 **Languages**
 
 <p>
