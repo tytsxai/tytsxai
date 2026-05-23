@@ -4,19 +4,9 @@
 <!-- ============================================================ -->
 
 <p align="center">
-  <img src="./assets/profile-banner.svg" alt="qilai / tytsxai - AI Products, Automation Systems, Developer Tools" width="100%" />
-</p>
-
-<h1 align="center">qilai / tytsxai</h1>
-
-<h3 align="center">
-  AI Product Engineer · Automation Systems · Developer Tools
-</h3>
-
-<p align="center">
-  I turn messy workflows into runnable products, local-first automation, and practical open-source tools.
+  <b>AI Product Engineer · Automation Systems · Developer Tools</b>
   <br />
-  Focused on AI applications, operator workflows, safety boundaries, and fast iteration.
+  I turn messy workflows into runnable products, local-first automation, and practical open-source tools.
 </p>
 
 <p align="center">
@@ -34,23 +24,26 @@
 </p>
 
 <p align="center">
-  <a href="#capability-map">Capability Map</a> ·
+  <a href="#engineering-profile">Engineering Profile</a> ·
   <a href="#how-i-build">How I Build</a> ·
-  <a href="#open-source-proof">Open Source Proof</a> ·
+  <a href="#open-source-evidence">Open Source Evidence</a> ·
   <a href="#stack">Stack</a>
 </p>
 
 ---
 
-## Capability Map
+## Engineering Profile
 
-| Capability | What I can deliver | Visible proof |
-| --- | --- | --- |
-| **AI application building** | LLM-powered product flows, prompt systems, agent workflows, evaluation loops, and user-facing AI tools. | PromptPanel, bazi-master, AI workflow repos |
-| **End-to-end product engineering** | From rough idea to runnable MVP: frontend, backend, data model, auth/session flow, docs, and deployment path. | full-stack apps, CLI tools, GitHub Pages demos |
-| **Automation with safety boundaries** | Local-first account tools, browser automation, dry-run flows, review gates, logs, rollback notes, and conservative defaults. | bilibili-cleaner, x-account-cleaner, Mac/Codex utilities |
-| **Developer experience** | Tools that shorten repeated work: launchers, workflow kits, bot builders, CLI helpers, and operator consoles. | PromptPanel, telegram-ui-builder, codex tooling |
-| **Open-source packaging** | README-first onboarding, quick starts, topics, licenses, status notes, screenshots/demos, and maintenance handoff. | growing public repository portfolio |
+<p align="center">
+  <img src="./assets/capability-map.svg" alt="Capability map: AI products, automation, developer tools, and open-source packaging" width="100%" />
+</p>
+
+| Signal | What it means in practice |
+| --- | --- |
+| **Product sense** | I look for the smallest useful loop first: user entry point, critical path, failure mode, and reason to come back. |
+| **Engineering depth** | I can move across frontend, backend, CLI, local desktop workflows, automation, docs, and deployment boundaries. |
+| **Operational judgment** | For tools that touch real accounts or data, I bias toward dry runs, confirmations, logs, recovery notes, and explicit limits. |
+| **Packaging discipline** | A project is not finished until a new visitor can understand what it does, run it, and know its current safety/status boundary. |
 
 ## How I Build
 
@@ -62,16 +55,16 @@
 | **Make it maintainable** | Keep docs, runbooks, quick starts, and project status aligned with what the code actually supports. |
 | **Iterate from evidence** | Treat stars, issues, user friction, runtime failures, and real usage as stronger signals than abstract polish. |
 
-## Open Source Proof
+## Open Source Evidence
 
-These projects are not the whole profile; they are public evidence of the way I build.
+These repos are evidence, not the headline. The headline is the ability to turn a real workflow into a usable tool.
 
-| Area | Representative repos |
-| --- | --- |
-| **AI + productivity** | [PromptPanel](https://github.com/tytsxai/PromptPanel), [bazi-master](https://github.com/tytsxai/bazi-master), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) |
-| **Account / workflow automation** | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner), [macfriends-cli](https://github.com/tytsxai/macfriends-cli) |
-| **Developer and bot tooling** | [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder), [codex-app-account-switcher](https://github.com/tytsxai/codex-app-account-switcher), [codex-bridge](https://github.com/tytsxai/codex-bridge) |
-| **Practical utilities** | [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese), [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack), [lab-starnode](https://github.com/tytsxai/lab-starnode) |
+| Capability shown | Representative repos | Why it matters |
+| --- | --- | --- |
+| **AI product + DX** | [PromptPanel](https://github.com/tytsxai/PromptPanel), [bazi-master](https://github.com/tytsxai/bazi-master), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) | Turns AI usage into concrete workflows, not just prompts or demos. |
+| **Safety-first automation** | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner), [macfriends-cli](https://github.com/tytsxai/macfriends-cli) | Automates repetitive account work while keeping review and local control visible. |
+| **Builder tooling** | [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder), [codex-app-account-switcher](https://github.com/tytsxai/codex-app-account-switcher), [codex-bridge](https://github.com/tytsxai/codex-bridge) | Reduces repeated setup and makes technical workflows easier to operate. |
+| **Practical utilities** | [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese), [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack), [lab-starnode](https://github.com/tytsxai/lab-starnode) | Solves concrete user problems with docs, scripts, and maintainable packaging. |
 
 <p align="center">
   <a href="https://github.com/tytsxai?tab=repositories">

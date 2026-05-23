@@ -1,0 +1,42 @@
+<svg width="1200" height="640" viewBox="0 0 1200 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="640" rx="24" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="1198" height="638" rx="23" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="64" y="76" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800">Capability Map</text>
+  <text x="64" y="114" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="500">What I consistently turn into shipped, usable software.</text>
+
+  <g transform="translate(64 158)">
+    <rect width="510" height="180" rx="18" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <rect x="26" y="30" width="58" height="58" rx="16" fill="#DBEAFE"/>
+    <text x="43" y="68" fill="#1D4ED8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="900">AI</text>
+    <text x="110" y="58" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="800">AI Products</text>
+    <text x="110" y="96" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">LLM workflows, prompts, agents, evaluation loops,</text>
+    <text x="110" y="126" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">and user-facing tools that solve concrete problems.</text>
+  </g>
+
+  <g transform="translate(626 158)">
+    <rect width="510" height="180" rx="18" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="2"/>
+    <rect x="26" y="30" width="58" height="58" rx="16" fill="#D1FAE5"/>
+    <text x="40" y="68" fill="#047857" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="900">OP</text>
+    <text x="110" y="58" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="800">Automation</text>
+    <text x="110" y="96" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">Local-first account tools, browser workflows, dry runs,</text>
+    <text x="110" y="126" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">logs, confirmations, and review gates.</text>
+  </g>
+
+  <g transform="translate(64 382)">
+    <rect width="510" height="180" rx="18" fill="#FFFFFF" stroke="#FCD34D" stroke-width="2"/>
+    <rect x="26" y="30" width="58" height="58" rx="16" fill="#FEF3C7"/>
+    <text x="42" y="68" fill="#B45309" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="900">DX</text>
+    <text x="110" y="58" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="800">Developer Tools</text>
+    <text x="110" y="96" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">Prompt launchers, CLIs, bot builders, workflow kits,</text>
+    <text x="110" y="126" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">operator consoles, and reusable internal tools.</text>
+  </g>
+
+  <g transform="translate(626 382)">
+    <rect width="510" height="180" rx="18" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+    <rect x="26" y="30" width="58" height="58" rx="16" fill="#EDE9FE"/>
+    <text x="40" y="68" fill="#6D28D9" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="900">OS</text>
+    <text x="110" y="58" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="800">Open-source Packaging</text>
+    <text x="110" y="96" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">README-first onboarding, quick starts, licenses,</text>
+    <text x="110" y="126" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="500">status notes, screenshots, demos, and handoff docs.</text>
+  </g>
+</svg>

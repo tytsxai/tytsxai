@@ -1,38 +1,25 @@
-<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="360" rx="28" fill="#0B1220"/>
-  <path d="M0 260C140 214 260 232 390 180C540 120 655 104 800 154C940 202 1060 180 1200 114V360H0V260Z" fill="#0F766E" fill-opacity="0.32"/>
-  <path d="M0 310C150 276 258 298 400 246C548 192 706 196 858 248C994 294 1102 270 1200 230V360H0V310Z" fill="#2563EB" fill-opacity="0.26"/>
-  <circle cx="1008" cy="86" r="86" fill="#22D3EE" fill-opacity="0.12"/>
-  <circle cx="1058" cy="122" r="116" stroke="#38BDF8" stroke-opacity="0.18" stroke-width="2"/>
-  <circle cx="158" cy="288" r="116" fill="#F59E0B" fill-opacity="0.10"/>
+<svg width="1200" height="280" viewBox="0 0 1200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="280" rx="22" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="1198" height="278" rx="21" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M64 72H1136" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="64" y="51" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="800">qilai / tytsxai</text>
+  <text x="64" y="120" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="30" font-weight="800">AI Engineering · Automation · DX</text>
+  <text x="64" y="164" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19" font-weight="500">Runnable products, local-first workflows, safety boundaries, and practical OSS.</text>
 
-  <text x="72" y="92" fill="#E5E7EB" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28" font-weight="600" letter-spacing="0">
-    qilai / tytsxai
-  </text>
-  <text x="72" y="154" fill="#FFFFFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="46" font-weight="800" letter-spacing="0">
-    AI Products + Automation
-  </text>
-  <text x="72" y="211" fill="#A7F3D0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="700" letter-spacing="0">
-    Systems and developer tools that ship.
-  </text>
-  <text x="72" y="262" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="500" letter-spacing="0">
-    Runnable products, safety boundaries, docs, and iteration loops.
-  </text>
-
-  <g transform="translate(72 296)">
-    <rect width="170" height="34" rx="17" fill="#111827" stroke="#22D3EE" stroke-opacity="0.42"/>
-    <text x="20" y="23" fill="#E0F2FE" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">AI Applications</text>
+  <g transform="translate(64 200)">
+    <rect width="146" height="34" rx="17" fill="#E0F2FE"/>
+    <text x="18" y="23" fill="#075985" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">AI Products</text>
   </g>
-  <g transform="translate(260 296)">
-    <rect width="190" height="34" rx="17" fill="#111827" stroke="#34D399" stroke-opacity="0.42"/>
-    <text x="20" y="23" fill="#DCFCE7" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Local-first Tools</text>
+  <g transform="translate(228 200)">
+    <rect width="146" height="34" rx="17" fill="#DCFCE7"/>
+    <text x="18" y="23" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Automation</text>
   </g>
-  <g transform="translate(468 296)">
-    <rect width="178" height="34" rx="17" fill="#111827" stroke="#FBBF24" stroke-opacity="0.42"/>
-    <text x="20" y="23" fill="#FEF3C7" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Operator Safety</text>
+  <g transform="translate(392 200)">
+    <rect width="162" height="34" rx="17" fill="#FEF3C7"/>
+    <text x="18" y="23" fill="#92400E" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Safety Bounds</text>
   </g>
-  <g transform="translate(658 296)">
-    <rect width="150" height="34" rx="17" fill="#111827" stroke="#93C5FD" stroke-opacity="0.42"/>
-    <text x="20" y="23" fill="#DBEAFE" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Open Source</text>
+  <g transform="translate(572 200)">
+    <rect width="158" height="34" rx="17" fill="#EDE9FE"/>
+    <text x="18" y="23" fill="#5B21B6" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Open Source</text>
   </g>
 </svg>
