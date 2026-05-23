@@ -87,19 +87,19 @@ open_to:
 **Languages**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,js,python,swift,rust,bash" alt="languages" />
+  <img src="https://skillicons.dev/icons?i=ts,js,python,go,rust,swift,bash,c,cpp,html,css,md" alt="languages" />
 </p>
 
 **Frontend**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,html,css" alt="frontend" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,vue,vite,tailwind,bootstrap,sass,html,css,figma,vercel,netlify" alt="frontend" />
 </p>
 
 **Backend & Data**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs,fastapi,postgres,redis,prisma,mongodb" alt="backend" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,fastapi,django,flask,postgres,mysql,redis,mongodb,prisma,supabase" alt="backend and data" />
 </p>
 
 **AI / LLM**
@@ -107,15 +107,20 @@ open_to:
 <p>
   <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
   <img src="https://img.shields.io/badge/Claude-CC785C?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
+  <img src="https://img.shields.io/badge/LlamaIndex-111827?style=for-the-badge" alt="LlamaIndex" />
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=111827" alt="Hugging Face" />
   <img src="https://img.shields.io/badge/Agents-111827?style=for-the-badge" alt="Agents" />
-  <img src="https://img.shields.io/badge/RAG-blue?style=for-the-badge" alt="RAG" />
-  <img src="https://img.shields.io/badge/Prompt%20Systems-purple?style=for-the-badge" alt="Prompt Systems" />
+  <img src="https://img.shields.io/badge/RAG-2563EB?style=for-the-badge" alt="RAG" />
+  <img src="https://img.shields.io/badge/Vector%20DB-0E7490?style=for-the-badge" alt="Vector DB" />
+  <img src="https://img.shields.io/badge/Prompt%20Systems-7C3AED?style=for-the-badge" alt="Prompt Systems" />
+  <img src="https://img.shields.io/badge/Evals-B45309?style=for-the-badge" alt="Evals" />
 </p>
 
 **DevOps & Tools**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,githubactions,linux,git,vscode,figma,postman,vim" alt="devops and tools" />
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,nginx,linux,ubuntu,aws,cloudflare,git,github,vscode,postman,vim" alt="devops and tools" />
 </p>
 
 ---
