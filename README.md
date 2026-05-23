@@ -123,10 +123,6 @@ open_to:
 ## 🏆 GitHub Snapshot
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=tytsxai&theme=algolia&no-frame=true&no-bg=true&margin-w=4&row=1&column=7" alt="trophies" />
-</p>
-
-<p align="center">
   <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=for-the-badge&logo=github&color=0969da" alt="public repositories" /></a>
   <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Owner%20Stars&style=for-the-badge&logo=github&color=ffca28" alt="owner stars" />
   <img src="https://img.shields.io/github/followers/tytsxai?style=for-the-badge&logo=github&label=Followers&color=4c1" alt="followers" />
