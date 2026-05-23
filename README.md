@@ -8,11 +8,11 @@
 </h1>
 
 <h3 align="center">
-  Full-stack Engineer · AI Application Builder · Automation Enthusiast
+  Full-stack Engineer · AI Application Builder · Agent Harness Builder
 </h3>
 
 <p align="center">
-  <i>Building practical AI products, local-first automation, and developer tools that ship.</i>
+  <i>Building practical AI products, agent harnesses, local-first automation, and developer tools that ship.</i>
 </p>
 
 <p align="center">
@@ -38,14 +38,17 @@
 
 ```yaml
 name:        qilai
-role:        Full-stack Engineer · AI Application Builder
+role:        Full-stack Engineer · AI Application Builder · Agent Harness Builder
 location:    China · GMT+8
 focus:
   - AI-assisted products that turn LLM usage into real workflows
+  - Agent harnesses: tools, memory, evals, observability, and operator controls
   - Local-first automation with dry runs, review gates, and clear logs
   - Developer tools, CLIs, bot builders, and operator-facing utilities
 strengths:
   - idea -> MVP -> docs -> iteration
+  - agent harness product design + technical execution
+  - product sense + harness engineering + runtime safety
   - frontend + backend + automation + packaging
   - safety boundaries for tools that touch real accounts or data
 principles:
@@ -54,6 +57,7 @@ principles:
   - "Ship small, learn fast, improve from evidence."
 open_to:
   - Practical AI products
+  - Agent harness R&D / productization
   - Developer automation
   - Local-first open-source tools
 ```
@@ -61,6 +65,7 @@ open_to:
 ## 🚀 Now / Recent
 
 - 🛠️  Polishing **PromptPanel** — a macOS prompt and snippet launcher for AI power users
+- 🧪  Exploring **agent harness** patterns — tool use, memory, evals, logs, guardrails, and human-in-the-loop controls
 - 🧹  Maintaining account/workflow automation tools such as **bilibili-cleaner** and **x-account-cleaner**
 - 🎨  Improving developer-facing builders such as **telegram-ui-builder** and Codex workflow utilities
 - 📦  Raising the quality bar of public repos: clearer README, quick start, safety boundary, license, topics, and demos
@@ -70,6 +75,7 @@ open_to:
 | Direction | What I care about | Public evidence |
 | --- | --- | --- |
 | **AI products** | Turning prompts, agents, and LLM workflows into usable tools | [PromptPanel](https://github.com/tytsxai/PromptPanel), [bazi-master](https://github.com/tytsxai/bazi-master) |
+| **Agent harness** | Productizing agents with tool contracts, eval loops, memory, observability, and operator control | Codex workflow utilities, PromptPanel, automation repos |
 | **Automation** | Local-first workflows, dry runs, review steps, logs, and rollback notes | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
 | **Developer tools** | CLIs, bot builders, operator consoles, and workflow kits | [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder), [codex-app-account-switcher](https://github.com/tytsxai/codex-app-account-switcher) |
 | **Practical utilities** | Small tools that solve concrete user problems and are easy to run | [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) |
@@ -77,6 +83,7 @@ open_to:
 ## 🧭 How I Work
 
 - 🎯 **Find the real workflow** — user entry point, critical path, failure mode, and reason to return.
+- 🧪 **Design the harness, not just the prompt** — tools, state, evals, logs, permissions, and recovery paths.
 - 🧱 **Build the smallest useful loop** — runnable first, then polish from actual friction.
 - 🛡️ **Harden risky actions** — dry runs, confirmations, logs, limits, and recovery notes.
 - 📚 **Package for the next visitor** — README, quick start, status, license, screenshots or demo where useful.
@@ -87,19 +94,19 @@ open_to:
 **Languages**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,js,python,go,rust,swift,bash,c,cpp,html,css,md" alt="languages" />
+  <img src="https://skillicons.dev/icons?i=ts,js,python,go,rust,swift,bash,c,cpp,java,kotlin,dart,html,css,md" alt="languages" />
 </p>
 
 **Frontend**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,vue,vite,tailwind,bootstrap,sass,html,css,figma,vercel,netlify" alt="frontend" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,vue,nuxtjs,svelte,vite,tailwind,bootstrap,sass,html,css,figma,vercel,netlify,redux" alt="frontend" />
 </p>
 
 **Backend & Data**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,fastapi,django,flask,postgres,mysql,redis,mongodb,prisma,supabase" alt="backend and data" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,fastapi,django,flask,postgres,mysql,sqlite,redis,mongodb,prisma,supabase,firebase,graphql,rabbitmq" alt="backend and data" />
 </p>
 
 **AI / LLM**
@@ -115,12 +122,34 @@ open_to:
   <img src="https://img.shields.io/badge/Vector%20DB-0E7490?style=for-the-badge" alt="Vector DB" />
   <img src="https://img.shields.io/badge/Prompt%20Systems-7C3AED?style=for-the-badge" alt="Prompt Systems" />
   <img src="https://img.shields.io/badge/Evals-B45309?style=for-the-badge" alt="Evals" />
+  <img src="https://img.shields.io/badge/Tool%20Calling-0F766E?style=for-the-badge" alt="Tool Calling" />
+  <img src="https://img.shields.io/badge/Memory-334155?style=for-the-badge" alt="Memory" />
+  <img src="https://img.shields.io/badge/Guardrails-B91C1C?style=for-the-badge" alt="Guardrails" />
+  <img src="https://img.shields.io/badge/Observability-0369A1?style=for-the-badge" alt="Observability" />
+</p>
+
+**Agent Harness / AI Engineering**
+
+<p>
+  <img src="https://img.shields.io/badge/Agent%20Harness-111827?style=for-the-badge" alt="Agent Harness" />
+  <img src="https://img.shields.io/badge/Harness%20Product-4C1D95?style=for-the-badge" alt="Agent Harness Product" />
+  <img src="https://img.shields.io/badge/Agent%20Runtime-1F2937?style=for-the-badge" alt="Agent Runtime" />
+  <img src="https://img.shields.io/badge/Tool%20Contracts-0F766E?style=for-the-badge" alt="Tool Contracts" />
+  <img src="https://img.shields.io/badge/Function%20Calling-2563EB?style=for-the-badge" alt="Function Calling" />
+  <img src="https://img.shields.io/badge/MCP-7C3AED?style=for-the-badge" alt="MCP" />
+  <img src="https://img.shields.io/badge/Workflows-B45309?style=for-the-badge" alt="Workflows" />
+  <img src="https://img.shields.io/badge/HITL-BE123C?style=for-the-badge" alt="Human in the Loop" />
+  <img src="https://img.shields.io/badge/Eval%20Harness-0369A1?style=for-the-badge" alt="Eval Harness" />
+  <img src="https://img.shields.io/badge/Tracing-475569?style=for-the-badge" alt="Tracing" />
+  <img src="https://img.shields.io/badge/Operator%20Console-166534?style=for-the-badge" alt="Operator Console" />
+  <img src="https://img.shields.io/badge/Product%20Loop-6D28D9?style=for-the-badge" alt="Product Loop" />
+  <img src="https://img.shields.io/badge/Safety%20Boundary-991B1B?style=for-the-badge" alt="Safety Boundary" />
 </p>
 
 **DevOps & Tools**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,nginx,linux,ubuntu,aws,cloudflare,git,github,vscode,postman,vim" alt="devops and tools" />
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,nginx,linux,ubuntu,debian,aws,gcp,cloudflare,terraform,ansible,prometheus,grafana,git,github,vscode,postman,vim" alt="devops and tools" />
 </p>
 
 ---
@@ -134,7 +163,7 @@ open_to:
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-AI%20Products%20·%20Automation%20·%20DevTools-purple?style=flat-square" alt="focus" />
+  <img src="https://img.shields.io/badge/Focus-AI%20Products%20·%20Agent%20Harness%20·%20Automation-purple?style=flat-square" alt="focus" />
   <img src="https://img.shields.io/badge/Style-Local--first%20·%20Practical%20·%20Safety--aware-0f766e?style=flat-square" alt="style" />
 </p>
 
