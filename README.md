@@ -4,15 +4,15 @@
 <!-- ============================================================ -->
 
 <h1 align="center">
-  Hi there, I'm <a href="https://github.com/tytsxai">qilai</a> 👋
+  qilai · AI Product Engineer
 </h1>
 
 <h3 align="center">
-  Full-stack Engineer · AI Application Builder · Agent Harness Builder
+  Full-stack delivery · Agent harnesses · Local-first automation
 </h3>
 
 <p align="center">
-  <i>Building practical AI products, agent harnesses, local-first automation, and developer tools that ship.</i>
+  <i>I build practical AI products and automation systems with runnable demos, clear docs, safety gates, and CI-backed delivery.</i>
 </p>
 
 <p align="center">
@@ -27,6 +27,7 @@
 
 <p align="center">
   📦 <a href="https://github.com/tytsxai?tab=repositories">Repositories</a> ·
+  ⭐ <a href="#-portfolio-highlights">Portfolio Highlights</a> ·
   🧰 <a href="#-what-i-build">What I Build</a> ·
   🧭 <a href="#-how-i-work">How I Work</a> ·
   📬 <a href="mailto:wwtvn1937@gmail.com">Contact</a>
@@ -34,28 +35,41 @@
 
 ---
 
-## 🙋‍♂️ About Me
+## ⭐ Portfolio Highlights
+
+These are the repos I would point a recruiter, collaborator, or technical reviewer to first.
+
+| Project | What it proves | Evidence |
+| --- | --- | --- |
+| [PromptPanel](https://github.com/tytsxai/PromptPanel) | macOS product thinking, local-first UX, release-readiness discipline | Swift app, screenshots, CI release-readiness check, user-facing README |
+| [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder) | frontend product execution for bot/workflow builders | Live GitHub Pages demo, React/Vite app, Pages deploy CI |
+| [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner) | risky-account automation with review gates and API/CLI surfaces | FastAPI, Web UI, Typer CLI, pytest CI, rate-limit and safety notes |
+| [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) | browser automation for destructive account cleanup with safer workflows | TypeScript, Playwright, CI, review-first cleanup model |
+| [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) | AI workflow packaging for non-engineering users | Python MVP CLI, templates, QA docs, GitHub Pages |
+| [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack) | operator-facing infra docs and deployment tooling | Shell toolkit, bilingual runbook, redaction CI, GPL-3.0 |
+
+## 🙋‍♂️ Working Profile
 
 ```yaml
 name:        qilai
-role:        Full-stack Engineer · AI Application Builder · Agent Harness Builder
+role:        AI Product Engineer · Full-stack Builder · Agent Harness Builder
 location:    China · GMT+8
 focus:
-  - AI-assisted products that turn LLM usage into real workflows
-  - Agent harnesses: tools, memory, evals, observability, and operator controls
-  - Local-first automation with dry runs, review gates, and clear logs
-  - Developer tools, CLIs, bot builders, and operator-facing utilities
+  - AI products that turn prompts and agents into repeatable workflows
+  - Agent harnesses with tools, memory, evals, logs, and operator controls
+  - Local-first automation with dry runs, review gates, limits, and recovery notes
+  - Developer tools, CLIs, bot builders, and operations-facing utilities
 strengths:
-  - idea -> MVP -> docs -> iteration
-  - agent harness product design + technical execution
-  - product sense + harness engineering + runtime safety
+  - idea -> runnable MVP -> docs -> CI -> iteration
+  - product judgment + harness engineering + runtime safety
   - frontend + backend + automation + packaging
-  - safety boundaries for tools that touch real accounts or data
+  - making risky workflows reviewable instead of opaque
 principles:
   - "Make the useful path work first."
   - "Keep failure modes visible."
   - "Ship small, learn fast, improve from evidence."
 open_to:
+  - AI product engineering roles
   - Practical AI products
   - Agent harness R&D / productization
   - Developer automation
@@ -68,17 +82,17 @@ open_to:
 - 🧪  Exploring **agent harness** patterns — tool use, memory, evals, logs, guardrails, and human-in-the-loop controls
 - 🧹  Maintaining account/workflow automation tools such as **bilibili-cleaner** and **x-account-cleaner**
 - 🎨  Improving developer-facing builders such as **telegram-ui-builder** and Codex workflow utilities
-- 📦  Raising the quality bar of public repos: clearer README, quick start, safety boundary, license, topics, and demos
+- 📦  Raising the quality bar of public repos: README, quick start, CI, safety boundaries, licenses, topics, demos, and Star History
 
 ## 🧰 What I Build
 
 | Direction | What I care about | Public evidence |
 | --- | --- | --- |
-| **AI products** | Turning prompts, agents, and LLM workflows into usable tools | [PromptPanel](https://github.com/tytsxai/PromptPanel), [bazi-master](https://github.com/tytsxai/bazi-master) |
-| **Agent harness** | Productizing agents with tool contracts, eval loops, memory, observability, and operator control | Codex workflow utilities, PromptPanel, automation repos |
-| **Automation** | Local-first workflows, dry runs, review steps, logs, and rollback notes | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
+| **AI products** | Turning prompts, agents, and LLM workflows into usable tools | [PromptPanel](https://github.com/tytsxai/PromptPanel), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) |
+| **Agent harness** | Productizing agents with tool contracts, eval loops, memory, observability, and operator control | PromptPanel, Codex workflow utilities, automation repos |
+| **Automation** | Local-first workflows, dry runs, review steps, logs, limits, and rollback notes | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
 | **Developer tools** | CLIs, bot builders, operator consoles, and workflow kits | [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder), [codex-app-account-switcher](https://github.com/tytsxai/codex-app-account-switcher) |
-| **Practical utilities** | Small tools that solve concrete user problems and are easy to run | [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) |
+| **Infrastructure utilities** | Small tools with clear runbooks and operational guardrails | [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack), [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese) |
 
 ## 🧭 How I Work
 
