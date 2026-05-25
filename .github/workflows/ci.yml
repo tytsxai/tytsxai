@@ -1,0 +1,31 @@
+name: Profile README
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-readme-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate profile README
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s README.md
+          ! grep -n 'PAT_1' README.md
+          ! grep -n 'profile-banner.svg' README.md
+          grep -n 'Portfolio Highlights' README.md
+          grep -n 'Agent Harness' README.md
+          grep -n 'Star History' README.md
