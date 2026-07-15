@@ -190,7 +190,7 @@ TypeScript / Python / React / FastAPI / PostgreSQL / Docker / OpenAI · Claude /
 ## ⭐ Star History
 
 <p align="center">
-  <a href="https://star-history.com/#tytsxai/idm-activation-script-chinese&tytsxai/promptpanel&tytsxai/bilibili-cleaner&tytsxai/bazi-master&tytsxai/telegram-ui-builder&Date">
+  <a href="https://www.star-history.com/?type=date&repos=tytsxai%2Fidm-activation-script-chinese%2Ctytsxai%2Fpromptpanel%2Ctytsxai%2Fbilibili-cleaner%2Ctytsxai%Fbazi-master%2Ctytsxai%2Ftelegram-ui-builder">
     <img src="https://api.star-history.com/svg?repos=tytsxai/idm-activation-script-chinese,tytsxai/promptpanel,tytsxai/bilibili-cleaner,tytsxai/bazi-master,tytsxai/telegram-ui-builder&type=Date" alt="Star History" width="760" />
   </a>
 </p>
