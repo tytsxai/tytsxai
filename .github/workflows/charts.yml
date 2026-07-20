@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - scripts/gen_charts.py
+      - scripts/gen_assets.py
       - .github/workflows/charts.yml
 
 permissions:
@@ -33,14 +33,14 @@ jobs:
       - name: Generate charts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/gen_charts.py
+        run: python3 scripts/gen_assets.py
 
       - name: Validate SVG output
         run: |
           python3 - <<'PY'
           import glob, xml.dom.minidom
           files = sorted(glob.glob("assets/*.svg"))
-          assert len(files) == 4, f"expected 4 svgs, got {files}"
+          assert len(files) == 8, f"expected 8 svgs, got {files}"
           for f in files:
               xml.dom.minidom.parse(f)
               print("ok", f)

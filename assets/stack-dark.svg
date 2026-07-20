@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="216" viewBox="0 0 880 216" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace">
+<style>.lbl{font-size:10.5px;letter-spacing:1.4px;fill:#7d8590}.val{font-size:12.5px}.nm{font-size:38px;font-weight:600;letter-spacing:-0.5px}.rl{font-size:13px;letter-spacing:3.2px;font-weight:500}.ax{font-size:10.5px}.lg{font-size:11px}.st{font-size:12.5px;letter-spacing:1.6px;font-weight:600}</style>
+<rect x="0.5" y="0.5" width="879" height="215" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="28" y="27" class="lbl">STACK  ·  WHAT I ACTUALLY BUILD WITH</text>
+<line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
+<text x="28" y="70" class="lbl">LANGUAGES</text>
+<text x="132" y="70" class="val" fill="#e6edf3">Python · TypeScript · Rust · Swift · Bash</text>
+<text x="28" y="96" class="lbl">AI / LLM</text>
+<text x="132" y="96" class="val" fill="#bc8cff">Claude · OpenAI · MCP · tool calling · multi-agent · RAG · evals · guardrails</text>
+<text x="28" y="122" class="lbl">BACKEND</text>
+<text x="132" y="122" class="val" fill="#e6edf3">FastAPI · Node · Express · PostgreSQL · Redis · Prisma</text>
+<text x="28" y="148" class="lbl">FRONTEND</text>
+<text x="132" y="148" class="val" fill="#e6edf3">React · Next.js · Vite · Tailwind · SwiftUI</text>
+<text x="28" y="174" class="lbl">INFRA</text>
+<text x="132" y="174" class="val" fill="#e6edf3">Docker · Linux · systemd · GitHub Actions · Nginx · Cloudflare</text>
+<text x="28" y="200" class="lbl">PRACTICE</text>
+<text x="132" y="200" class="val" fill="#3fb950">dry-run gates · rate limits · structured logs · rollback paths · token budgeting</text>
+</svg>
