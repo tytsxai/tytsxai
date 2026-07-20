@@ -206,7 +206,21 @@ Public, runnable, and maintained. Stars are real users, not follows.
 </p>
 
 <p align="center">
-  <sub>Shipped across <b>Python · TypeScript · Rust · Swift · Shell</b> — from native macOS apps to FastAPI services to production infra.</sub>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/star-history-dark.svg" />
+    <img src="assets/star-history.svg" alt="Star history across my main repositories" width="880" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg" />
+    <img src="assets/languages.svg" alt="Language mix across public repositories" width="880" />
+  </picture>
+</p>
+
+<p align="center">
+  <sub>Charts are generated from the GitHub API by <a href="scripts/gen_charts.py">scripts/gen_charts.py</a> and refreshed weekly by <a href=".github/workflows/charts.yml">CI</a> — self-hosted on purpose, so nothing here breaks when a third-party card service is rate-limited.</sub>
 </p>
 
 ---

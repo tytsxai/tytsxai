@@ -1,0 +1,59 @@
+name: Refresh profile charts
+
+# Regenerates assets/*.svg (star history + language mix) so the profile never
+# depends on third-party card services that go rate-limited and render broken.
+# Reads public GitHub data only; writes nothing outside this repository.
+
+on:
+  schedule:
+    - cron: "17 3 * * 1" # Mondays 03:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/gen_charts.py
+      - .github/workflows/charts.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-charts
+  cancel-in-progress: false
+
+jobs:
+  charts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate charts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen_charts.py
+
+      - name: Validate SVG output
+        run: |
+          python3 - <<'PY'
+          import glob, xml.dom.minidom
+          files = sorted(glob.glob("assets/*.svg"))
+          assert len(files) == 4, f"expected 4 svgs, got {files}"
+          for f in files:
+              xml.dom.minidom.parse(f)
+              print("ok", f)
+          PY
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain assets)" ]; then
+            echo "charts unchanged"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore: refresh profile charts"
+          git push
