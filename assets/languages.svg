@@ -6,14 +6,14 @@
 <line x1="0" y1="44" x2="880" y2="44" stroke="#d8dee4"/>
 <clipPath id="clip"><rect x="28" y="62" width="824" height="12" rx="6"/></clipPath>
 <g clip-path="url(#clip)">
-<rect x="28.00" y="62" width="410.30" height="12" fill="#3572A5"/>
-<rect x="437.70" y="62" width="292.51" height="12" fill="#3178c6"/>
-<rect x="729.61" y="62" width="48.76" height="12" fill="#f1e05a"/>
-<rect x="777.77" y="62" width="39.14" height="12" fill="#e34c26"/>
-<rect x="816.30" y="62" width="13.53" height="12" fill="#F05138"/>
+<rect x="28.00" y="62" width="410.37" height="12" fill="#3572A5"/>
+<rect x="437.77" y="62" width="292.46" height="12" fill="#3178c6"/>
+<rect x="729.63" y="62" width="48.75" height="12" fill="#f1e05a"/>
+<rect x="777.78" y="62" width="39.13" height="12" fill="#e34c26"/>
+<rect x="816.31" y="62" width="13.53" height="12" fill="#F05138"/>
 <rect x="829.24" y="62" width="12.24" height="12" fill="#89e051"/>
 <rect x="840.88" y="62" width="5.29" height="12" fill="#563d7c"/>
-<rect x="845.57" y="62" width="3.46" height="12" fill="#dea584"/>
+<rect x="845.57" y="62" width="3.45" height="12" fill="#dea584"/>
 <rect x="848.43" y="62" width="4.17" height="12" fill="#8c959f"/>
 </g>
 <circle cx="32" cy="96" r="4" fill="#3572A5"/>
