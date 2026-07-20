@@ -4,15 +4,15 @@
 <text x="880" y="16" text-anchor="end" fill="#6e7781">by bytes of code</text>
 <clipPath id="r"><rect x="0" y="30" width="880" height="14" rx="7"/></clipPath>
 <g clip-path="url(#r)">
-<rect x="0.00" y="30" width="437.90" height="14" fill="#3572A5"/>
-<rect x="437.40" y="30" width="312.35" height="14" fill="#3178c6"/>
-<rect x="749.25" y="30" width="51.95" height="14" fill="#f1e05a"/>
-<rect x="800.70" y="30" width="41.67" height="14" fill="#e34c26"/>
-<rect x="841.87" y="30" width="14.32" height="14" fill="#F05138"/>
-<rect x="855.68" y="30" width="12.94" height="14" fill="#89e051"/>
+<rect x="0.00" y="30" width="438.04" height="14" fill="#3572A5"/>
+<rect x="437.54" y="30" width="312.25" height="14" fill="#3178c6"/>
+<rect x="749.29" y="30" width="51.93" height="14" fill="#f1e05a"/>
+<rect x="800.72" y="30" width="41.66" height="14" fill="#e34c26"/>
+<rect x="841.88" y="30" width="14.31" height="14" fill="#F05138"/>
+<rect x="855.69" y="30" width="12.94" height="14" fill="#89e051"/>
 <rect x="868.12" y="30" width="5.51" height="14" fill="#563d7c"/>
-<rect x="873.13" y="30" width="3.55" height="14" fill="#dea584"/>
-<rect x="876.18" y="30" width="4.32" height="14" fill="#8b949e"/>
+<rect x="873.14" y="30" width="3.55" height="14" fill="#dea584"/>
+<rect x="876.19" y="30" width="4.31" height="14" fill="#8b949e"/>
 </g>
 <circle cx="5" cy="64" r="5" fill="#3572A5"/>
 <text x="15" y="68" fill="#57606a">Python 49.7%</text>
