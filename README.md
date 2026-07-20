@@ -13,21 +13,20 @@
 </p>
 
 <p align="center">
-  <a href="https://t.me/cangqilai123"><img src="https://img.shields.io/badge/Open%20to%20Work-Telegram%20%40cangqilai123-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="https://t.me/cangqilai123"><img src="https://img.shields.io/badge/Telegram-%40cangqilai123-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
   <a href="mailto:wwtvn1937@gmail.com"><img src="https://img.shields.io/badge/Email-wwtvn1937%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Experience-4%20yrs%20hands--on%20AI-2ea44f?style=flat-square" alt="experience" />
   <img src="https://img.shields.io/badge/Based%20in-China%20·%20GMT%2B8-0969da?style=flat-square" alt="location" />
-  <img src="https://img.shields.io/badge/Work%20mode-Onsite%20CN%20%2F%20Remote-7C3AED?style=flat-square" alt="work mode" />
-  <img src="https://img.shields.io/badge/Passport-Valid%20·%20Can%20travel%20abroad-B45309?style=flat-square" alt="passport" />
+  <img src="https://img.shields.io/badge/Focus-Agents%20·%20RAG%20·%20Automation-7C3AED?style=flat-square" alt="focus" />
   <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Stars%20on%20my%20OSS&style=flat-square&color=ffca28&logo=github" alt="stars" />
   <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=flat-square&logo=github&color=0969da" alt="public repos" /></a>
 </p>
 
 <p align="center">
-  🎯 <a href="#-open-to-work--求职中">Open to Work</a> ·
+  👋 <a href="#-about--简介">About</a> ·
   ⭐ <a href="#-portfolio-highlights--代表作">Portfolio</a> ·
   🧠 <a href="#-what-i-actually-ship--能交付什么">Capabilities</a> ·
   🧭 <a href="#-how-i-deliver--交付方式">How I Deliver</a> ·
@@ -36,49 +35,45 @@
 
 ---
 
-## 🎯 Open to Work · 求职中
-
-> **Looking for:** AI Forward Deployed Engineer (FDE) · AI Application Engineer · LLM / Agent Engineer · Intelligent Automation
-> **目标岗位：** AI Forward Deployed Engineer（FDE）、AI 应用落地、LLM 开发、多 Agent 系统、智能自动化
+## 👋 About · 简介
 
 | | |
 | --- | --- |
-| 🧑‍💻 **Who** | Born in the 2000s（00 后），4 years of hands-on AI engineering — not slideware, shipped systems |
-| 📍 **Where** | Based in China (GMT+8) · Open to **onsite in China** or **fully remote** worldwide |
-| ✈️ **Mobility** | Valid passport · available for **business travel and overseas deployments** |
-| 🚀 **Strength** | Own it end to end: solution design → build → deploy → operate. Multiple production systems running stably |
-| 🧰 **Depth** | Agents, multi-agent orchestration, RAG, automation matrices, evals, observability, cost control |
-| 💰 **Mindset** | Frontier tech **with a cost ceiling** — I optimize token/infra spend as a first-class requirement |
-| 🤝 **Fit** | Results-oriented. I want a team that actually ships. Two-way fit matters — let's both be honest about it |
-| 📬 **Reach me** | Telegram [**@cangqilai123**](https://t.me/cangqilai123) (fastest) · [Email](mailto:wwtvn1937@gmail.com) — DMs open |
+| 🧑‍💻 **Who** | Born in the 2000s（00 后），4 years of hands-on AI engineering — shipped systems, not slideware |
+| 📍 **Where** | Based in China (GMT+8) · work with teams onsite and remote |
+| 🎯 **Focus** | AI application delivery: agents & multi-agent orchestration, RAG, LLM products, intelligent automation |
+| 🚀 **How I work** | End to end, solo when it needs to be: solution design → build → deploy → operate. Multiple production systems running stably |
+| 🧰 **Depth** | Tool contracts, evals, observability, cost control, runbooks — the parts that decide whether a system survives production |
+| 💰 **Mindset** | Frontier tech **with a cost ceiling** — token and infra spend is a first-class requirement, not an afterthought |
+| 📬 **Reach me** | Telegram [**@cangqilai123**](https://t.me/cangqilai123) (fastest) · [Email](mailto:wwtvn1937@gmail.com) |
 
 <details>
-<summary><b>中文完整版（点击展开）</b></summary>
+<summary><b>中文简介（点击展开）</b></summary>
 
 <br/>
 
-00 后，目前在国内，寻找**国内或远程**的 AI Forward Deployed Engineer（FDE）、AI 应用落地、LLM 开发、多 Agent 系统、智能自动化岗位。护照正常，可出差、可出境。
+00 后，在国内（GMT+8），**4 年 AI 实战经验**。擅长从 0 到 1 独立负责，从方案设计一直做到生产落地并长期稳定运行，已交付多个在跑的系统。
 
-**4 年 AI 实战经验**，擅长从 0 到 1 独立负责，从方案设计一直做到生产落地，已交付多个长期稳定运行的项目。熟悉 Agent 编排、多 Agent 协作、RAG 检索增强、自动化矩阵等方向。注重前沿技术与成本控制的平衡，能高效把 AI 转化为可衡量的实际价值。
+主要方向：Agent 编排与多 Agent 协作、RAG 检索增强、LLM 应用产品化、智能自动化矩阵。工程上更看重那些决定系统能不能扛住生产的部分——工具契约、评测、可观测性、成本控制、运行手册。注重前沿技术与成本的平衡，把 token 和基础设施开销当成一等需求而不是事后优化。
 
-结果导向，希望加入真正做事的结果导向团队，双向匹配。欢迎直接私信：Telegram [@cangqilai123](https://t.me/cangqilai123)。
+有具体问题要解决，直接私信：Telegram [@cangqilai123](https://t.me/cangqilai123)。
 
 </details>
 
 ---
 
-## 🛰️ Why an FDE, and why me · 为什么适合 FDE
+## 🛰️ Where I add value · 我擅长的地方
 
-An FDE lives where the model meets the customer's messy reality. That gap is exactly what I've spent four years closing.
+The interesting work is where the model meets someone's messy reality. That gap is what I've spent four years closing.
 
-| The job really is… | What I bring | Proof you can read |
+| The hard part | How I handle it | Proof you can read |
 | --- | --- | --- |
-| **Sit with the customer, find the real workflow** | I start from the operator's critical path and failure modes, not from the model | Every repo below starts with a concrete workflow, not a demo |
-| **Build a working system in days, not quarters** | 0→1 solo delivery: design → MVP → docs → CI → production | 29 public repos, most shipped end to end alone |
-| **Make it survive contact with production** | Dry runs, review gates, rate limits, retries, rollback paths, structured logs | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
-| **Keep unit economics sane** | Model routing, caching, batching, prompt/context budgeting, cheap-model-first tiering | Agent harnesses & automation pipelines I run daily |
-| **Hand it over so it keeps running** | Bilingual runbooks, deploy scripts, systemd/CI, redaction gates, upgrade notes | [anyreality-resi-stack](https://github.com/tytsxai/anyreality-resi-stack) |
-| **Cross language & culture** | Native Chinese, working English, bilingual docs as a default habit | Most repos ship zh-CN + EN READMEs |
+| **Finding the real workflow** | Start from the operator's critical path and failure modes, not from the model | Every repo below starts with a concrete workflow, not a demo |
+| **Getting a working system in days, not quarters** | 0→1 solo delivery: design → MVP → docs → CI → production | 29 public repos, most shipped end to end alone |
+| **Surviving contact with production** | Dry runs, review gates, rate limits, retries, rollback paths, structured logs | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
+| **Keeping unit economics sane** | Model routing, caching, batching, prompt/context budgeting, cheap-model-first tiering | Agent harnesses & automation pipelines I run daily |
+| **Handing it over so it keeps running** | Bilingual runbooks, deploy scripts, systemd/CI, redaction gates, upgrade notes | [anyreality-resi-stack](https://github.com/tytsxai/anyreality-resi-stack) |
+| **Working across language & culture** | Native Chinese, working English, bilingual docs as a default habit | Most repos ship zh-CN + EN READMEs |
 
 ---
 
@@ -235,7 +230,7 @@ Public, runnable, and maintained. Stars are real users, not follows.
   <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/All%20Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos" /></a>
 </p>
 
-**Fastest response: Telegram [@cangqilai123](https://t.me/cangqilai123).** Send the problem, not the JD — I'll tell you within a message or two whether I can actually solve it and roughly how.
+**Fastest response: Telegram [@cangqilai123](https://t.me/cangqilai123).** Send the problem — I'll tell you within a message or two whether I can actually solve it and roughly how.
 
 **最快联系方式：Telegram [@cangqilai123](https://t.me/cangqilai123)。** 直接说要解决什么问题就行，我会告诉你能不能做、大概怎么做。
 
