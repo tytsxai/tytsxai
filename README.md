@@ -1,222 +1,231 @@
 <!-- ============================================================ -->
-<!-- qilai (tytsxai) — GitHub Profile README -->
-<!-- Full-stack Engineer · AI Application Builder -->
+<!-- qilai (tytsxai) — GitHub Profile README                     -->
+<!-- AI Forward Deployed Engineer · Agent Systems · 0→1 Delivery -->
 <!-- ============================================================ -->
 
-<h1 align="center">
-  qilai · AI Product Engineer
-</h1>
+<h1 align="center">qilai · AI Forward Deployed Engineer</h1>
 
-<h3 align="center">
-  Full-stack delivery · Agent harnesses · Local-first automation
-</h3>
+<h3 align="center">Agents &amp; Multi-Agent Systems · RAG · LLM Applications · Automation at Scale</h3>
 
 <p align="center">
-  <i>I build practical AI products and automation systems with runnable demos, clear docs, safety gates, and CI-backed delivery.</i>
+  <i>I take AI from a whiteboard idea to a production system that a real business runs on — design, build, deploy, operate.</i><br/>
+  <i>把 AI 从方案设计一路做到生产落地并长期稳定运行：0→1 独立负责，交付即可用。</i>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Open%20to%20Collaborate-2ea44f?style=flat-square&logo=github" alt="status" />
-  <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=flat-square&logo=github&color=0969da" alt="public repositories" /></a>
-  <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Stars&style=flat-square&color=ffca28&logo=github" alt="stars" />
-  <img src="https://img.shields.io/github/followers/tytsxai?label=Followers&style=flat-square&color=4c1&logo=github" alt="followers" />
-  <img src="https://komarev.com/ghpvc/?username=tytsxai&label=Profile%20views&color=blueviolet&style=flat-square" alt="profile views" />
-  <a href="https://x.com/cangqilai888"><img src="https://img.shields.io/badge/X-@cangqilai888-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
-  <a href="https://www.v2ex.com/member/qilai"><img src="https://img.shields.io/badge/V2EX-qilai-000000?style=flat-square" alt="V2EX" /></a>
+  <a href="https://t.me/cangqilai123"><img src="https://img.shields.io/badge/Open%20to%20Work-Telegram%20%40cangqilai123-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="mailto:wwtvn1937@gmail.com"><img src="https://img.shields.io/badge/Email-wwtvn1937%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 <p align="center">
-  📦 <a href="https://github.com/tytsxai?tab=repositories">Repositories</a> ·
-  ⭐ <a href="#-portfolio-highlights">Portfolio Highlights</a> ·
-  🧰 <a href="#-what-i-build">What I Build</a> ·
-  🧭 <a href="#-how-i-work">How I Work</a> ·
-  📬 <a href="mailto:wwtvn1937@gmail.com">Contact</a>
+  <img src="https://img.shields.io/badge/Experience-4%20yrs%20hands--on%20AI-2ea44f?style=flat-square" alt="experience" />
+  <img src="https://img.shields.io/badge/Based%20in-China%20·%20GMT%2B8-0969da?style=flat-square" alt="location" />
+  <img src="https://img.shields.io/badge/Work%20mode-Onsite%20CN%20%2F%20Remote-7C3AED?style=flat-square" alt="work mode" />
+  <img src="https://img.shields.io/badge/Passport-Valid%20·%20Can%20travel%20abroad-B45309?style=flat-square" alt="passport" />
+  <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Stars%20on%20my%20OSS&style=flat-square&color=ffca28&logo=github" alt="stars" />
+  <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=flat-square&logo=github&color=0969da" alt="public repos" /></a>
+</p>
+
+<p align="center">
+  🎯 <a href="#-open-to-work--求职中">Open to Work</a> ·
+  ⭐ <a href="#-portfolio-highlights--代表作">Portfolio</a> ·
+  🧠 <a href="#-what-i-actually-ship--能交付什么">Capabilities</a> ·
+  🧭 <a href="#-how-i-deliver--交付方式">How I Deliver</a> ·
+  📬 <a href="#-contact--联系方式">Contact</a>
 </p>
 
 ---
 
-## ⭐ Portfolio Highlights
+## 🎯 Open to Work · 求职中
 
-These are the repos I would point a recruiter, collaborator, or technical reviewer to first.
+> **Looking for:** AI Forward Deployed Engineer (FDE) · AI Application Engineer · LLM / Agent Engineer · Intelligent Automation
+> **目标岗位：** AI Forward Deployed Engineer（FDE）、AI 应用落地、LLM 开发、多 Agent 系统、智能自动化
 
-| Project | What it proves | Evidence |
+| | |
+| --- | --- |
+| 🧑‍💻 **Who** | Born in the 2000s（00 后），4 years of hands-on AI engineering — not slideware, shipped systems |
+| 📍 **Where** | Based in China (GMT+8) · Open to **onsite in China** or **fully remote** worldwide |
+| ✈️ **Mobility** | Valid passport · available for **business travel and overseas deployments** |
+| 🚀 **Strength** | Own it end to end: solution design → build → deploy → operate. Multiple production systems running stably |
+| 🧰 **Depth** | Agents, multi-agent orchestration, RAG, automation matrices, evals, observability, cost control |
+| 💰 **Mindset** | Frontier tech **with a cost ceiling** — I optimize token/infra spend as a first-class requirement |
+| 🤝 **Fit** | Results-oriented. I want a team that actually ships. Two-way fit matters — let's both be honest about it |
+| 📬 **Reach me** | Telegram [**@cangqilai123**](https://t.me/cangqilai123) (fastest) · [Email](mailto:wwtvn1937@gmail.com) — DMs open |
+
+<details>
+<summary><b>中文完整版（点击展开）</b></summary>
+
+<br/>
+
+00 后，目前在国内，寻找**国内或远程**的 AI Forward Deployed Engineer（FDE）、AI 应用落地、LLM 开发、多 Agent 系统、智能自动化岗位。护照正常，可出差、可出境。
+
+**4 年 AI 实战经验**，擅长从 0 到 1 独立负责，从方案设计一直做到生产落地，已交付多个长期稳定运行的项目。熟悉 Agent 编排、多 Agent 协作、RAG 检索增强、自动化矩阵等方向。注重前沿技术与成本控制的平衡，能高效把 AI 转化为可衡量的实际价值。
+
+结果导向，希望加入真正做事的结果导向团队，双向匹配。欢迎直接私信：Telegram [@cangqilai123](https://t.me/cangqilai123)。
+
+</details>
+
+---
+
+## 🛰️ Why an FDE, and why me · 为什么适合 FDE
+
+An FDE lives where the model meets the customer's messy reality. That gap is exactly what I've spent four years closing.
+
+| The job really is… | What I bring | Proof you can read |
 | --- | --- | --- |
-| [PromptPanel](https://github.com/tytsxai/PromptPanel) | macOS product thinking, local-first UX, release-readiness discipline | Swift app, screenshots, CI release-readiness check, user-facing README |
-| [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder) | frontend product execution for bot/workflow builders | Live GitHub Pages demo, React/Vite app, Pages deploy CI |
-| [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner) | risky-account automation with review gates and API/CLI surfaces | FastAPI, Web UI, Typer CLI, pytest CI, rate-limit and safety notes |
-| [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) | browser automation for destructive account cleanup with safer workflows | TypeScript, Playwright, CI, review-first cleanup model |
-| [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) | AI workflow packaging for non-engineering users | Python MVP CLI, templates, QA docs, GitHub Pages |
-| [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack) | operator-facing infra docs and deployment tooling | Shell toolkit, bilingual runbook, redaction CI, GPL-3.0 |
+| **Sit with the customer, find the real workflow** | I start from the operator's critical path and failure modes, not from the model | Every repo below starts with a concrete workflow, not a demo |
+| **Build a working system in days, not quarters** | 0→1 solo delivery: design → MVP → docs → CI → production | 29 public repos, most shipped end to end alone |
+| **Make it survive contact with production** | Dry runs, review gates, rate limits, retries, rollback paths, structured logs | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
+| **Keep unit economics sane** | Model routing, caching, batching, prompt/context budgeting, cheap-model-first tiering | Agent harnesses & automation pipelines I run daily |
+| **Hand it over so it keeps running** | Bilingual runbooks, deploy scripts, systemd/CI, redaction gates, upgrade notes | [anyreality-resi-stack](https://github.com/tytsxai/anyreality-resi-stack) |
+| **Cross language & culture** | Native Chinese, working English, bilingual docs as a default habit | Most repos ship zh-CN + EN READMEs |
 
-## 🙋‍♂️ Working Profile
+---
 
-```yaml
-name:        qilai
-role:        AI Product Engineer · Full-stack Builder · Agent Harness Builder
-location:    China · GMT+8
-focus:
-  - AI products that turn prompts and agents into repeatable workflows
-  - Agent harnesses with tools, memory, evals, logs, and operator controls
-  - Local-first automation with dry runs, review gates, limits, and recovery notes
-  - Developer tools, CLIs, bot builders, and operations-facing utilities
-strengths:
-  - idea -> runnable MVP -> docs -> CI -> iteration
-  - product judgment + harness engineering + runtime safety
-  - frontend + backend + automation + packaging
-  - making risky workflows reviewable instead of opaque
-principles:
-  - "Make the useful path work first."
-  - "Keep failure modes visible."
-  - "Ship small, learn fast, improve from evidence."
-open_to:
-  - AI product engineering roles
-  - Practical AI products
-  - Agent harness R&D / productization
-  - Developer automation
-  - Local-first open-source tools
-```
+## ⭐ Portfolio Highlights · 代表作
 
-## 🚀 Now / Recent
+Public, runnable, and maintained. Stars are real users, not follows.
 
-- 🛠️  Polishing **PromptPanel** — a macOS prompt and snippet launcher for AI power users
-- 🧪  Exploring **agent harness** patterns — tool use, memory, evals, logs, guardrails, and human-in-the-loop controls
-- 🧹  Maintaining account/workflow automation tools such as **bilibili-cleaner** and **x-account-cleaner**
-- 🎨  Improving developer-facing builders such as **telegram-ui-builder** and Codex workflow utilities
-- 📦  Raising the quality bar of public repos: README, quick start, CI, safety boundaries, licenses, topics, demos, and Star History
-
-## 🧰 What I Build
-
-| Direction | What I care about | Public evidence |
+| Project | What it is | What it proves |
 | --- | --- | --- |
-| **AI products** | Turning prompts, agents, and LLM workflows into usable tools | [PromptPanel](https://github.com/tytsxai/PromptPanel), [ecommerce-product-image-workflow](https://github.com/tytsxai/ecommerce-product-image-workflow/) |
-| **Agent harness** | Productizing agents with tool contracts, eval loops, memory, observability, and operator control | PromptPanel, Codex workflow utilities, automation repos |
-| **Automation** | Local-first workflows, dry runs, review steps, logs, limits, and rollback notes | [bilibili-cleaner](https://github.com/tytsxai/bilibili-cleaner), [x-account-cleaner](https://github.com/tytsxai/x-account-cleaner) |
-| **Developer tools** | CLIs, bot builders, operator consoles, and workflow kits | [telegram-ui-builder](https://github.com/tytsxai/telegram-ui-builder), [codex-app-account-switcher](https://github.com/tytsxai/codex-app-account-switcher) |
-| **Infrastructure utilities** | Small tools with clear runbooks and operational guardrails | [reality-resi-stack](https://github.com/tytsxai/reality-resi-stack), [IDM-Activation-Script-Chinese](https://github.com/tytsxai/IDM-Activation-Script-Chinese) |
+| [**IDM-Activation-Script-Chinese**](https://github.com/tytsxai/IDM-Activation-Script-Chinese) ![stars](https://img.shields.io/github/stars/tytsxai/IDM-Activation-Script-Chinese?style=flat-square&label=&color=ffca28) | Windows batch toolkit, GPL-3.0, ~1k stars, 70+ forks | Real distribution & maintenance at scale — issues, encoding hell (GBK/CP936), registry backup, self-check |
+| [**PromptPanel**](https://github.com/tytsxai/PromptPanel) ![stars](https://img.shields.io/github/stars/tytsxai/PromptPanel?style=flat-square&label=&color=ffca28) | macOS prompt/snippet launcher for AI power users (Swift/SwiftUI) | Product thinking for the LLM workflow itself · local-first UX · release-readiness CI |
+| [**bilibili-cleaner**](https://github.com/tytsxai/bilibili-cleaner) ![stars](https://img.shields.io/github/stars/tytsxai/bilibili-cleaner?style=flat-square&label=&color=ffca28) | Bulk account cleanup — FastAPI + Web UI + Typer CLI + Docker | Destructive automation done **safely**: QR login, rate limits, review gates, pytest CI |
+| [**macfriends-cli**](https://github.com/tytsxai/macfriends-cli) ![stars](https://img.shields.io/github/stars/tytsxai/macfriends-cli?style=flat-square&label=&color=ffca28) | WeChat relationship detection on macOS (Rust + ObjC++ agent) | Systems depth: native agent, ABI-pinned reverse work, strictly local execution |
+| [**anyreality-resi-stack**](https://github.com/tytsxai/anyreality-resi-stack) ![stars](https://img.shields.io/github/stars/tytsxai/anyreality-resi-stack?style=flat-square&label=&color=ffca28) | Self-hosted sing-box infra: installer, subscription server, dual-node routing | Infra & ops delivery: bilingual runbook, systemd, secret-redaction CI, GPL-3.0 |
+| [**bazi-master**](https://github.com/tytsxai/bazi-master) ![stars](https://img.shields.io/github/stars/tytsxai/bazi-master?style=flat-square&label=&color=ffca28) | Full-stack AI divination platform (React + Express + PostgreSQL + Prisma) | LLM-in-product: interpretation pipelines, multi-module domain logic, full-stack ownership |
+| [**x-account-cleaner**](https://github.com/tytsxai/x-account-cleaner) | Local-first X/Twitter cleanup CLI (TypeScript + Playwright) | Browser automation with a review-first, irreversible-action-aware model |
+| [**telegram-ui-builder**](https://github.com/tytsxai/telegram-ui-builder) · [live demo](https://tytsxai.github.io/telegram-ui-builder/) | Visual designer for bot messages, inline keyboards, multi-screen flows | Developer-facing tooling with a deployed demo and Pages CI |
 
-## 🧭 How I Work
+> 🔒 A meaningful share of my work is private client / production systems (agent pipelines, ops automation, data workflows). Happy to walk through architecture and trade-offs in a call.
+> 🔒 相当一部分是私有生产项目，方案与取舍可在沟通中详聊。
 
-- 🎯 **Find the real workflow** — user entry point, critical path, failure mode, and reason to return.
-- 🧪 **Design the harness, not just the prompt** — tools, state, evals, logs, permissions, and recovery paths.
-- 🧱 **Build the smallest useful loop** — runnable first, then polish from actual friction.
-- 🛡️ **Harden risky actions** — dry runs, confirmations, logs, limits, and recovery notes.
-- 📚 **Package for the next visitor** — README, quick start, status, license, screenshots or demo where useful.
-- 🔁 **Iterate from evidence** — issues, runtime failures, user confusion, stars, and repeated usage.
+---
 
-## 🧰 Tech Stack
+## 🧠 What I Actually Ship · 能交付什么
 
-**Primary stack**
+<table>
+<tr><td width="50%" valign="top">
 
-TypeScript / Python / React / FastAPI / PostgreSQL / Docker / OpenAI · Claude / Agent Harness / Local-first Automation
+### 🤖 Agents & Multi-Agent
+- Tool contracts, function calling, **MCP** servers/clients
+- Planner → executor → verifier decomposition
+- Multi-agent orchestration: fan-out, pipelines, adversarial review
+- Human-in-the-loop gates on irreversible actions
+- Memory, state, resumability, failure recovery
 
-**Languages**
+</td><td width="50%" valign="top">
 
-<p>
-  <img src="https://skillicons.dev/icons?i=ts,js,python,go,rust,swift,bash,c,cpp,java,kotlin,dart,html,css,md" alt="languages" />
-</p>
+### 📚 RAG & Knowledge
+- Chunking, hybrid retrieval, reranking, citation grounding
+- Vector DB + graph/structured hybrid retrieval
+- Knowledge graphs over code and documents
+- Freshness, dedup, and eval-driven retrieval tuning
 
-**Frontend**
+</td></tr>
+<tr><td width="50%" valign="top">
 
-<p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,vue,nuxtjs,svelte,vite,tailwind,bootstrap,sass,html,css,figma,vercel,netlify,redux" alt="frontend" />
-</p>
+### ⚙️ Intelligent Automation
+- Automation matrices across accounts, channels, sites
+- Scheduling, queues, idempotency, retries, backoff
+- Browser/API automation with safety boundaries
+- Structured logs, metrics, alerting into Telegram/Slack
 
-**Backend & Data**
+</td><td width="50%" valign="top">
 
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,fastapi,django,flask,postgres,mysql,sqlite,redis,mongodb,prisma,supabase,firebase,graphql,rabbitmq" alt="backend and data" />
-</p>
+### 💸 Reliability & Cost
+- Model routing & cheap-model-first tiering
+- Prompt/context budgeting, caching, batching
+- Evals & regression gates before rollout
+- Runbooks, rollback paths, on-call-able ops
+
+</td></tr>
+</table>
+
+---
+
+## 🧭 How I Deliver · 交付方式
+
+- 🎯 **Start from the workflow, not the model.** Who runs it, what breaks, what "done" means in their numbers.
+- 🧪 **Smallest useful loop first.** A runnable thin slice in days, then harden from the friction that actually shows up.
+- 🛡️ **Treat risky actions as first-class.** Dry run, confirm, limit, log, roll back — visible failure beats silent failure.
+- 📏 **Measure before claiming.** Evals, reproduction steps, and real runs. "Verified" and "should work" are different words.
+- 📚 **Package for the next person.** Docs, deploy scripts, CI, and runbooks so it outlives my involvement.
+- 🔁 **Iterate from evidence.** Issues, traces, cost dashboards, user confusion — not vibes.
+
+---
+
+## 🧰 Tech Stack · 技术栈
+
+**Core:** Python · TypeScript · Rust · Swift · React/Next.js · FastAPI · Node.js · PostgreSQL · Redis · Docker · Linux
 
 **AI / LLM**
 
 <p>
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
   <img src="https://img.shields.io/badge/Claude-CC785C?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude" />
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
-  <img src="https://img.shields.io/badge/LlamaIndex-111827?style=for-the-badge" alt="LlamaIndex" />
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=111827" alt="Hugging Face" />
-  <img src="https://img.shields.io/badge/Agents-111827?style=for-the-badge" alt="Agents" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/Multi--Agent-4C1D95?style=for-the-badge" alt="Multi-Agent" />
+  <img src="https://img.shields.io/badge/MCP-7C3AED?style=for-the-badge" alt="MCP" />
   <img src="https://img.shields.io/badge/RAG-2563EB?style=for-the-badge" alt="RAG" />
   <img src="https://img.shields.io/badge/Vector%20DB-0E7490?style=for-the-badge" alt="Vector DB" />
-  <img src="https://img.shields.io/badge/Prompt%20Systems-7C3AED?style=for-the-badge" alt="Prompt Systems" />
-  <img src="https://img.shields.io/badge/Evals-B45309?style=for-the-badge" alt="Evals" />
   <img src="https://img.shields.io/badge/Tool%20Calling-0F766E?style=for-the-badge" alt="Tool Calling" />
-  <img src="https://img.shields.io/badge/Memory-334155?style=for-the-badge" alt="Memory" />
+  <img src="https://img.shields.io/badge/Evals-B45309?style=for-the-badge" alt="Evals" />
   <img src="https://img.shields.io/badge/Guardrails-B91C1C?style=for-the-badge" alt="Guardrails" />
   <img src="https://img.shields.io/badge/Observability-0369A1?style=for-the-badge" alt="Observability" />
+  <img src="https://img.shields.io/badge/Cost%20Control-166534?style=for-the-badge" alt="Cost Control" />
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
 </p>
 
-**Agent Harness / AI Engineering**
+**Languages &amp; Runtime**
 
 <p>
-  <img src="https://img.shields.io/badge/Agent%20Harness-111827?style=for-the-badge" alt="Agent Harness" />
-  <img src="https://img.shields.io/badge/Harness%20Product-4C1D95?style=for-the-badge" alt="Agent Harness Product" />
-  <img src="https://img.shields.io/badge/Agent%20Runtime-1F2937?style=for-the-badge" alt="Agent Runtime" />
-  <img src="https://img.shields.io/badge/Tool%20Contracts-0F766E?style=for-the-badge" alt="Tool Contracts" />
-  <img src="https://img.shields.io/badge/Function%20Calling-2563EB?style=for-the-badge" alt="Function Calling" />
-  <img src="https://img.shields.io/badge/MCP-7C3AED?style=for-the-badge" alt="MCP" />
-  <img src="https://img.shields.io/badge/Workflows-B45309?style=for-the-badge" alt="Workflows" />
-  <img src="https://img.shields.io/badge/HITL-BE123C?style=for-the-badge" alt="Human in the Loop" />
-  <img src="https://img.shields.io/badge/Eval%20Harness-0369A1?style=for-the-badge" alt="Eval Harness" />
-  <img src="https://img.shields.io/badge/Tracing-475569?style=for-the-badge" alt="Tracing" />
-  <img src="https://img.shields.io/badge/Operator%20Console-166534?style=for-the-badge" alt="Operator Console" />
-  <img src="https://img.shields.io/badge/Product%20Loop-6D28D9?style=for-the-badge" alt="Product Loop" />
-  <img src="https://img.shields.io/badge/Safety%20Boundary-991B1B?style=for-the-badge" alt="Safety Boundary" />
+  <img src="https://skillicons.dev/icons?i=python,ts,js,rust,swift,go,bash,html,css" alt="languages" />
 </p>
 
-**DevOps & Tools**
+**Web &amp; Data**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,githubactions,nginx,linux,ubuntu,debian,aws,gcp,cloudflare,terraform,ansible,prometheus,grafana,git,github,vscode,postman,vim" alt="devops and tools" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,nodejs,fastapi,express,prisma,postgres,sqlite,redis,supabase" alt="web and data" />
+</p>
+
+**Infra &amp; Ops**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,githubactions,linux,ubuntu,nginx,cloudflare,git,github,grafana,vscode" alt="infra and ops" />
 </p>
 
 ---
 
-## 🏆 GitHub Snapshot
+## 📈 Snapshot
 
 <p align="center">
-  <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=for-the-badge&logo=github&color=0969da" alt="public repositories" /></a>
-  <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Owner%20Stars&style=for-the-badge&logo=github&color=ffca28" alt="owner stars" />
-  <img src="https://img.shields.io/github/followers/tytsxai?style=for-the-badge&logo=github&label=Followers&color=4c1" alt="followers" />
+  <img src="https://img.shields.io/github/stars/tytsxai?affiliations=OWNER&label=Total%20stars&style=for-the-badge&logo=github&color=ffca28" alt="total stars" />
+  <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?label=Public%20repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Ftytsxai&style=for-the-badge&logo=github&color=0969da" alt="public repos" /></a>
+  <img src="https://img.shields.io/github/followers/tytsxai?label=Followers&style=for-the-badge&logo=github&color=4c1" alt="followers" />
+  <img src="https://img.shields.io/github/forks/tytsxai/IDM-Activation-Script-Chinese?label=Top%20repo%20forks&style=for-the-badge&logo=github&color=8957e5" alt="forks" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-AI%20Products%20·%20Agent%20Harness%20·%20Automation-purple?style=flat-square" alt="focus" />
-  <img src="https://img.shields.io/badge/Style-Local--first%20·%20Practical%20·%20Safety--aware-0f766e?style=flat-square" alt="style" />
+  <sub>Shipped across <b>Python · TypeScript · Rust · Swift · Shell</b> — from native macOS apps to FastAPI services to production infra.</sub>
 </p>
 
 ---
 
-## ⭐ Star History
-
-<p align="center">
-  <a href="https://www.star-history.com/?type=date&repos=tytsxai%2Fidm-activation-script-chinese%2Ctytsxai%2Fpromptpanel%2Ctytsxai%2Fbilibili-cleaner%2Ctytsxai%Fbazi-master%2Ctytsxai%2Ftelegram-ui-builder">
-    <img src="https://api.star-history.com/svg?repos=tytsxai/idm-activation-script-chinese,tytsxai/promptpanel,tytsxai/bilibili-cleaner,tytsxai/bazi-master,tytsxai/telegram-ui-builder&type=Date" alt="Star History" width="760" />
-  </a>
-</p>
-
-## 📬 Connect
+## 📬 Contact · 联系方式
 
 <p align="left">
-  <a href="https://github.com/tytsxai">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="mailto:wwtvn1937@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://x.com/cangqilai888">
-    <img src="https://img.shields.io/badge/X-@cangqilai888-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" />
-  </a>
-  <a href="https://www.v2ex.com/member/qilai">
-    <img src="https://img.shields.io/badge/V2EX-qilai-1f6feb?style=for-the-badge" alt="V2EX" />
-  </a>
-  <img src="https://img.shields.io/badge/Open%20to-Practical%20Collaboration-2ea44f?style=for-the-badge" alt="Open to practical collaboration" />
+  <a href="https://t.me/cangqilai123"><img src="https://img.shields.io/badge/Telegram-%40cangqilai123-229ED9?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+  <a href="mailto:wwtvn1937@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://x.com/cangqilai888"><img src="https://img.shields.io/badge/X-@cangqilai888-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://www.v2ex.com/member/qilai"><img src="https://img.shields.io/badge/V2EX-qilai-1f6feb?style=for-the-badge" alt="V2EX" /></a>
+  <a href="https://github.com/tytsxai?tab=repositories"><img src="https://img.shields.io/badge/All%20Repos-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos" /></a>
 </p>
 
-<p align="center">
-  <i>✨ Code is useful when it removes friction. Automation is valuable when it stays under control. ✨</i>
-</p>
+**Fastest response: Telegram [@cangqilai123](https://t.me/cangqilai123).** Send the problem, not the JD — I'll tell you within a message or two whether I can actually solve it and roughly how.
+
+**最快联系方式：Telegram [@cangqilai123](https://t.me/cangqilai123)。** 直接说要解决什么问题就行，我会告诉你能不能做、大概怎么做。
 
 <p align="center">
-  <sub>Repository count is dynamic because the open-source portfolio keeps growing.</sub>
+  <i>✨ AI is only valuable when it survives production. Automation is only valuable when it stays under control. ✨</i><br/>
+  <sub>AI 要能扛住生产环境才有价值；自动化要始终可控才有价值。</sub>
 </p>
