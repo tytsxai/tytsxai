@@ -6,15 +6,15 @@
 <line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
 <clipPath id="clip"><rect x="28" y="62" width="824" height="12" rx="6"/></clipPath>
 <g clip-path="url(#clip)">
-<rect x="28.00" y="62" width="410.37" height="12" fill="#3572A5"/>
-<rect x="437.77" y="62" width="292.46" height="12" fill="#3178c6"/>
-<rect x="729.63" y="62" width="48.75" height="12" fill="#f1e05a"/>
-<rect x="777.78" y="62" width="39.13" height="12" fill="#e34c26"/>
-<rect x="816.31" y="62" width="13.53" height="12" fill="#F05138"/>
-<rect x="829.24" y="62" width="12.24" height="12" fill="#89e051"/>
-<rect x="840.88" y="62" width="5.29" height="12" fill="#563d7c"/>
-<rect x="845.57" y="62" width="3.45" height="12" fill="#dea584"/>
-<rect x="848.43" y="62" width="4.17" height="12" fill="#7d8590"/>
+<rect x="28.00" y="62" width="410.33" height="12" fill="#3572A5"/>
+<rect x="437.73" y="62" width="292.43" height="12" fill="#3178c6"/>
+<rect x="729.56" y="62" width="48.74" height="12" fill="#f1e05a"/>
+<rect x="777.71" y="62" width="39.13" height="12" fill="#e34c26"/>
+<rect x="816.23" y="62" width="13.53" height="12" fill="#F05138"/>
+<rect x="829.16" y="62" width="12.24" height="12" fill="#89e051"/>
+<rect x="840.80" y="62" width="5.29" height="12" fill="#563d7c"/>
+<rect x="845.49" y="62" width="3.45" height="12" fill="#dea584"/>
+<rect x="848.35" y="62" width="4.25" height="12" fill="#7d8590"/>
 </g>
 <circle cx="32" cy="96" r="4" fill="#3572A5"/>
 <text x="41" y="100" class="lg" fill="#8b949e">Python 49.7%</text>
