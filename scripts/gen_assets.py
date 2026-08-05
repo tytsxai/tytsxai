@@ -20,13 +20,12 @@ Reads public GitHub data only; writes only into assets/.
 from __future__ import annotations
 
 import json
-import math
 import os
 import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 USER = "tytsxai"
@@ -35,14 +34,17 @@ ROLE = "AI FORWARD DEPLOYED ENGINEER"
 SIGNOFF = "AI  ·  AUTOMATION  ·  PRODUCTION"
 TELEGRAM = "t.me/cangqilai123"
 
-# Repos plotted in the star-history chart, in legend order.
-STAR_REPOS = [
-    "IDM-Activation-Script-Chinese",
-    "bazi-master",
-    "PromptPanel",
-    "bilibili-cleaner",
-    "macfriends-cli",
-    "anyreality-resi-stack",
+# Repos shown in the "selected work" panel, in display order. Keep this in
+# sync with the pinned repositories on the profile. The blurb is written by
+# hand; language and star count are read from the API on every run, so the
+# panel can never drift away from what a visitor sees on the repo page.
+WORK_REPOS = [
+    ("bazi-master", "Divination platform — BaZi, Tarot, I Ching, AI reading"),
+    ("IDM-Activation-Script-Chinese", "Chinese edition of the IDM activation toolkit"),
+    ("bilibili-cleaner", "Bulk cleanup for Bilibili accounts — QR login, web UI"),
+    ("PromptPanel", "Native macOS prompt launcher with a global hotkey"),
+    ("lab-virtualchem", "Gamified virtual chemistry lab for teaching and drills"),
+    ("dewatermark-platform", "Self-hosted video watermark-removal API and worker"),
 ]
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
@@ -66,8 +68,6 @@ THEMES = {
     },
 }
 
-SERIES_COLORS = ["#e3b341", "#3fb950", "#58a6ff", "#bc8cff", "#f778ba", "#39c5cf"]
-
 W = 880  # every asset shares one width so the column reads as a single system
 
 
@@ -86,26 +86,28 @@ def api(path: str, accept: str = "application/vnd.github+json"):
         return (json.loads(body) if body else None), resp.status
 
 
-def stargazer_dates(repo: str) -> list[datetime]:
-    """Every starred_at timestamp for a repo, oldest first."""
-    dates: list[datetime] = []
-    page = 1
-    while page <= 60:  # ~6k stars; the API caps out around here anyway
-        data, _ = api(
-            f"/repos/{USER}/{repo}/stargazers?per_page=100&page={page}",
-            accept="application/vnd.github.star+json",
+def work_rows() -> list[dict]:
+    """Live language + star count for every repo in WORK_REPOS.
+
+    A repo that has been renamed, archived away or made private is skipped
+    rather than fabricated, so the panel shrinks instead of lying.
+    """
+    rows: list[dict] = []
+    for name, blurb in WORK_REPOS:
+        try:
+            repo, _ = api(f"/repos/{USER}/{name}")
+        except (urllib.error.HTTPError, urllib.error.URLError) as exc:
+            print(f"  ! {name}: {exc}", file=sys.stderr)
+            continue
+        rows.append(
+            {
+                "name": name,
+                "blurb": blurb,
+                "lang": repo.get("language") or "—",
+                "stars": repo.get("stargazers_count", 0),
+            }
         )
-        if not data:
-            break
-        dates += [
-            datetime.strptime(d["starred_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            for d in data
-            if d.get("starred_at")
-        ]
-        if len(data) < 100:
-            break
-        page += 1
-    return sorted(dates)
+    return rows
 
 
 def weekly_commits(repos: list[str]) -> list[int]:
@@ -281,83 +283,38 @@ def render_stack(theme: str) -> str:
     return "\n".join(out)
 
 
-# ----------------------------------------------------------- star history
+# ------------------------------------------------------------ selected work
 
-SH_H = 400
-SH_T, SH_B, SH_L, SH_R = 96, 46, 62, 28
+WORK_ROW_H = 30
 
 
-def render_stars(series: list[tuple[str, list[datetime]]], theme: str) -> str:
-    c = THEMES[theme]
-    active = [(n, d) for n, d in series if d]
-    if not active:
+def render_work(rows: list[dict], stats: dict, theme: str) -> str:
+    """One row per pinned repo: language dot, name, language, stars, blurb."""
+    if not rows:
         return ""
-
-    all_dates = [d for _, dates in active for d in dates]
-    t0, t1 = min(all_dates), max(all_dates)
-    span = max((t1 - t0).total_seconds(), 1.0)
-    top = 10 ** math.ceil(math.log10(max(max(len(d) for _, d in active), 10)))
-
-    def x_of(dt: datetime) -> float:
-        return SH_L + (dt - t0).total_seconds() / span * (W - SH_L - SH_R)
-
-    def y_of(v: int) -> float:
-        frac = math.log10(max(v, 1)) / math.log10(top)
-        return SH_H - SH_B - frac * (SH_H - SH_T - SH_B)
-
-    out = head(SH_H, c)
-    out.append(label(PAD, 27, "STAR HISTORY  ·  LOG SCALE", c))
+    c = THEMES[theme]
+    height = 74 + len(rows) * WORK_ROW_H
+    out = head(height, c)
+    out.append(label(PAD, 27, "SELECTED WORK  ·  PINNED REPOSITORIES", c))
     out.append(
         f'<text x="{W - PAD}" y="27" class="lbl" text-anchor="end">'
-        f'{sum(len(d) for _, d in active):,} STARS ACROSS {len(active)} REPOS</text>'
+        f'{stats["repos"]} PUBLIC REPOS  ·  {stats["stars"]:,} STARS</text>'
     )
     out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
 
-    decade = 1
-    while decade <= top:
-        y = y_of(decade)
-        out.append(f'<line x1="{SH_L}" y1="{y:.1f}" x2="{W - SH_R}" y2="{y:.1f}" stroke="{c["rule"]}"/>')
+    y = 72
+    for row in rows:
+        dot = LANG_COLORS.get(row["lang"], c["faint"])
+        out.append(f'<circle cx="{PAD + 4}" cy="{y - 4}" r="4" fill="{dot}"/>')
+        out.append(value(PAD + 16, y, row["name"], c, c["blue"]))
         out.append(
-            f'<text x="{SH_L - 10}" y="{y + 4:.1f}" class="ax" fill="{c["faint"]}" '
-            f'text-anchor="end">{decade:,}</text>'
+            f'<text x="{PAD + 330}" y="{y}" class="lg" text-anchor="end" fill="{c["amber"]}">'
+            f'{row["stars"]} \u2605</text>'
         )
-        decade *= 10
-
-    for i in range(5):
-        tick = t0 + timedelta(seconds=span * i / 4)
-        x = x_of(tick)
         out.append(
-            f'<line x1="{x:.1f}" y1="{SH_T}" x2="{x:.1f}" y2="{SH_H - SH_B}" '
-            f'stroke="{c["rule"]}" stroke-dasharray="2 5"/>'
+            f'<text x="{PAD + 352}" y="{y}" class="lg" fill="{c["muted"]}">{esc(row["blurb"])}</text>'
         )
-        anchor = "start" if i == 0 else "end" if i == 4 else "middle"
-        out.append(
-            f'<text x="{x:.1f}" y="{SH_H - SH_B + 20}" class="ax" fill="{c["faint"]}" '
-            f'text-anchor="{anchor}">{tick:%Y-%m-%d}</text>'
-        )
-
-    for idx, (name, dates) in enumerate(active):
-        color = SERIES_COLORS[idx % len(SERIES_COLORS)]
-        step = max(1, len(dates) // 400)
-        pts = [f"{x_of(dates[0]):.1f},{y_of(1):.1f}"]
-        pts += [f"{x_of(dates[i]):.1f},{y_of(i + 1):.1f}" for i in range(0, len(dates), step)]
-        pts.append(f"{x_of(dates[-1]):.1f},{y_of(len(dates)):.1f}")
-        out.append(
-            f'<polyline fill="none" stroke="{color}" stroke-width="2" stroke-linejoin="round" '
-            f'stroke-linecap="round" points="{" ".join(pts)}"/>'
-        )
-        out.append(f'<circle cx="{x_of(dates[-1]):.1f}" cy="{y_of(len(dates)):.1f}" r="3.2" fill="{color}"/>')
-
-    lx, ly = SH_L, 68
-    for idx, (name, dates) in enumerate(active):
-        color = SERIES_COLORS[idx % len(SERIES_COLORS)]
-        text = f"{name} {len(dates)}"
-        width = 15 + len(text) * 6.7
-        if lx + width > W - SH_R:
-            lx, ly = SH_L, ly + 17
-        out.append(f'<rect x="{lx}" y="{ly - 7}" width="8" height="8" rx="2" fill="{color}"/>')
-        out.append(f'<text x="{lx + 13}" y="{ly}" class="lg" fill="{c["muted"]}">{esc(text)}</text>')
-        lx += width + 11
+        y += WORK_ROW_H
 
     out.append("</svg>")
     return "\n".join(out)
@@ -442,15 +399,9 @@ def main() -> int:
     weeks = weekly_commits([r["name"] for r in owned])
     print(f"  {sum(weeks)} commits over 52 weeks")
 
-    series = []
-    for repo in STAR_REPOS:
-        try:
-            dates = stargazer_dates(repo)
-        except (urllib.error.HTTPError, urllib.error.URLError) as exc:
-            print(f"  ! {repo}: {exc}", file=sys.stderr)
-            continue
-        series.append((repo, dates))
-        print(f"  {repo}: {len(dates)} stars")
+    work = work_rows()
+    for row in work:
+        print(f"  {row['name']}: {row['lang']} · {row['stars']} stars")
 
     written = []
     for theme in THEMES:
@@ -458,7 +409,7 @@ def main() -> int:
         for stem, svg in (
             ("hero", render_hero(theme, stats, weeks)),
             ("stack", render_stack(theme)),
-            ("star-history", render_stars(series, theme)),
+            ("work", render_work(work, stats, theme)),
             ("languages", render_langs(totals, theme)),
         ):
             if not svg:

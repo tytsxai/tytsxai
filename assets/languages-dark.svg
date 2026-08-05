@@ -6,32 +6,32 @@
 <line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
 <clipPath id="clip"><rect x="28" y="62" width="824" height="12" rx="6"/></clipPath>
 <g clip-path="url(#clip)">
-<rect x="28.00" y="62" width="409.69" height="12" fill="#3572A5"/>
-<rect x="437.09" y="62" width="289.39" height="12" fill="#3178c6"/>
-<rect x="725.88" y="62" width="50.19" height="12" fill="#f1e05a"/>
-<rect x="775.47" y="62" width="39.32" height="12" fill="#e34c26"/>
-<rect x="814.19" y="62" width="13.72" height="12" fill="#F05138"/>
-<rect x="827.31" y="62" width="13.09" height="12" fill="#89e051"/>
-<rect x="839.80" y="62" width="5.94" height="12" fill="#563d7c"/>
-<rect x="845.15" y="62" width="3.47" height="12" fill="#dea584"/>
-<rect x="848.02" y="62" width="4.58" height="12" fill="#7d8590"/>
+<rect x="28.00" y="62" width="527.96" height="12" fill="#3572A5"/>
+<rect x="555.36" y="62" width="129.15" height="12" fill="#f1e05a"/>
+<rect x="683.91" y="62" width="97.93" height="12" fill="#3178c6"/>
+<rect x="781.23" y="62" width="37.37" height="12" fill="#F05138"/>
+<rect x="818.00" y="62" width="12.87" height="12" fill="#89e051"/>
+<rect x="830.27" y="62" width="10.17" height="12" fill="#e34c26"/>
+<rect x="839.85" y="62" width="5.45" height="12" fill="#C1F12E"/>
+<rect x="844.70" y="62" width="4.49" height="12" fill="#563d7c"/>
+<rect x="848.59" y="62" width="4.01" height="12" fill="#7d8590"/>
 </g>
 <circle cx="32" cy="96" r="4" fill="#3572A5"/>
-<text x="41" y="100" class="lg" fill="#8b949e">Python 49.6%</text>
-<circle cx="136.4" cy="96" r="4" fill="#3178c6"/>
-<text x="145.4" y="100" class="lg" fill="#8b949e">TypeScript 35.0%</text>
-<circle cx="267.6" cy="96" r="4" fill="#f1e05a"/>
-<text x="276.6" y="100" class="lg" fill="#8b949e">JavaScript 6.0%</text>
-<circle cx="392.1" cy="96" r="4" fill="#e34c26"/>
-<text x="401.1" y="100" class="lg" fill="#8b949e">HTML 4.7%</text>
-<circle cx="476.40000000000003" cy="96" r="4" fill="#F05138"/>
-<text x="485.40000000000003" y="100" class="lg" fill="#8b949e">Swift 1.6%</text>
-<circle cx="567.4000000000001" cy="96" r="4" fill="#89e051"/>
-<text x="576.4000000000001" y="100" class="lg" fill="#8b949e">Shell 1.5%</text>
-<circle cx="658.4000000000001" cy="96" r="4" fill="#563d7c"/>
-<text x="667.4000000000001" y="100" class="lg" fill="#8b949e">CSS 0.6%</text>
-<circle cx="736.0000000000001" cy="96" r="4" fill="#dea584"/>
-<text x="745.0000000000001" y="100" class="lg" fill="#8b949e">Rust 0.3%</text>
+<text x="41" y="100" class="lg" fill="#8b949e">Python 64.0%</text>
+<circle cx="136.4" cy="96" r="4" fill="#f1e05a"/>
+<text x="145.4" y="100" class="lg" fill="#8b949e">JavaScript 15.6%</text>
+<circle cx="267.6" cy="96" r="4" fill="#3178c6"/>
+<text x="276.6" y="100" class="lg" fill="#8b949e">TypeScript 11.8%</text>
+<circle cx="398.8" cy="96" r="4" fill="#F05138"/>
+<text x="407.8" y="100" class="lg" fill="#8b949e">Swift 4.5%</text>
+<circle cx="489.8" cy="96" r="4" fill="#89e051"/>
+<text x="498.8" y="100" class="lg" fill="#8b949e">Shell 1.5%</text>
+<circle cx="580.8" cy="96" r="4" fill="#e34c26"/>
+<text x="589.8" y="100" class="lg" fill="#8b949e">HTML 1.2%</text>
+<circle cx="665.0999999999999" cy="96" r="4" fill="#C1F12E"/>
+<text x="674.0999999999999" y="100" class="lg" fill="#8b949e">Batchfile 0.6%</text>
+<circle cx="782.8999999999999" cy="96" r="4" fill="#563d7c"/>
+<text x="791.8999999999999" y="100" class="lg" fill="#8b949e">CSS 0.5%</text>
 <circle cx="32" cy="115" r="4" fill="#7d8590"/>
-<text x="41" y="119" class="lg" fill="#8b949e">Other 0.5%</text>
+<text x="41" y="119" class="lg" fill="#8b949e">Other 0.4%</text>
 </svg>

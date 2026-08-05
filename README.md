@@ -116,14 +116,14 @@ A meaningful share of my work is private client and production systems — agent
 
 ---
 
-<sub>NUMBERS</sub>
+<sub>WORK</sub>
 
-## Traction
+## Selected work
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/star-history-dark.svg" />
-    <img src="assets/star-history.svg" alt="Star history across six repositories, log scale" width="880" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.svg" />
+    <img src="assets/work.svg" alt="Selected work — pinned repositories with their primary language and star count: bazi-master, IDM-Activation-Script-Chinese, bilibili-cleaner, PromptPanel, lab-virtualchem, dewatermark-platform." width="880" />
   </picture>
 </p>
 
