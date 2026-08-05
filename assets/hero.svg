@@ -75,7 +75,7 @@
 <rect x="806.91" y="258" width="13.30" height="24" rx="2.5" fill="#aceebb"/>
 <rect x="822.81" y="258" width="13.30" height="24" rx="2.5" fill="#4ac26b"/>
 <rect x="838.70" y="258" width="13.30" height="24" rx="2.5" fill="#aceebb"/>
-<text x="852" y="250" class="lbl" text-anchor="end">1,047 COMMITS</text>
+<text x="852" y="250" class="lbl" text-anchor="end">1,016 COMMITS</text>
 <circle cx="32" cy="312" r="4.5" fill="#1a7f37"/>
 <text x="44" y="316" class="st" fill="#1a7f37">OPEN TO WORK</text>
 <text x="176" y="316" class="val" fill="#656d76">AI  ·  AUTOMATION  ·  PRODUCTION</text>
