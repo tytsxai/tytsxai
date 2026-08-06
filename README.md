@@ -22,13 +22,20 @@
   <sub>把 AI 从方案设计一路做到生产落地并长期稳定运行：0→1 独立负责，交付即可用。</sub>
 </p>
 
+<p align="center">
+  <sub><b>qilai / tytsxai</b> · AI Forward Deployed Engineer (FDE) · China · GMT+8 · open source under <a href="https://github.com/tytsxai?tab=repositories">tytsxai</a></sub><br/>
+  <sub>Keywords: AI FDE · LLM engineering · multi-agent · RAG · production AI · self-hosted bots · automation · Telegram tooling</sub>
+</p>
+
 ---
 
 <sub>POSITION</sub>
 
-## Open to work
+## Open to work · 求职意向
 
 Looking for **AI Forward Deployed Engineer (FDE)**, AI application engineering, LLM / agent engineering, or intelligent automation. Onsite in China or fully remote, worldwide.
+
+**Who this profile is for / 适合谁：** hiring managers and founders evaluating an FDE who ships production AI systems end-to-end — not demos only.
 
 - Born in the 2000s. Four years of hands-on AI engineering — shipped systems, not slideware.
 - I own the whole line: solution design → build → deploy → operate. Several production systems still running.
