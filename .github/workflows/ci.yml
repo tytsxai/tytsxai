@@ -19,6 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      # These assertions guard what actually breaks the rendered profile: a
+      # leaked token placeholder, and an <img> pointing at an asset that is not
+      # in the repo (GitHub renders that as a broken image on the profile page).
+      # They deliberately do not assert on prose headings — the previous version
+      # of this job pinned three headings from a superseded README layout and
+      # had been failing on every push since 2026-07-20 without anyone noticing.
       - name: Validate profile README
         shell: bash
         run: |
@@ -26,6 +32,31 @@ jobs:
           test -s README.md
           ! grep -n 'PAT_1' README.md
           ! grep -n 'profile-banner.svg' README.md
-          grep -n 'Portfolio Highlights' README.md
-          grep -n 'Agent Harness' README.md
-          grep -n 'Star History' README.md
+
+      - name: Every referenced asset exists
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=0
+          while read -r asset; do
+            if [ ! -f "$asset" ]; then
+              echo "::error::README references missing asset: $asset"
+              missing=1
+            else
+              echo "ok $asset"
+            fi
+          done < <(grep -oE '(src|srcset)="assets/[^"]+"' README.md | sed -E 's/.*"(assets\/[^"]+)"/\1/' | sort -u)
+          exit "$missing"
+
+      - name: Assets parse as SVG
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import glob, xml.dom.minidom
+          files = sorted(glob.glob("assets/*.svg"))
+          assert files, "no assets/*.svg found"
+          for f in files:
+              xml.dom.minidom.parse(f)
+              print("ok", f)
+          PY
