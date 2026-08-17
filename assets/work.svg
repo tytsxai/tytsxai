@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="254" viewBox="0 0 880 254" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="224" viewBox="0 0 880 224" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace">
 <style>.lbl{font-size:10.5px;letter-spacing:1.4px;fill:#8c959f}.val{font-size:12.5px}.nm{font-size:38px;font-weight:600;letter-spacing:-0.5px}.rl{font-size:13px;letter-spacing:3.2px;font-weight:500}.ax{font-size:10.5px}.lg{font-size:11px}.st{font-size:12.5px;letter-spacing:1.6px;font-weight:600}</style>
-<rect x="0.5" y="0.5" width="879" height="253" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="0.5" y="0.5" width="879" height="223" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
 <text x="28" y="27" class="lbl">SELECTED WORK  ·  PINNED REPOSITORIES</text>
-<text x="852" y="27" class="lbl" text-anchor="end">39 PUBLIC REPOS  ·  125 STARS</text>
+<text x="852" y="27" class="lbl" text-anchor="end">41 PUBLIC REPOS  ·  272 STARS</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#d8dee4"/>
 <circle cx="32" cy="68" r="4" fill="#f1e05a"/>
 <text x="44" y="72" class="val" fill="#0969da">bazi-master</text>
-<text x="358" y="72" class="lg" text-anchor="end" fill="#9a6700">18 ★</text>
+<text x="358" y="72" class="lg" text-anchor="end" fill="#9a6700">19 ★</text>
 <text x="380" y="72" class="lg" fill="#656d76">Divination platform — BaZi, Tarot, I Ching, AI reading</text>
 <circle cx="32" cy="98" r="4" fill="#C1F12E"/>
 <text x="44" y="102" class="val" fill="#0969da">IDM-Activation-Script-Chinese</text>
-<text x="358" y="102" class="lg" text-anchor="end" fill="#9a6700">89 ★</text>
+<text x="358" y="102" class="lg" text-anchor="end" fill="#9a6700">233 ★</text>
 <text x="380" y="102" class="lg" fill="#656d76">Chinese edition of the IDM activation toolkit</text>
 <circle cx="32" cy="128" r="4" fill="#3572A5"/>
 <text x="44" y="132" class="val" fill="#0969da">bilibili-cleaner</text>
-<text x="358" y="132" class="lg" text-anchor="end" fill="#9a6700">6 ★</text>
+<text x="358" y="132" class="lg" text-anchor="end" fill="#9a6700">5 ★</text>
 <text x="380" y="132" class="lg" fill="#656d76">Bulk cleanup for Bilibili accounts — QR login, web UI</text>
 <circle cx="32" cy="158" r="4" fill="#F05138"/>
 <text x="44" y="162" class="val" fill="#0969da">PromptPanel</text>
@@ -22,10 +22,6 @@
 <text x="380" y="162" class="lg" fill="#656d76">Native macOS prompt launcher with a global hotkey</text>
 <circle cx="32" cy="188" r="4" fill="#3572A5"/>
 <text x="44" y="192" class="val" fill="#0969da">lab-virtualchem</text>
-<text x="358" y="192" class="lg" text-anchor="end" fill="#9a6700">1 ★</text>
+<text x="358" y="192" class="lg" text-anchor="end" fill="#9a6700">2 ★</text>
 <text x="380" y="192" class="lg" fill="#656d76">Gamified virtual chemistry lab for teaching and drills</text>
-<circle cx="32" cy="218" r="4" fill="#3572A5"/>
-<text x="44" y="222" class="val" fill="#0969da">dewatermark-platform</text>
-<text x="358" y="222" class="lg" text-anchor="end" fill="#9a6700">0 ★</text>
-<text x="380" y="222" class="lg" fill="#656d76">Self-hosted video watermark-removal API and worker</text>
 </svg>
