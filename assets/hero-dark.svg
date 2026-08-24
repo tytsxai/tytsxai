@@ -74,8 +74,8 @@
 <rect x="791.02" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
 <rect x="806.91" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
 <rect x="822.81" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
-<rect x="838.70" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
-<text x="852" y="250" class="lbl" text-anchor="end">2,795 COMMITS</text>
+<rect x="838.70" y="258" width="13.30" height="24" rx="2.5" fill="#21262d"/>
+<text x="852" y="250" class="lbl" text-anchor="end">2,757 COMMITS</text>
 <circle cx="32" cy="312" r="4.5" fill="#3fb950"/>
 <text x="44" y="316" class="st" fill="#3fb950">OPEN TO WORK</text>
 <text x="176" y="316" class="val" fill="#8b949e">BUILD  ·  DEPLOY  ·  OPERATE  ·  HAND OVER</text>
