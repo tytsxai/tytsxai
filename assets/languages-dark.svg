@@ -6,22 +6,22 @@
 <line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
 <clipPath id="clip"><rect x="28" y="62" width="824" height="12" rx="6"/></clipPath>
 <g clip-path="url(#clip)">
-<rect x="28.00" y="62" width="472.03" height="12" fill="#3572A5"/>
-<rect x="499.43" y="62" width="185.09" height="12" fill="#3178c6"/>
-<rect x="683.92" y="62" width="95.33" height="12" fill="#f1e05a"/>
-<rect x="778.65" y="62" width="21.55" height="12" fill="#89e051"/>
-<rect x="799.60" y="62" width="17.49" height="12" fill="#F05138"/>
-<rect x="816.49" y="62" width="13.98" height="12" fill="#dea584"/>
-<rect x="829.86" y="62" width="10.29" height="12" fill="#e34c26"/>
-<rect x="839.55" y="62" width="5.52" height="12" fill="#563d7c"/>
-<rect x="844.47" y="62" width="8.13" height="12" fill="#7d8590"/>
+<rect x="28.00" y="62" width="474.01" height="12" fill="#3572A5"/>
+<rect x="501.41" y="62" width="184.05" height="12" fill="#3178c6"/>
+<rect x="684.86" y="62" width="94.80" height="12" fill="#f1e05a"/>
+<rect x="779.06" y="62" width="21.43" height="12" fill="#89e051"/>
+<rect x="799.89" y="62" width="17.39" height="12" fill="#F05138"/>
+<rect x="816.69" y="62" width="13.90" height="12" fill="#dea584"/>
+<rect x="829.99" y="62" width="10.24" height="12" fill="#e34c26"/>
+<rect x="839.62" y="62" width="5.49" height="12" fill="#563d7c"/>
+<rect x="844.52" y="62" width="8.08" height="12" fill="#7d8590"/>
 </g>
 <circle cx="32" cy="96" r="4" fill="#3572A5"/>
-<text x="41" y="100" class="lg" fill="#8b949e">Python 57.2%</text>
+<text x="41" y="100" class="lg" fill="#8b949e">Python 57.5%</text>
 <circle cx="136.4" cy="96" r="4" fill="#3178c6"/>
-<text x="145.4" y="100" class="lg" fill="#8b949e">TypeScript 22.4%</text>
+<text x="145.4" y="100" class="lg" fill="#8b949e">TypeScript 22.3%</text>
 <circle cx="267.6" cy="96" r="4" fill="#f1e05a"/>
-<text x="276.6" y="100" class="lg" fill="#8b949e">JavaScript 11.5%</text>
+<text x="276.6" y="100" class="lg" fill="#8b949e">JavaScript 11.4%</text>
 <circle cx="398.8" cy="96" r="4" fill="#89e051"/>
 <text x="407.8" y="100" class="lg" fill="#8b949e">Shell 2.5%</text>
 <circle cx="489.8" cy="96" r="4" fill="#F05138"/>

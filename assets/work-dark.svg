@@ -2,15 +2,15 @@
 <style>.lbl{font-size:10.5px;letter-spacing:1.4px;fill:#7d8590}.val{font-size:12.5px}.nm{font-size:38px;font-weight:600;letter-spacing:-0.5px}.rl{font-size:13px;letter-spacing:3.2px;font-weight:500}.ax{font-size:10.5px}.lg{font-size:11px}.st{font-size:12.5px;letter-spacing:1.6px;font-weight:600}</style>
 <rect x="0.5" y="0.5" width="879" height="223" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="28" y="27" class="lbl">SELECTED WORK  ·  PINNED REPOSITORIES</text>
-<text x="852" y="27" class="lbl" text-anchor="end">41 PUBLIC REPOS  ·  272 STARS</text>
+<text x="852" y="27" class="lbl" text-anchor="end">41 PUBLIC REPOS  ·  378 STARS</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
 <circle cx="32" cy="68" r="4" fill="#f1e05a"/>
 <text x="44" y="72" class="val" fill="#58a6ff">bazi-master</text>
-<text x="358" y="72" class="lg" text-anchor="end" fill="#e3b341">19 ★</text>
+<text x="358" y="72" class="lg" text-anchor="end" fill="#e3b341">20 ★</text>
 <text x="380" y="72" class="lg" fill="#8b949e">Divination platform — BaZi, Tarot, I Ching, AI reading</text>
 <circle cx="32" cy="98" r="4" fill="#C1F12E"/>
 <text x="44" y="102" class="val" fill="#58a6ff">IDM-Activation-Script-Chinese</text>
-<text x="358" y="102" class="lg" text-anchor="end" fill="#e3b341">233 ★</text>
+<text x="358" y="102" class="lg" text-anchor="end" fill="#e3b341">335 ★</text>
 <text x="380" y="102" class="lg" fill="#8b949e">Chinese edition of the IDM activation toolkit</text>
 <circle cx="32" cy="128" r="4" fill="#3572A5"/>
 <text x="44" y="132" class="val" fill="#58a6ff">bilibili-cleaner</text>
