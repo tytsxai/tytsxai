@@ -2,7 +2,7 @@
 """Generate every visual on the profile as a self-hosted SVG.
 
 Design direction — "status board":
-An FDE is judged on whether the thing still runs in someone else's production.
+Delivery engineering is judged on whether it still runs after handover.
 So the profile is dressed as an ops console: monospace data rows, hairline
 rules, status dots, and a real 52-week shipping-cadence strip. Every accent
 colour carries meaning (green = live, amber = traction, blue = information)
@@ -30,21 +30,22 @@ from pathlib import Path
 
 USER = "tytsxai"
 NAME = "qilai"
-ROLE = "AI FORWARD DEPLOYED ENGINEER"
-SIGNOFF = "AI  ·  AUTOMATION  ·  PRODUCTION"
-TELEGRAM = "t.me/cangqilai123"
+ROLE = "AI APPLICATION & DELIVERY ENGINEER"
+SIGNOFF = "BUILD  ·  DEPLOY  ·  OPERATE  ·  HAND OVER"
+# Email is the only contact channel published anywhere on this profile.
+EMAIL = "wwtvn1937@gmail.com"
 
 # Repos shown in the "selected work" panel, in display order. Keep this in
 # sync with the pinned repositories on the profile. The blurb is written by
 # hand; language and star count are read from the API on every run, so the
 # panel can never drift away from what a visitor sees on the repo page.
 WORK_REPOS = [
+    ("IDM-Activation-Script-Chinese", "Chinese GBK toolkit · registry backup, no patching"),
     ("bazi-master", "Divination platform — BaZi, Tarot, I Ching, AI reading"),
-    ("IDM-Activation-Script-Chinese", "Chinese edition of the IDM activation toolkit"),
+    ("cleanplate", "Local-first video watermark removal — FastAPI + ComfyUI"),
     ("bilibili-cleaner", "Bulk cleanup for Bilibili accounts — QR login, web UI"),
     ("PromptPanel", "Native macOS prompt launcher with a global hotkey"),
-    ("lab-virtualchem", "Gamified virtual chemistry lab for teaching and drills"),
-    ("dewatermark-platform", "Self-hosted video watermark-removal API and worker"),
+    ("virtual-chem-lab", "Gamified virtual chemistry lab for teaching and drills"),
 ]
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
@@ -198,15 +199,15 @@ def render_hero(theme: str, stats: dict, weeks: list[int]) -> str:
     # data grid — two columns, four rows. Right-hand values stay under ~44
     # characters or they run past the panel edge.
     rows = [
-        ("FOCUS", "agents · multi-agent · RAG · automation", None),
-        ("EXPERIENCE", "4 years shipping AI into production", None),
-        ("DELIVERY", "0→1 solo · design → build → operate", None),
-        ("DEPTH", "tool contracts · evals · cost control", None),
+        ("FOCUS", "agent workflows · RAG · automation", None),
+        ("EXPERIENCE", "4 yrs engineering · AI in prod since 2023", None),
+        ("DELIVERY", "1-2 week MVP · build → deploy → operate", None),
+        ("DEPTH", "state machines · idempotency · rollback", None),
     ]
     right = [
         ("BASED", "China · GMT+8", None),
-        ("WORK MODE", "onsite in China  /  fully remote", None),
-        ("MOBILITY", "passport valid · travels to deploy", None),
+        ("WORK MODE", "onsite · remote · client site", None),
+        ("AVAILABLE", "immediately · no notice period", c["green"]),
         ("PUBLIC WORK", f"{stats['repos']} own repos · {stats['stars']:,} stars", c["amber"]),
     ]
     ry = 158
@@ -249,7 +250,7 @@ def render_hero(theme: str, stats: dict, weeks: list[int]) -> str:
     )
     out.append(
         f'<text x="{W - PAD}" y="{sy}" class="val" text-anchor="end" fill="{c["muted"]}">'
-        f'telegram  <tspan fill="{c["blue"]}">{esc(TELEGRAM)}</tspan></text>'
+        f'email  <tspan fill="{c["blue"]}">{esc(EMAIL)}</tspan></text>'
     )
 
     out.append("</svg>")
@@ -259,12 +260,13 @@ def render_hero(theme: str, stats: dict, weeks: list[int]) -> str:
 # ------------------------------------------------------------------- stack
 
 STACK = [
-    ("LANGUAGES", "Python · TypeScript · Rust · Swift · Bash", "ink"),
-    ("AI / LLM", "Claude · OpenAI · MCP · tool calling · multi-agent · RAG · evals · guardrails", "purple"),
-    ("BACKEND", "FastAPI · Node · Express · PostgreSQL · Redis · Prisma", "ink"),
+    ("LANGUAGES", "TypeScript · Python · Swift · Rust · Bash", "ink"),
+    ("AI / LLM", "LLM APIs · tool calling · agent workflows · JSON Schema · MCP · RAG", "purple"),
+    ("BACKEND", "Node.js · FastAPI · Express · PostgreSQL · Redis · BullMQ", "ink"),
     ("FRONTEND", "React · Next.js · Vite · Tailwind · SwiftUI", "ink"),
-    ("INFRA", "Docker · Linux · systemd · GitHub Actions · Nginx · Cloudflare", "ink"),
-    ("PRACTICE", "dry-run gates · rate limits · structured logs · rollback paths · token budgeting", "green"),
+    ("RETRIEVAL", "Meilisearch · pgvector · hybrid recall · rerank · SimHash dedup", "blue"),
+    ("INFRA", "Docker · Linux · Nginx · GitHub Actions · GPU model serving (ComfyUI/SD)", "ink"),
+    ("PRACTICE", "idempotent retries · human handoff · structured logs · cost per call", "green"),
 ]
 
 

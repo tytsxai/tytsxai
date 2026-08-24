@@ -5,23 +5,23 @@
 <text x="852" y="27" class="lbl" text-anchor="end">UPDATED 2026-08-24</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
 <text x="28" y="98" class="nm" fill="#e6edf3">qilai</text>
-<text x="28" y="126" class="rl" fill="#58a6ff">AI FORWARD DEPLOYED ENGINEER</text>
+<text x="28" y="126" class="rl" fill="#58a6ff">AI APPLICATION &amp; DELIVERY ENGINEER</text>
 <text x="28" y="158" class="lbl">FOCUS</text>
-<text x="124" y="158" class="val" fill="#e6edf3">agents · multi-agent · RAG · automation</text>
+<text x="124" y="158" class="val" fill="#e6edf3">agent workflows · RAG · automation</text>
 <text x="468" y="158" class="lbl">BASED</text>
 <text x="564" y="158" class="val" fill="#e6edf3">China · GMT+8</text>
 <text x="28" y="180" class="lbl">EXPERIENCE</text>
-<text x="124" y="180" class="val" fill="#e6edf3">4 years shipping AI into production</text>
+<text x="124" y="180" class="val" fill="#e6edf3">4 yrs engineering · AI in prod since 2023</text>
 <text x="468" y="180" class="lbl">WORK MODE</text>
-<text x="564" y="180" class="val" fill="#e6edf3">onsite in China  /  fully remote</text>
+<text x="564" y="180" class="val" fill="#e6edf3">onsite · remote · client site</text>
 <text x="28" y="202" class="lbl">DELIVERY</text>
-<text x="124" y="202" class="val" fill="#e6edf3">0→1 solo · design → build → operate</text>
-<text x="468" y="202" class="lbl">MOBILITY</text>
-<text x="564" y="202" class="val" fill="#e6edf3">passport valid · travels to deploy</text>
+<text x="124" y="202" class="val" fill="#e6edf3">1-2 week MVP · build → deploy → operate</text>
+<text x="468" y="202" class="lbl">AVAILABLE</text>
+<text x="564" y="202" class="val" fill="#3fb950">immediately · no notice period</text>
 <text x="28" y="224" class="lbl">DEPTH</text>
-<text x="124" y="224" class="val" fill="#e6edf3">tool contracts · evals · cost control</text>
+<text x="124" y="224" class="val" fill="#e6edf3">state machines · idempotency · rollback</text>
 <text x="468" y="224" class="lbl">PUBLIC WORK</text>
-<text x="564" y="224" class="val" fill="#e3b341">41 own repos · 378 stars</text>
+<text x="564" y="224" class="val" fill="#e3b341">41 own repos · 392 stars</text>
 <text x="28" y="250" class="lbl">SHIPPING CADENCE  ·  52 WEEKS</text>
 <rect x="28.00" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
 <rect x="43.90" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
@@ -74,10 +74,10 @@
 <rect x="791.02" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
 <rect x="806.91" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
 <rect x="822.81" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
-<rect x="838.70" y="258" width="13.30" height="24" rx="2.5" fill="#21262d"/>
-<text x="852" y="250" class="lbl" text-anchor="end">2,761 COMMITS</text>
+<rect x="838.70" y="258" width="13.30" height="24" rx="2.5" fill="#0e4429"/>
+<text x="852" y="250" class="lbl" text-anchor="end">2,795 COMMITS</text>
 <circle cx="32" cy="312" r="4.5" fill="#3fb950"/>
 <text x="44" y="316" class="st" fill="#3fb950">OPEN TO WORK</text>
-<text x="176" y="316" class="val" fill="#8b949e">AI  ·  AUTOMATION  ·  PRODUCTION</text>
-<text x="852" y="316" class="val" text-anchor="end" fill="#8b949e">telegram  <tspan fill="#58a6ff">t.me/cangqilai123</tspan></text>
+<text x="176" y="316" class="val" fill="#8b949e">BUILD  ·  DEPLOY  ·  OPERATE  ·  HAND OVER</text>
+<text x="852" y="316" class="val" text-anchor="end" fill="#8b949e">email  <tspan fill="#58a6ff">wwtvn1937@gmail.com</tspan></text>
 </svg>
