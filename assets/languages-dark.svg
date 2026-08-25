@@ -6,22 +6,22 @@
 <line x1="0" y1="44" x2="880" y2="44" stroke="#21262d"/>
 <clipPath id="bclip"><rect x="28" y="62" width="824" height="18" rx="5"/></clipPath>
 <g clip-path="url(#bclip)">
-<rect x="28.00" y="62" width="473.39" height="18" fill="#3572A5"/>
-<rect x="500.79" y="62" width="183.81" height="18" fill="#3178c6"/>
-<rect x="684.00" y="62" width="95.75" height="18" fill="#f1e05a"/>
-<rect x="779.15" y="62" width="21.41" height="18" fill="#89e051"/>
-<rect x="799.95" y="62" width="17.37" height="18" fill="#F05138"/>
-<rect x="816.72" y="62" width="13.88" height="18" fill="#dea584"/>
+<rect x="28.00" y="62" width="473.51" height="18" fill="#3572A5"/>
+<rect x="500.91" y="62" width="183.75" height="18" fill="#3178c6"/>
+<rect x="684.06" y="62" width="95.71" height="18" fill="#f1e05a"/>
+<rect x="779.17" y="62" width="21.40" height="18" fill="#89e051"/>
+<rect x="799.97" y="62" width="17.37" height="18" fill="#F05138"/>
+<rect x="816.74" y="62" width="13.88" height="18" fill="#dea584"/>
 <rect x="830.01" y="62" width="10.22" height="18" fill="#e34c26"/>
 <rect x="839.63" y="62" width="5.49" height="18" fill="#663399"/>
 <rect x="844.52" y="62" width="3.12" height="18" fill="#C1F12E"/>
-<rect x="847.03" y="62" width="2.17" height="18" fill="#b07219"/>
+<rect x="847.04" y="62" width="2.17" height="18" fill="#b07219"/>
 <rect x="848.61" y="62" width="1.40" height="18" fill="#00ADD8"/>
 <rect x="849.32" y="62" width="1.40" height="18" fill="#6866fb"/>
 <rect x="849.97" y="62" width="1.40" height="18" fill="#384d54"/>
 <rect x="850.49" y="62" width="1.40" height="18" fill="#336790"/>
 <rect x="850.98" y="62" width="1.40" height="18" fill="#012456"/>
-<rect x="851.44" y="62" width="1.40" height="18" fill="#264b99"/>
+<rect x="851.45" y="62" width="1.40" height="18" fill="#264b99"/>
 <rect x="851.73" y="62" width="1.40" height="18" fill="#427819"/>
 <rect x="851.98" y="62" width="1.40" height="18" fill="#7e858d"/>
 <rect x="851.99" y="62" width="1.40" height="18" fill="#f34b7d"/>

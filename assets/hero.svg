@@ -18,7 +18,7 @@
 <text x="462.0" y="212" class="num" fill="#0969da">19</text>
 <text x="463.0" y="230" class="label">LANGUAGES</text>
 <rect x="655.0" y="176" width="197.0" height="66" rx="9" fill="#f6f8fa" stroke="#d0d7de"/>
-<text x="671.0" y="212" class="num" fill="#1a7f37">2,816</text>
+<text x="671.0" y="212" class="num" fill="#1a7f37">2,772</text>
 <text x="672.0" y="230" class="label">COMMITS · 52W</text>
 <text x="28" y="266" class="label">SHIPPING CADENCE  ·  52 WEEKS</text>
 <text x="852" y="266" class="label" text-anchor="end">BUILD  ·  DEPLOY  ·  OPERATE  ·  HAND OVER</text>
@@ -40,7 +40,7 @@
 <rect x="266.44" y="274" width="13.30" height="22" rx="2.5" fill="#116329"/>
 <rect x="282.34" y="274" width="13.30" height="22" rx="2.5" fill="#116329"/>
 <rect x="298.23" y="274" width="13.30" height="22" rx="2.5" fill="#116329"/>
-<rect x="314.13" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
+<rect x="314.13" y="274" width="13.30" height="22" rx="2.5" fill="#116329"/>
 <rect x="330.03" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
 <rect x="345.92" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
 <rect x="361.82" y="274" width="13.30" height="22" rx="2.5" fill="#4ac26b"/>
@@ -59,7 +59,7 @@
 <rect x="568.47" y="274" width="13.30" height="22" rx="2.5" fill="#aceebb"/>
 <rect x="584.37" y="274" width="13.30" height="22" rx="2.5" fill="#4ac26b"/>
 <rect x="600.26" y="274" width="13.30" height="22" rx="2.5" fill="#eaeef2"/>
-<rect x="616.16" y="274" width="13.30" height="22" rx="2.5" fill="#116329"/>
+<rect x="616.16" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
 <rect x="632.05" y="274" width="13.30" height="22" rx="2.5" fill="#4ac26b"/>
 <rect x="647.95" y="274" width="13.30" height="22" rx="2.5" fill="#aceebb"/>
 <rect x="663.85" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
@@ -73,7 +73,7 @@
 <rect x="791.02" y="274" width="13.30" height="22" rx="2.5" fill="#2da44e"/>
 <rect x="806.91" y="274" width="13.30" height="22" rx="2.5" fill="#4ac26b"/>
 <rect x="822.81" y="274" width="13.30" height="22" rx="2.5" fill="#aceebb"/>
-<rect x="838.70" y="274" width="13.30" height="22" rx="2.5" fill="#4ac26b"/>
+<rect x="838.70" y="274" width="13.30" height="22" rx="2.5" fill="#aceebb"/>
 <text x="28" y="320" class="data" fill="#656d76">email  <tspan fill="#0969da">wwtvn1937@gmail.com</tspan></text>
 <text x="852" y="320" class="label" text-anchor="end">ONSITE  ·  REMOTE  ·  CLIENT SITE</text>
 </svg>
