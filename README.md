@@ -58,10 +58,6 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
   </picture>
 </p>
 
-<p align="center">
-  <sub>Kubernetes 是线上运维的参与深度，不是主栈，图里没单列出来。</sub>
-</p>
-
 ---
 
 公开、可运行、在维护。下面的星标与语言数据由 CI 每周从 GitHub API 刷新。
