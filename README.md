@@ -25,28 +25,28 @@
 
 ---
 
-<sub>WHAT I DO</sub>
+<sub>WHAT</sub>
 
-## 我擅长什么
+## 能力方向
 
-常驻中国、时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
+常驻中国，时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
 
-核心是把模型接到扛得住生产的地方：Agent 工作流、Tool Calling、结构化输出，MCP / RAG 以接入落地为主，不做算法研究——失败能重试、过程能回查、卡住了有人接手，demo 跑通不算交付。最拿手的是异步系统的状态机与幂等设计，模型 API、三方平台、链上接口这类外部依赖，都能做成可重试、可回放、可排障的模块，状态一致性与补偿审计是我最硬的一块。检索方向做过全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重，后来做 RAG 知识库，召回层就是从这条链路接出去的。
+核心方向是把模型接到扛得住生产的地方：Agent 工作流、Tool Calling、结构化输出，MCP / RAG 以接入落地为主，不做算法研究；失败可重试、过程可回查、异常留有人工接管路径。主要积累在异步系统的状态机与幂等设计——模型 API、三方平台、链上接口这类外部依赖，通常做成可重试、可回放、可排障的模块，涉及状态一致性与补偿审计。检索方向做过全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重，后续的 RAG 知识库检索层沿用了这条链路。
 
-交付上习惯一个人走完全链路——接口、库表、React 页面、Docker 部署、GPU 环境上的模型服务、线上排障都能自己收尾，交付现场不用等别人接力。也在意交付之后能不能被接手：通常先用一到两周出可用版本，再补齐幂等、重试、人工接管与回滚，验收清单、Runbook 和部署脚本一起给，不写代码的人也能自己跑起来。
+交付覆盖接口、库表、React 页面、Docker 部署、GPU 环境上的模型服务与线上排障，通常一人负责到底。节奏上先用一到两周产出可用版本，再补齐幂等、重试、人工接管与回滚，随交付附带验收清单、Runbook 和部署脚本。
 
-公司内部做过 AI 自动化运营平台、内容生产线、AI 图像处理平台与中文混合检索系统，源码不外传，架构和取舍可以细聊——简历和代码走读发邮件约。
+公司内部项目包括 AI 自动化运营平台、内容生产线、AI 图像处理平台与中文混合检索系统；源码不对外公开，架构与技术选型可在沟通中展开。
 
 <details>
 <summary><b>English</b></summary>
 
 <br/>
 
-**AI application & delivery engineer**, based in China (GMT+8), roughly four years of engineering since 2022.03 and AI in production since 2023. Available immediately, onsite or remote.
+**AI application & delivery engineer**, based in China (GMT+8). Roughly four years of engineering since 2022.03, AI in production since 2023. Available immediately, onsite or remote.
 
-I put models where they have to survive production — agent workflows, tool calling, structured output, MCP and RAG as integration work rather than research — with retries, replayable state and a human handoff for everything that can get stuck; a demo that runs once isn't a delivery. What I'm strongest at is async state machines and idempotency: model APIs, third-party platforms and chain interfaces turned into modules you can retry, replay and debug. On the retrieval side I've shipped full-text + vector hybrid recall with score fusion and rerank, and later routed a RAG pipeline through the same recall layer.
+Core focus: putting models where they have to survive production — agent workflows, tool calling, structured output, MCP and RAG as integration work rather than research — with retries, replayable state, and a human handoff for anything that can get stuck. Primary strength is async state machines and idempotency: model APIs, third-party platforms and chain interfaces turned into modules that can be retried, replayed and debugged. On the retrieval side: full-text + vector hybrid recall, score fusion, rerank; a later RAG pipeline reused the same recall layer.
 
-I own the whole line solo — API and schema design, React front end, Docker deployment, GPU model serving, on-call debugging — and I care about what happens after handover: a usable version in a week or two, then idempotency, retries, human takeover and rollback, shipped with an acceptance checklist, a runbook and deploy scripts. In-house work has covered an AI automation platform, a content pipeline, an image-processing platform and a Chinese hybrid search system; source stays private, but the architecture is open for a call.
+Delivery covers API and schema design, the React front end, Docker deployment, GPU model serving, and on-call debugging — usually end to end. Typical pace: a usable version in a week or two, then idempotency, retries, human takeover and rollback, shipped with an acceptance checklist, a runbook and deploy scripts. In-house work has included an AI automation platform, a content pipeline, an image-processing platform and a Chinese hybrid search system; source stays private, architecture is open to discuss.
 
 Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
@@ -110,9 +110,9 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
 **[wwtvn1937@gmail.com](mailto:wwtvn1937@gmail.com)** —— 本主页唯一的联系方式。
 
-直接说要解决什么问题，比发 JD 有效：一两封邮件之内我会告诉你能不能做、大概怎么做、需要什么前提。
+邮件里说明要解决的问题即可，比发 JD 更有效；通常一到两封邮件内能确认是否能接、大致方案与所需前提。
 
-<sub>Email **wwtvn1937@gmail.com** — the only contact channel here. Send the problem rather than the job description.</sub>
+<sub>Email **wwtvn1937@gmail.com** — the only contact channel here. A problem description works better than a job description.</sub>
 
 <p align="center">
   <sub>AI 只有活过生产环境才算数；自动化只有还在控制之内才算数。</sub>
