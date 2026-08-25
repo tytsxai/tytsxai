@@ -29,33 +29,24 @@
 
 ## 我擅长什么
 
-**把模型接到能上线的地方。**
-Agent 工作流、Tool Calling、结构化输出、MCP / RAG 接入。失败能重试、过程能回查、卡住了有人接手——demo 跑通不算交付。
+常驻中国、时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
 
-**异步系统的状态机与幂等。**
-模型 API、三方平台、链上接口这类外部依赖，做成可重试、可回放、可排障的模块。状态一致性、补偿与回放审计是我最硬的一块。
+核心是把模型接到扛得住生产的地方：Agent 工作流、Tool Calling、结构化输出，MCP / RAG 以接入落地为主，不做算法研究——失败能重试、过程能回查、卡住了有人接手，demo 跑通不算交付。最拿手的是异步系统的状态机与幂等设计，模型 API、三方平台、链上接口这类外部依赖，都能做成可重试、可回放、可排障的模块，状态一致性与补偿审计是我最硬的一块。检索方向做过全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重，后来做 RAG 知识库，召回层就是从这条链路接出去的。
 
-**检索做到能用。**
-全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重；后来做 RAG 知识库，召回层就是从这条链路接出去的。
+交付上习惯一个人走完全链路——接口、库表、React 页面、Docker 部署、GPU 环境上的模型服务、线上排障都能自己收尾，交付现场不用等别人接力。也在意交付之后能不能被接手：通常先用一到两周出可用版本，再补齐幂等、重试、人工接管与回滚，验收清单、Runbook 和部署脚本一起给，不写代码的人也能自己跑起来。
 
-**一个人走完全链路。**
-接口、库表、React 页面、Docker 部署、GPU 环境上的模型服务、线上排障，交付现场不用等别人接力。
-
-**交付到别人能接手。**
-1–2 周先出可用版本，再补幂等、重试、人工接管与回滚；验收清单、Runbook 和部署脚本一起给，不写代码的人也能自己跑。
-
-<sub>约 4 年工程经验（2022.03 起），2023 年起把 AI 工程化落地。公司内部做过 AI 自动化运营平台、内容生产线、AI 图像处理平台与中文混合检索系统，源码不外传，架构和取舍可以细聊。目前可随时到岗，远程或驻场都行——简历和代码走读发邮件约。</sub>
+公司内部做过 AI 自动化运营平台、内容生产线、AI 图像处理平台与中文混合检索系统，源码不外传，架构和取舍可以细聊——简历和代码走读发邮件约。
 
 <details>
 <summary><b>English</b></summary>
 
 <br/>
 
-**AI application & delivery engineer**, China (GMT+8), available immediately, onsite or remote.
+**AI application & delivery engineer**, based in China (GMT+8), roughly four years of engineering since 2022.03 and AI in production since 2023. Available immediately, onsite or remote.
 
-I put models where they have to survive production: agent workflows, tool calling, structured output, MCP and RAG integration, with retries, replayable state and a human handoff for everything that can get stuck. Strongest on async state machines and idempotency — model APIs, third-party platforms and chain interfaces turned into modules you can retry, replay and debug. Also full-text + vector hybrid retrieval with score fusion and rerank, and self-hosted model serving on GPU boxes.
+I put models where they have to survive production — agent workflows, tool calling, structured output, MCP and RAG as integration work rather than research — with retries, replayable state and a human handoff for everything that can get stuck; a demo that runs once isn't a delivery. What I'm strongest at is async state machines and idempotency: model APIs, third-party platforms and chain interfaces turned into modules you can retry, replay and debug. On the retrieval side I've shipped full-text + vector hybrid recall with score fusion and rerank, and later routed a RAG pipeline through the same recall layer.
 
-Roughly four years of engineering, AI in production since 2023. I own the whole line solo — API and schema design, React front end, Docker deployment, on-call debugging — and hand systems over with a runbook rather than with my phone number.
+I own the whole line solo — API and schema design, React front end, Docker deployment, GPU model serving, on-call debugging — and I care about what happens after handover: a usable version in a week or two, then idempotency, retries, human takeover and rollback, shipped with an acceptance checklist, a runbook and deploy scripts. In-house work has covered an AI automation platform, a content pipeline, an image-processing platform and a Chinese hybrid search system; source stays private, but the architecture is open for a call.
 
 Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
@@ -73,7 +64,7 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 </p>
 
 <p align="center">
-  <sub>MCP / RAG 以接入与落地为主，不做算法研究；Kubernetes 为线上运维参与深度，不吹成主栈。</sub>
+  <sub>Kubernetes 是线上运维的参与深度，不是主栈，图里没单列出来。</sub>
 </p>
 
 ---
