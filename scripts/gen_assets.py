@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Generate every visual on the profile as a self-hosted SVG.
 
-Design direction — "status board":
-Delivery engineering is judged on whether it still runs after handover.
-So the profile is dressed as an ops console: monospace data rows, hairline
-rules, status dots, and a real 52-week shipping-cadence strip. Every accent
-colour carries meaning (green = live, amber = traction, blue = information)
-rather than decoration.
+Design direction — "engineering dossier":
+Four panels that each do a different job and therefore look different.
+The hero states who and how much; the stack panel shows breadth as a chip
+matrix in real brand colours; the language board shows how far each language
+reaches across the repository set; the work panel puts the star counts where
+they can actually be seen.
+
+Type is a two-font system: monospace carries labels, chips and data (it is
+the working font of the job) while the system sans carries display numbers
+and the name, so the eye has somewhere to land. Accent colours all mean
+something — green is live, amber is traction, blue is information, and a
+technology's chip wears its own brand colour.
 
 Practical reason it is self-hosted: star-history.com and github-readme-stats
 share one pool of GitHub tokens and serve 503 for hours at a time, and
@@ -31,45 +37,60 @@ from pathlib import Path
 USER = "tytsxai"
 NAME = "qilai"
 ROLE = "AI APPLICATION & DELIVERY ENGINEER"
+TAGLINE = "Agent workflows, retrieval and automation, taken all the way into production"
 SIGNOFF = "BUILD  ·  DEPLOY  ·  OPERATE  ·  HAND OVER"
-# Email is the only contact channel published anywhere on this profile.
 EMAIL = "wwtvn1937@gmail.com"
 
-# Repos shown in the "selected work" panel, in display order. Keep this in
-# sync with the pinned repositories on the profile. The blurb is written by
-# hand; language and star count are read from the API on every run, so the
-# panel can never drift away from what a visitor sees on the repo page.
+# Repos shown in the "selected work" panel. Keep this set in sync with the
+# evidence table in README.md — the two drifting apart is the failure mode
+# this list exists to prevent. Order here does not matter: the panel sorts by
+# star count at render time so the strongest evidence always leads. Blurbs are
+# written by hand; language and stars come from the API on every run, so the
+# panel can never claim a number the repo page contradicts.
 WORK_REPOS = [
-    ("IDM-Activation-Script-Chinese", "Chinese GBK toolkit · registry backup, no patching"),
-    ("bazi-master", "Divination platform — BaZi, Tarot, I Ching, AI reading"),
-    ("cleanplate", "Local-first video watermark removal — FastAPI + ComfyUI"),
-    ("bilibili-cleaner", "Bulk cleanup for Bilibili accounts — QR login, web UI"),
-    ("PromptPanel", "Native macOS prompt launcher with a global hotkey"),
-    ("virtual-chem-lab", "Gamified virtual chemistry lab for teaching and drills"),
+    ("IDM-Activation-Script-Chinese", "Windows toolkit with real users — issues, GBK encoding, registry rollback"),
+    ("bazi-master", "Full-stack divination platform — React, Express, PostgreSQL, LLM readings"),
+    ("cleanplate", "Local-first video watermark removal — FastAPI, ComfyUI, async job queue"),
+    ("bilibili-cleaner", "Destructive automation done safely — QR login, rate limits, review gate"),
+    ("PromptPanel", "Native macOS prompt launcher — Swift, SwiftUI, global hotkey, local-first"),
+    ("macfriends-cli", "Systems-level Rust + ObjC++ agent, ABI-pinned, never touches the network"),
 ]
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
 
 MONO = "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace"
+SANS = "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
 
-# One token set per theme. `surface` matches GitHub's own panel colour so the
-# assets read as part of the page rather than as pasted-in images.
+# Monospace advance width is a fixed fraction of the font size, which is the
+# whole reason the chip and column maths below works without measuring text.
+MONO_RATIO = 0.605
+
+
+def mw(size: float, text: str) -> float:
+    return len(text) * size * MONO_RATIO
+
+
+# One token set per theme. Surfaces match GitHub's own so the assets read as
+# part of the page rather than as pasted-in images.
 THEMES = {
     "light": {
-        "surface": "#f6f8fa", "border": "#d0d7de", "rule": "#d8dee4",
+        "surface": "#ffffff", "sunken": "#f6f8fa", "border": "#d0d7de", "rule": "#d8dee4",
         "ink": "#1f2328", "muted": "#656d76", "faint": "#8c959f",
         "green": "#1a7f37", "amber": "#9a6700", "blue": "#0969da", "purple": "#8250df",
         "heat": ["#eaeef2", "#aceebb", "#4ac26b", "#2da44e", "#116329"],
+        "chip_fill": 0.10, "chip_stroke": 0.40,
     },
     "dark": {
-        "surface": "#161b22", "border": "#30363d", "rule": "#30363d",
-        "ink": "#e6edf3", "muted": "#8b949e", "faint": "#7d8590",
+        "surface": "#0d1117", "sunken": "#161b22", "border": "#30363d", "rule": "#21262d",
+        "ink": "#e6edf3", "muted": "#8b949e", "faint": "#6e7681",
         "green": "#3fb950", "amber": "#e3b341", "blue": "#58a6ff", "purple": "#bc8cff",
-        "heat": ["#21262d", "#0e4429", "#006d32", "#26a641", "#39d353"],
+        "heat": ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+        "chip_fill": 0.18, "chip_stroke": 0.50,
     },
 }
 
-W = 880  # every asset shares one width so the column reads as a single system
+W = 880   # every asset shares one width so the column reads as a single system
+PAD = 28
 
 
 # ---------------------------------------------------------------- data layer
@@ -141,116 +162,151 @@ def esc(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def head(height: int, c: dict, panel: bool = True) -> list[str]:
-    out = [
+def head(height: int, c: dict) -> list[str]:
+    """Panel shell plus the shared type scale.
+
+    Sizes sit deliberately far apart — 29px display numbers against 9.5px
+    labels — because the previous revision set nearly everything at 12.5px
+    and left the eye nowhere to land.
+    """
+    return [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" '
-        f'viewBox="0 0 {W} {height}" font-family="{MONO}">',
+        f'viewBox="0 0 {W} {height}" font-family="{MONO}" role="img">',
         "<style>"
-        f".lbl{{font-size:10.5px;letter-spacing:1.4px;fill:{c['faint']}}}"
-        ".val{font-size:12.5px}"
-        ".nm{font-size:38px;font-weight:600;letter-spacing:-0.5px}"
-        ".rl{font-size:13px;letter-spacing:3.2px;font-weight:500}"
-        ".ax{font-size:10.5px}.lg{font-size:11px}"
-        ".st{font-size:12.5px;letter-spacing:1.6px;font-weight:600}"
+        f".kicker{{font-size:9.5px;letter-spacing:1.7px;font-weight:600;fill:{c['faint']}}}"
+        f".label{{font-size:9.5px;letter-spacing:1.5px;fill:{c['faint']}}}"
+        f".body{{font-size:11.5px;fill:{c['muted']}}}"
+        f".data{{font-size:12px;fill:{c['ink']}}}"
+        ".chip{font-size:11px}"
+        f".name{{font-family:{SANS};font-size:44px;font-weight:700;letter-spacing:-1.2px;fill:{c['ink']}}}"
+        f".num{{font-family:{SANS};font-size:29px;font-weight:700;letter-spacing:-0.8px}}"
+        f".role{{font-size:12px;letter-spacing:2.6px;font-weight:600;fill:{c['blue']}}}"
+        f".repo{{font-size:13.5px;font-weight:600;fill:{c['blue']}}}"
+        f".stars{{font-family:{SANS};font-size:15px;font-weight:700;fill:{c['amber']}}}"
         "</style>",
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="12" '
+        f'fill="{c["surface"]}" stroke="{c["border"]}"/>',
     ]
-    if panel:
-        out.append(
-            f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="10" '
-            f'fill="{c["surface"]}" stroke="{c["border"]}"/>'
-        )
-    return out
 
 
-def label(x: float, y: float, text: str, c: dict) -> str:
-    return f'<text x="{x}" y="{y}" class="lbl">{esc(text)}</text>'
+def kicker(y: float, left: str, right: str, c: dict) -> list[str]:
+    """Every panel opens on the same hairline rail: what this is, and one fact."""
+    return [
+        f'<text x="{PAD}" y="{y}" class="kicker">{esc(left)}</text>',
+        f'<text x="{W - PAD}" y="{y}" class="label" text-anchor="end">{esc(right)}</text>',
+        f'<line x1="0" y1="{y + 17}" x2="{W}" y2="{y + 17}" stroke="{c["rule"]}"/>',
+    ]
 
 
-def value(x: float, y: float, text: str, c: dict, fill: str | None = None) -> str:
-    return f'<text x="{x}" y="{y}" class="val" fill="{fill or c["ink"]}">{esc(text)}</text>'
+CHIP_H = 23
+CHIP_TEXT = 11
+
+
+def chip_width(text: str) -> float:
+    return 22 + mw(CHIP_TEXT, text) + 12
+
+
+def chip(x: float, y: float, text: str, color: str, c: dict) -> str:
+    """A pill in the technology's own brand colour.
+
+    Fill and stroke are the same hue at different alphas, so one colour
+    definition stays legible on either surface.
+    """
+    return (
+        f'<g><rect x="{x:.1f}" y="{y:.1f}" width="{chip_width(text):.1f}" height="{CHIP_H}" rx="6" '
+        f'fill="{color}" fill-opacity="{c["chip_fill"]}" '
+        f'stroke="{color}" stroke-opacity="{c["chip_stroke"]}"/>'
+        f'<circle cx="{x + 11:.1f}" cy="{y + CHIP_H / 2:.1f}" r="3.2" fill="{color}"/>'
+        f'<text x="{x + 21:.1f}" y="{y + CHIP_H / 2 + 4:.1f}" class="chip" fill="{c["ink"]}">{esc(text)}</text></g>'
+    )
 
 
 # -------------------------------------------------------------------- hero
 
-HERO_H = 338
-PAD = 28
+HERO_H = 340
 
 
-def render_hero(theme: str, stats: dict, weeks: list[int]) -> str:
+def cadence_tiers(weeks: list[int]):
+    """Map a week's commit count to a heat tier by quantile, not by peak.
+
+    Scaling linearly against the peak week is what the previous revision did,
+    and a single 500-commit week flattened 44 of the other 51 into one shade —
+    a strip that looks like data but carries none. Quartiles of the non-zero
+    weeks keep the contrast where the variation actually is.
+    """
+    active = sorted(c for c in weeks if c > 0)
+    if not active:
+        return lambda count: 0
+    cuts = [active[int(len(active) * q)] for q in (0.25, 0.55, 0.85)]
+
+    def tier(count: int) -> int:
+        if count == 0:
+            return 0
+        return 1 + sum(count > cut for cut in cuts)
+
+    return tier
+
+
+def render_hero(theme: str, stats: dict, weeks: list[int], lang_count: int) -> str:
     c = THEMES[theme]
     out = head(HERO_H, c)
 
-    # header hairline: who / when
-    out.append(label(PAD, 27, f"{USER.upper()}  ·  CHINA GMT+8", c))
+    # top rail — availability first, because it is the one line a visitor who
+    # is hiring needs before anything else on the page
+    out.append(f'<circle cx="{PAD + 4}" cy="23" r="4.5" fill="{c["green"]}"/>')
+    out.append(f'<text x="{PAD + 16}" y="27" class="kicker" fill="{c["green"]}">OPEN TO WORK</text>')
     out.append(
-        f'<text x="{W - PAD}" y="27" class="lbl" text-anchor="end">'
-        f'UPDATED {datetime.now(timezone.utc):%Y-%m-%d}</text>'
+        f'<text x="{W - PAD}" y="27" class="label" text-anchor="end">'
+        f'{USER.upper()}  ·  CHINA GMT+8  ·  UPDATED {datetime.now(timezone.utc):%Y-%m-%d}</text>'
     )
     out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
 
     # identity
-    out.append(
-        f'<text x="{PAD}" y="98" class="nm" fill="{c["ink"]}">{esc(NAME)}</text>'
-    )
-    out.append(
-        f'<text x="{PAD}" y="126" class="rl" fill="{c["blue"]}">{esc(ROLE)}</text>'
-    )
+    out.append(f'<text x="{PAD}" y="102" class="name">{esc(NAME)}</text>')
+    out.append(f'<text x="{PAD}" y="128" class="role">{esc(ROLE)}</text>')
+    out.append(f'<text x="{PAD}" y="152" class="body">{esc(TAGLINE)}</text>')
 
-    # data grid — two columns, four rows. Right-hand values stay under ~44
-    # characters or they run past the panel edge.
-    rows = [
-        ("FOCUS", "agent workflows · RAG · automation", None),
-        ("EXPERIENCE", "4 yrs engineering · AI in prod since 2023", None),
-        ("DELIVERY", "1-2 week MVP · build → deploy → operate", None),
-        ("DEPTH", "state machines · idempotency · rollback", None),
+    # stat tiles — these numbers used to sit inside a 12.5px text grid, which
+    # is the whole reason several hundred stars read as a footnote
+    tiles = [
+        (f"{stats['repos']}", "PUBLIC REPOS", c["ink"]),
+        (f"{stats['stars']:,}", "STARS EARNED", c["amber"]),
+        (f"{lang_count}", "LANGUAGES", c["blue"]),
+        (f"{sum(weeks):,}", "COMMITS · 52W", c["green"]),
     ]
-    right = [
-        ("BASED", "China · GMT+8", None),
-        ("WORK MODE", "onsite · remote · client site", None),
-        ("AVAILABLE", "immediately · no notice period", c["green"]),
-        ("PUBLIC WORK", f"{stats['repos']} own repos · {stats['stars']:,} stars", c["amber"]),
-    ]
-    ry = 158
-    for (l1, v1, f1), (l2, v2, f2) in zip(rows, right):
-        out.append(label(PAD, ry, l1, c))
-        out.append(value(PAD + 96, ry, v1, c, f1))
-        out.append(label(468, ry, l2, c))
-        out.append(value(468 + 96, ry, v2, c, f2))
-        ry += 22
-
-    # signature: 52 weeks of shipping cadence, GitHub's own heat scale
-    strip_y = 258
-    out.append(label(PAD, strip_y - 8, "SHIPPING CADENCE  ·  52 WEEKS", c))
-    peak = max(weeks) or 1
-    n = len(weeks)
-    gap = 2.6
-    bw = (W - 2 * PAD - gap * (n - 1)) / n
-    for i, count in enumerate(weeks):
-        if count == 0:
-            tier = 0
-        else:
-            tier = min(4, 1 + int(count / peak * 3.999))
-        x = PAD + i * (bw + gap)
+    tw, gap = (W - 2 * PAD - 3 * 12) / 4, 12
+    ty = 176
+    for i, (num, cap, fill) in enumerate(tiles):
+        tx = PAD + i * (tw + gap)
         out.append(
-            f'<rect x="{x:.2f}" y="{strip_y}" width="{bw:.2f}" height="24" rx="2.5" fill="{c["heat"][tier]}"/>'
+            f'<rect x="{tx:.1f}" y="{ty}" width="{tw:.1f}" height="66" rx="9" '
+            f'fill="{c["sunken"]}" stroke="{c["border"]}"/>'
         )
-    out.append(
-        f'<text x="{W - PAD}" y="{strip_y - 8}" class="lbl" text-anchor="end">'
-        f'{sum(weeks):,} COMMITS</text>'
-    )
+        out.append(f'<text x="{tx + 16:.1f}" y="{ty + 36}" class="num" fill="{fill}">{esc(num)}</text>')
+        out.append(f'<text x="{tx + 17:.1f}" y="{ty + 54}" class="label">{esc(cap)}</text>')
 
-    # status line
-    sy = 316
-    out.append(f'<circle cx="{PAD + 4}" cy="{sy - 4}" r="4.5" fill="{c["green"]}"/>')
+    # signature: 52 weeks of shipping cadence on GitHub's own heat scale
+    strip_y = 274
+    out.append(f'<text x="{PAD}" y="{strip_y - 8}" class="label">SHIPPING CADENCE  ·  52 WEEKS</text>')
+    out.append(f'<text x="{W - PAD}" y="{strip_y - 8}" class="label" text-anchor="end">{esc(SIGNOFF)}</text>')
+    n = len(weeks)
+    bar_gap = 2.6
+    bw = (W - 2 * PAD - bar_gap * (n - 1)) / n
+    tier_of = cadence_tiers(weeks)
+    for i, count in enumerate(weeks):
+        tier = tier_of(count)
+        x = PAD + i * (bw + bar_gap)
+        out.append(
+            f'<rect x="{x:.2f}" y="{strip_y}" width="{bw:.2f}" height="22" rx="2.5" fill="{c["heat"][tier]}"/>'
+        )
+
     out.append(
-        f'<text x="{PAD + 16}" y="{sy}" class="st" fill="{c["green"]}">OPEN TO WORK</text>'
-    )
-    out.append(
-        f'<text x="{PAD + 148}" y="{sy}" class="val" fill="{c["muted"]}">{esc(SIGNOFF)}</text>'
-    )
-    out.append(
-        f'<text x="{W - PAD}" y="{sy}" class="val" text-anchor="end" fill="{c["muted"]}">'
+        f'<text x="{PAD}" y="{strip_y + 46}" class="data" fill="{c["muted"]}">'
         f'email  <tspan fill="{c["blue"]}">{esc(EMAIL)}</tspan></text>'
+    )
+    out.append(
+        f'<text x="{W - PAD}" y="{strip_y + 46}" class="label" text-anchor="end">'
+        f'ONSITE  ·  REMOTE  ·  CLIENT SITE</text>'
     )
 
     out.append("</svg>")
@@ -259,63 +315,137 @@ def render_hero(theme: str, stats: dict, weeks: list[int]) -> str:
 
 # ------------------------------------------------------------------- stack
 
+# Each technology carries its own brand colour. `None` means "use the theme's
+# ink", which is how brands that are literally black (Next.js, shadcn/ui,
+# Express) stay visible on a dark surface.
 STACK = [
-    ("LANGUAGES", "TypeScript · Python · Swift · Rust · Bash", "ink"),
-    ("AI / LLM", "LLM APIs · tool calling · agent workflows · JSON Schema · MCP · RAG", "purple"),
-    ("BACKEND", "Node.js · FastAPI · Express · PostgreSQL · Redis · BullMQ", "ink"),
-    ("FRONTEND", "React · Next.js · Vite · Tailwind · SwiftUI", "ink"),
-    ("RETRIEVAL", "Meilisearch · pgvector · hybrid recall · rerank · SimHash dedup", "blue"),
-    ("INFRA", "Docker · Linux · Nginx · GitHub Actions · GPU model serving (ComfyUI/SD)", "ink"),
-    ("PRACTICE", "idempotent retries · human handoff · structured logs · cost per call", "green"),
+    ("LANGUAGES", "#3776AB", [
+        ("Python", "#3776AB"), ("TypeScript", "#3178C6"), ("JavaScript", "#F0DB4F"),
+        ("Rust", "#CE422B"), ("Swift", "#F05138"), ("Java", "#ED8B00"),
+        ("Bash", "#4EAA25"), ("SQL", "#4479A1"), ("Objective-C++", "#6866FB"),
+    ]),
+    ("AI  /  LLM", "#8250df", [
+        ("Claude", "#D97757"), ("OpenAI", "#10A37F"), ("MCP", "#7C3AED"),
+        ("Tool Calling", "#8250df"), ("Multi-Agent", "#8250df"), ("RAG", "#8250df"),
+        ("Structured Output", "#8250df"), ("Evals", "#8250df"), ("Guardrails", "#8250df"),
+    ]),
+    ("BACKEND", "#009688", [
+        ("FastAPI", "#009688"), ("Node.js", "#5FA04E"), ("Express", None),
+        ("PostgreSQL", "#4169E1"), ("Redis", "#FF4438"), ("Prisma", "#5A67D8"),
+        ("SQLAlchemy", "#D71F00"), ("Celery", "#37814A"), ("BullMQ", "#EA4335"),
+    ]),
+    ("FRONTEND", "#61DAFB", [
+        ("React", "#61DAFB"), ("Next.js", None), ("Vite", "#646CFF"),
+        ("Tailwind", "#06B6D4"), ("shadcn/ui", None), ("SwiftUI", "#F05138"),
+    ]),
+    ("DATA  /  SEARCH", "#FF5CAA", [
+        ("Meilisearch", "#FF5CAA"), ("pgvector", "#4169E1"), ("Hybrid Recall", "#0969da"),
+        ("Rerank", "#0969da"), ("CN Tokenisation", "#0969da"), ("SimHash Dedup", "#0969da"),
+    ]),
+    ("INFRA  /  OPS", "#2496ED", [
+        ("Docker", "#2496ED"), ("Linux", "#FCC624"), ("Nginx", "#009639"),
+        ("GitHub Actions", "#2088FF"), ("Cloudflare", "#F38020"), ("systemd", "#30A2C7"),
+        ("GPU Serving", "#76B900"),
+    ]),
+    ("PRACTICE", "#1a7f37", [
+        ("Idempotent Retries", "#1a7f37"), ("State Machines", "#1a7f37"),
+        ("Dry-run Gates", "#1a7f37"), ("Rate Limits", "#1a7f37"),
+        ("Structured Logs", "#1a7f37"), ("Rollback Paths", "#1a7f37"),
+        ("Human Handoff", "#1a7f37"), ("Cost per Call", "#1a7f37"),
+    ]),
 ]
+
+LANE_X = 152          # chips start here; the lane label lives in the gutter left of it
+CHIP_GAP = 7
+CHIP_ROW = 30
+
+
+def _lane_rows(items):
+    """Greedy-wrap chips into rows that fit between LANE_X and the right pad."""
+    limit = W - PAD
+    rows, row, x = [], [], float(LANE_X)
+    for name, color in items:
+        width = chip_width(name)
+        if row and x + width > limit:
+            rows.append(row)
+            row, x = [], float(LANE_X)
+        row.append((name, color, width))
+        x += width + CHIP_GAP
+    if row:
+        rows.append(row)
+    return rows
 
 
 def render_stack(theme: str) -> str:
     c = THEMES[theme]
-    height = 60 + len(STACK) * 26
+    lanes = [(label, accent, _lane_rows(items)) for label, accent, items in STACK]
+    body = sum(len(rows) * CHIP_ROW + 14 for _, _, rows in lanes)
+    height = int(58 + body)
+
     out = head(height, c)
-    out.append(label(PAD, 27, "STACK  ·  WHAT I ACTUALLY BUILD WITH", c))
-    out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
-    y = 70
-    for name, items, tone in STACK:
-        out.append(label(PAD, y, name, c))
-        out.append(value(PAD + 104, y, items, c, c[tone] if tone != "ink" else None))
-        y += 26
+    out.extend(kicker(27, "STACK  ·  WHAT I ACTUALLY BUILD WITH", "SHIPPED, NOT SKIMMED", c))
+
+    y = 60
+    for label, accent, rows in lanes:
+        block = len(rows) * CHIP_ROW
+        # a short colour rail anchors each lane so categories can be scanned
+        # without reading a single word
+        out.append(
+            f'<rect x="{PAD}" y="{y + 4:.1f}" width="3" height="{max(block - 12, 8):.1f}" rx="1.5" fill="{accent}"/>'
+        )
+        out.append(f'<text x="{PAD + 14}" y="{y + 19:.1f}" class="label">{esc(label)}</text>')
+        for r, row in enumerate(rows):
+            x = float(LANE_X)
+            for name, color, width in row:
+                out.append(chip(x, y + r * CHIP_ROW + 2, name, color or c["ink"], c))
+                x += width + CHIP_GAP
+        y += block + 14
+
     out.append("</svg>")
     return "\n".join(out)
 
 
 # ------------------------------------------------------------ selected work
 
-WORK_ROW_H = 30
+WORK_ROW_H = 44
 
 
 def render_work(rows: list[dict], stats: dict, theme: str) -> str:
-    """One row per pinned repo: language dot, name, language, stars, blurb."""
+    """One card per pinned repo: language dot, name, star tile, one line of why."""
     if not rows:
         return ""
     c = THEMES[theme]
-    height = 74 + len(rows) * WORK_ROW_H
+    rows = sorted(rows, key=lambda r: r["stars"], reverse=True)
+    height = 60 + len(rows) * WORK_ROW_H + 8
     out = head(height, c)
-    out.append(label(PAD, 27, "SELECTED WORK  ·  PINNED REPOSITORIES", c))
-    out.append(
-        f'<text x="{W - PAD}" y="27" class="lbl" text-anchor="end">'
-        f'{stats["repos"]} PUBLIC REPOS  ·  {stats["stars"]:,} STARS</text>'
-    )
-    out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
+    out.extend(kicker(27, "SELECTED WORK  ·  PUBLIC AND RUNNING",
+                      f'{stats["repos"]} REPOS  ·  {stats["stars"]:,} STARS', c))
 
-    y = 72
+    y = 58
     for row in rows:
         dot = LANG_COLORS.get(row["lang"], c["faint"])
-        out.append(f'<circle cx="{PAD + 4}" cy="{y - 4}" r="4" fill="{dot}"/>')
-        out.append(value(PAD + 16, y, row["name"], c, c["blue"]))
+        star_text = f'{row["stars"]:,}'
+        # the star count is the hardest evidence here, so it gets its own tile
+        # on the right instead of an 11px number lost in the text flow
+        tile_w = max(60.0, 34 + len(star_text) * 9)
+        tile_x = W - PAD - tile_w
+        lit = row["stars"] > 0
+        tone = c["amber"] if lit else c["faint"]
         out.append(
-            f'<text x="{PAD + 330}" y="{y}" class="lg" text-anchor="end" fill="{c["amber"]}">'
-            f'{row["stars"]} \u2605</text>'
+            f'<rect x="{tile_x:.1f}" y="{y + 2:.1f}" width="{tile_w:.1f}" height="30" rx="7" '
+            f'fill="{tone}" fill-opacity="{c["chip_fill"] if lit else 0.06}" '
+            f'stroke="{tone}" stroke-opacity="{c["chip_stroke"] if lit else 0.25}"/>'
         )
         out.append(
-            f'<text x="{PAD + 352}" y="{y}" class="lg" fill="{c["muted"]}">{esc(row["blurb"])}</text>'
+            f'<text x="{tile_x + tile_w / 2:.1f}" y="{y + 23:.1f}" class="stars" '
+            f'text-anchor="middle" fill="{tone}">★ {esc(star_text)}</text>'
         )
+
+        out.append(f'<circle cx="{PAD + 4}" cy="{y + 13:.1f}" r="4.5" fill="{dot}"/>')
+        out.append(f'<text x="{PAD + 18}" y="{y + 18:.1f}" class="repo">{esc(row["name"])}</text>')
+        lang_x = PAD + 18 + mw(13.5, row["name"]) + 12
+        out.append(f'<text x="{lang_x:.1f}" y="{y + 18:.1f}" class="label">{esc(row["lang"].upper())}</text>')
+        out.append(f'<text x="{PAD + 18}" y="{y + 34:.1f}" class="body">{esc(row["blurb"])}</text>')
         y += WORK_ROW_H
 
     out.append("</svg>")
@@ -324,53 +454,119 @@ def render_work(rows: list[dict], stats: dict, theme: str) -> str:
 
 # -------------------------------------------------------------- languages
 
-LANG_H = 128
 LANG_COLORS = {
     "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a",
     "Rust": "#dea584", "Swift": "#F05138", "Shell": "#89e051", "Go": "#00ADD8",
-    "Batchfile": "#C1F12E", "HTML": "#e34c26", "CSS": "#563d7c", "C": "#555555",
+    "Batchfile": "#C1F12E", "HTML": "#e34c26", "CSS": "#663399", "C": "#555555",
     "C++": "#f34b7d", "Java": "#b07219", "Objective-C++": "#6866fb",
     "PowerShell": "#012456", "Dockerfile": "#384d54", "Makefile": "#427819",
+    "PLpgSQL": "#336790", "Go Template": "#00ADD8", "Inno Setup": "#264b99",
+    "Mako": "#7e858d", "Ruby": "#701516", "Kotlin": "#A97BFF", "Vue": "#41b883",
 }
 
+LANG_ROWS = 6         # rows per column
+LANG_COLS = 2
 
-def render_langs(totals: dict[str, int], theme: str) -> str:
+
+def render_langs(totals: dict, repo_count: dict, repos: int, theme: str) -> str:
+    """Language board — byte share on top, reach across repositories below.
+
+    Bytes alone told a misleading story: Python is over half the code, so a
+    lone stacked bar renders as "Python developer" and buries the fact that
+    Swift is an entire native app and Shell touches most of the repositories.
+    Each language therefore gets a row, and that row's meter is repo reach —
+    the number that actually shows breadth — with byte share kept as text.
+    """
     c = THEMES[theme]
     total = sum(totals.values())
     if not total:
         return ""
     ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)
-    top, rest = ranked[:8], sum(v for _, v in ranked[8:])
-    if rest:
-        top.append(("Other", rest))
+    shown = ranked[:LANG_ROWS * LANG_COLS]
 
-    out = head(LANG_H, c)
-    out.append(label(PAD, 27, "LANGUAGE MIX  ·  ALL PUBLIC REPOS", c))
-    out.append(f'<text x="{W - PAD}" y="27" class="lbl" text-anchor="end">BY BYTES OF CODE</text>')
-    out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
+    bar_y, bar_h = 62, 18
+    row_y0 = bar_y + bar_h + 42
+    tail = ranked[LANG_ROWS * LANG_COLS:]
+    height = int(row_y0 + LANG_ROWS * 26 + (24 if tail else 6))
 
-    bar_y, bar_h, bar_w = 62, 12, W - 2 * PAD
-    out.append(f'<clipPath id="clip"><rect x="{PAD}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="6"/></clipPath>')
-    out.append('<g clip-path="url(#clip)">')
+    out = head(height, c)
+    out.extend(kicker(27, "LANGUAGE BOARD  ·  ALL PUBLIC REPOS",
+                      f"{len(totals)} LANGUAGES  ·  {repos} REPOS", c))
+
+    # full-width share bar: the one place byte share is the honest metric
+    bar_w = W - 2 * PAD
+    out.append(
+        f'<clipPath id="bclip"><rect x="{PAD}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="5"/></clipPath>'
+    )
+    out.append('<g clip-path="url(#bclip)">')
     cursor = float(PAD)
-    for name, val in top:
+    for name, val in ranked:
         seg = val / total * bar_w
         out.append(
-            f'<rect x="{cursor:.2f}" y="{bar_y}" width="{seg + 0.6:.2f}" height="{bar_h}" '
+            f'<rect x="{cursor:.2f}" y="{bar_y}" width="{max(seg, 0.8) + 0.6:.2f}" height="{bar_h}" '
             f'fill="{LANG_COLORS.get(name, c["faint"])}"/>'
         )
         cursor += seg
     out.append("</g>")
+    out.append(f'<text x="{PAD}" y="{bar_y + bar_h + 20}" class="label">ABOVE  =  SHARE OF CODE BY BYTES</text>')
+    out.append(
+        f'<text x="{W - PAD}" y="{bar_y + bar_h + 20}" class="label" text-anchor="end">'
+        f'METERS BELOW  =  REPOSITORIES IT APPEARS IN</text>'
+    )
 
-    lx, ly = PAD, 100
-    for name, val in top:
-        text = f"{name} {val / total * 100:.1f}%"
-        width = 14 + len(text) * 6.7
-        if lx + width > W - PAD:
-            lx, ly = PAD, ly + 19
-        out.append(f'<circle cx="{lx + 4}" cy="{ly - 4}" r="4" fill="{LANG_COLORS.get(name, c["faint"])}"/>')
-        out.append(f'<text x="{lx + 13}" y="{ly}" class="lg" fill="{c["muted"]}">{esc(text)}</text>')
-        lx += width + 10
+    # per-language rows in two columns, split by a hairline so the eye does not
+    # read a left row and a right row as one long run-on line
+    gutter = 44.0
+    col_w = (W - 2 * PAD - gutter) / LANG_COLS
+    rule_x = PAD + col_w + gutter / 2
+    out.append(
+        f'<line x1="{rule_x:.1f}" y1="{row_y0 - 18:.1f}" x2="{rule_x:.1f}" '
+        f'y2="{row_y0 + (LANG_ROWS - 1) * 26 + 6:.1f}" stroke="{c["border"]}"/>'
+    )
+
+    name_w, meter_w = 106.0, 100.0
+    for i, (name, val) in enumerate(shown):
+        col, row = i // LANG_ROWS, i % LANG_ROWS
+        x = PAD + col * (col_w + gutter)
+        y = row_y0 + row * 26
+        color = LANG_COLORS.get(name, c["faint"])
+        reach = repo_count.get(name, 0)
+
+        out.append(f'<circle cx="{x + 4:.1f}" cy="{y - 4:.1f}" r="4" fill="{color}"/>')
+        out.append(f'<text x="{x + 15:.1f}" y="{y:.1f}" class="data">{esc(name)}</text>')
+
+        mx = x + 15 + name_w
+        out.append(
+            f'<rect x="{mx:.1f}" y="{y - 11:.1f}" width="{meter_w}" height="8" rx="4" '
+            f'fill="{c["sunken"]}" stroke="{c["border"]}" stroke-opacity="0.6"/>'
+        )
+        fill_w = max(4.0, reach / max(repos, 1) * meter_w)
+        out.append(f'<rect x="{mx:.1f}" y="{y - 11:.1f}" width="{fill_w:.1f}" height="8" rx="4" fill="{color}"/>')
+
+        # byte share sits next to the meter because it is the headline number;
+        # reach trails it as the supporting one
+        out.append(
+            f'<text x="{mx + meter_w + 46:.1f}" y="{y:.1f}" class="data" text-anchor="end" '
+            f'fill="{c["muted"]}">{val / total * 100:.1f}%</text>'
+        )
+        out.append(
+            f'<text x="{mx + meter_w + 58:.1f}" y="{y:.1f}" class="body">'
+            f'{reach} {"repo" if reach == 1 else "repos"}</text>'
+        )
+
+    if tail:
+        # this runs unattended every week, so the tail has to be clipped to the
+        # panel rather than trusted to stay short as more languages appear
+        names, budget = [], (W - 2 * PAD) - mw(11.5, "also shipped: ")
+        for name, _ in tail:
+            piece = (", " if names else "") + name
+            if mw(11.5, piece) > budget:
+                names.append(f"+{len(tail) - len(names)} more")
+                break
+            names.append(piece if not names else piece)
+            budget -= mw(11.5, piece)
+        line = "".join(names) if names else ""
+        out.append(f'<text x="{PAD}" y="{height - 14:.1f}" class="body">also shipped: {esc(line)}</text>')
 
     out.append("</svg>")
     return "\n".join(out)
@@ -390,12 +586,14 @@ def main() -> int:
     print(f"  {stats['repos']} repos · {stats['stars']} stars")
 
     totals: dict[str, int] = {}
+    repo_count: dict[str, int] = {}
     for repo in owned:
         if repo.get("archived"):
             continue
         langs, _ = api(f"/repos/{USER}/{repo['name']}/languages")
         for name, size in (langs or {}).items():
             totals[name] = totals.get(name, 0) + size
+            repo_count[name] = repo_count.get(name, 0) + 1
     print(f"  {len(totals)} languages")
 
     weeks = weekly_commits([r["name"] for r in owned])
@@ -409,10 +607,10 @@ def main() -> int:
     for theme in THEMES:
         suffix = "" if theme == "light" else "-dark"
         for stem, svg in (
-            ("hero", render_hero(theme, stats, weeks)),
+            ("hero", render_hero(theme, stats, weeks, len(totals))),
             ("stack", render_stack(theme)),
             ("work", render_work(work, stats, theme)),
-            ("languages", render_langs(totals, theme)),
+            ("languages", render_langs(totals, repo_count, stats["repos"], theme)),
         ):
             if not svg:
                 continue

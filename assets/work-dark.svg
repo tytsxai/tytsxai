@@ -1,31 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="254" viewBox="0 0 880 254" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace">
-<style>.lbl{font-size:10.5px;letter-spacing:1.4px;fill:#7d8590}.val{font-size:12.5px}.nm{font-size:38px;font-weight:600;letter-spacing:-0.5px}.rl{font-size:13px;letter-spacing:3.2px;font-weight:500}.ax{font-size:10.5px}.lg{font-size:11px}.st{font-size:12.5px;letter-spacing:1.6px;font-weight:600}</style>
-<rect x="0.5" y="0.5" width="879" height="253" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="28" y="27" class="lbl">SELECTED WORK  ·  PINNED REPOSITORIES</text>
-<text x="852" y="27" class="lbl" text-anchor="end">41 PUBLIC REPOS  ·  392 STARS</text>
-<line x1="0" y1="44" x2="880" y2="44" stroke="#30363d"/>
-<circle cx="32" cy="68" r="4" fill="#C1F12E"/>
-<text x="44" y="72" class="val" fill="#58a6ff">IDM-Activation-Script-Chinese</text>
-<text x="358" y="72" class="lg" text-anchor="end" fill="#e3b341">349 ★</text>
-<text x="380" y="72" class="lg" fill="#8b949e">Chinese GBK toolkit · registry backup, no patching</text>
-<circle cx="32" cy="98" r="4" fill="#f1e05a"/>
-<text x="44" y="102" class="val" fill="#58a6ff">bazi-master</text>
-<text x="358" y="102" class="lg" text-anchor="end" fill="#e3b341">20 ★</text>
-<text x="380" y="102" class="lg" fill="#8b949e">Divination platform — BaZi, Tarot, I Ching, AI reading</text>
-<circle cx="32" cy="128" r="4" fill="#3572A5"/>
-<text x="44" y="132" class="val" fill="#58a6ff">cleanplate</text>
-<text x="358" y="132" class="lg" text-anchor="end" fill="#e3b341">0 ★</text>
-<text x="380" y="132" class="lg" fill="#8b949e">Local-first video watermark removal — FastAPI + ComfyUI</text>
-<circle cx="32" cy="158" r="4" fill="#3572A5"/>
-<text x="44" y="162" class="val" fill="#58a6ff">bilibili-cleaner</text>
-<text x="358" y="162" class="lg" text-anchor="end" fill="#e3b341">5 ★</text>
-<text x="380" y="162" class="lg" fill="#8b949e">Bulk cleanup for Bilibili accounts — QR login, web UI</text>
-<circle cx="32" cy="188" r="4" fill="#F05138"/>
-<text x="44" y="192" class="val" fill="#58a6ff">PromptPanel</text>
-<text x="358" y="192" class="lg" text-anchor="end" fill="#e3b341">4 ★</text>
-<text x="380" y="192" class="lg" fill="#8b949e">Native macOS prompt launcher with a global hotkey</text>
-<circle cx="32" cy="218" r="4" fill="#3572A5"/>
-<text x="44" y="222" class="val" fill="#58a6ff">virtual-chem-lab</text>
-<text x="358" y="222" class="lg" text-anchor="end" fill="#e3b341">2 ★</text>
-<text x="380" y="222" class="lg" fill="#8b949e">Gamified virtual chemistry lab for teaching and drills</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="332" viewBox="0 0 880 332" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace" role="img">
+<style>.kicker{font-size:9.5px;letter-spacing:1.7px;font-weight:600;fill:#6e7681}.label{font-size:9.5px;letter-spacing:1.5px;fill:#6e7681}.body{font-size:11.5px;fill:#8b949e}.data{font-size:12px;fill:#e6edf3}.chip{font-size:11px}.name{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:-1.2px;fill:#e6edf3}.num{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:-0.8px}.role{font-size:12px;letter-spacing:2.6px;font-weight:600;fill:#58a6ff}.repo{font-size:13.5px;font-weight:600;fill:#58a6ff}.stars{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;fill:#e3b341}</style>
+<rect x="0.5" y="0.5" width="879" height="331" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text x="28" y="27" class="kicker">SELECTED WORK  ·  PUBLIC AND RUNNING</text>
+<text x="852" y="27" class="label" text-anchor="end">41 REPOS  ·  402 STARS</text>
+<line x1="0" y1="44" x2="880" y2="44" stroke="#21262d"/>
+<rect x="791.0" y="60.0" width="61.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
+<text x="821.5" y="81.0" class="stars" text-anchor="middle" fill="#e3b341">★ 359</text>
+<circle cx="32" cy="71.0" r="4.5" fill="#C1F12E"/>
+<text x="46" y="76.0" class="repo">IDM-Activation-Script-Chinese</text>
+<text x="294.9" y="76.0" class="label">BATCHFILE</text>
+<text x="46" y="92.0" class="body">Windows toolkit with real users — issues, GBK encoding, registry rollback</text>
+<rect x="792.0" y="104.0" width="60.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
+<text x="822.0" y="125.0" class="stars" text-anchor="middle" fill="#e3b341">★ 20</text>
+<circle cx="32" cy="115.0" r="4.5" fill="#f1e05a"/>
+<text x="46" y="120.0" class="repo">bazi-master</text>
+<text x="147.8" y="120.0" class="label">JAVASCRIPT</text>
+<text x="46" y="136.0" class="body">Full-stack divination platform — React, Express, PostgreSQL, LLM readings</text>
+<rect x="792.0" y="148.0" width="60.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
+<text x="822.0" y="169.0" class="stars" text-anchor="middle" fill="#e3b341">★ 5</text>
+<circle cx="32" cy="159.0" r="4.5" fill="#3572A5"/>
+<text x="46" y="164.0" class="repo">bilibili-cleaner</text>
+<text x="188.7" y="164.0" class="label">PYTHON</text>
+<text x="46" y="180.0" class="body">Destructive automation done safely — QR login, rate limits, review gate</text>
+<rect x="792.0" y="192.0" width="60.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
+<text x="822.0" y="213.0" class="stars" text-anchor="middle" fill="#e3b341">★ 4</text>
+<circle cx="32" cy="203.0" r="4.5" fill="#F05138"/>
+<text x="46" y="208.0" class="repo">PromptPanel</text>
+<text x="147.8" y="208.0" class="label">SWIFT</text>
+<text x="46" y="224.0" class="body">Native macOS prompt launcher — Swift, SwiftUI, global hotkey, local-first</text>
+<rect x="792.0" y="236.0" width="60.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
+<text x="822.0" y="257.0" class="stars" text-anchor="middle" fill="#e3b341">★ 2</text>
+<circle cx="32" cy="247.0" r="4.5" fill="#dea584"/>
+<text x="46" y="252.0" class="repo">macfriends-cli</text>
+<text x="172.3" y="252.0" class="label">RUST</text>
+<text x="46" y="268.0" class="body">Systems-level Rust + ObjC++ agent, ABI-pinned, never touches the network</text>
+<rect x="792.0" y="280.0" width="60.0" height="30" rx="7" fill="#6e7681" fill-opacity="0.06" stroke="#6e7681" stroke-opacity="0.25"/>
+<text x="822.0" y="301.0" class="stars" text-anchor="middle" fill="#6e7681">★ 0</text>
+<circle cx="32" cy="291.0" r="4.5" fill="#3572A5"/>
+<text x="46" y="296.0" class="repo">cleanplate</text>
+<text x="139.7" y="296.0" class="label">PYTHON</text>
+<text x="46" y="312.0" class="body">Local-first video watermark removal — FastAPI, ComfyUI, async job queue</text>
 </svg>

@@ -9,12 +9,13 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
-    <img src="assets/hero.svg" alt="qilai — AI application and delivery engineer. Based in China, GMT+8. Four years of engineering, AI in production since 2023. Available immediately, onsite or remote." width="880" />
+    <img src="assets/hero.svg" alt="qilai — AI application and delivery engineer, China GMT+8, open to work. Live counters for public repositories, stars earned, languages and commits over the last 52 weeks, above a weekly shipping-cadence strip." width="880" />
   </picture>
 </p>
 
 <p align="center">
-  <b>研发交付工程师 / AI 落地交付</b> · Node.js · TypeScript · Python · React<br/>
+  <b>研发交付工程师 / AI 落地交付</b><br/>
+  <sub>Python · TypeScript · JavaScript · Rust · Swift · Java · Shell · SQL</sub><br/>
   <sub>把 AI 接进真实业务流程，做成能上线、能排障、能交给别人跑下去的系统。</sub>
 </p>
 
@@ -59,7 +60,7 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
-    <img src="assets/stack.svg" alt="Stack: TypeScript, Python, Swift, Rust, Bash; LLM APIs, tool calling, agent workflows, JSON Schema, MCP, RAG; Node.js, FastAPI, Express, PostgreSQL, Redis, BullMQ; React, Next.js, Vite, Tailwind, SwiftUI; Meilisearch, pgvector, hybrid recall, rerank, SimHash dedup; Docker, Linux, Nginx, GitHub Actions, GPU model serving; idempotent retries, human handoff, structured logs, cost per call" width="880" />
+    <img src="assets/stack.svg" alt="Stack by lane. Languages: Python, TypeScript, JavaScript, Rust, Swift, Java, Bash, SQL, Objective-C++. AI and LLM: Claude, OpenAI, MCP, tool calling, multi-agent, RAG, structured output, evals, guardrails. Backend: FastAPI, Node.js, Express, PostgreSQL, Redis, Prisma, SQLAlchemy, Celery, BullMQ. Frontend: React, Next.js, Vite, Tailwind, shadcn/ui, SwiftUI. Data and search: Meilisearch, pgvector, hybrid recall, rerank, Chinese tokenisation, SimHash dedup. Infra and ops: Docker, Linux, Nginx, GitHub Actions, Cloudflare, systemd, GPU serving. Practice: idempotent retries, state machines, dry-run gates, rate limits, structured logs, rollback paths, human handoff, cost per call." width="880" />
   </picture>
 </p>
 
@@ -87,15 +88,19 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.svg" />
-    <img src="assets/work.svg" alt="Selected work — pinned repositories with their primary language and live star count" width="880" />
+    <img src="assets/work.svg" alt="Selected work — public repositories sorted by star count, each with its primary language and a one-line description" width="880" />
   </picture>
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg" />
-    <img src="assets/languages.svg" alt="Language mix across all public repositories, by bytes of code" width="880" />
+    <img src="assets/languages.svg" alt="Language board — every language across all public repositories, each with its share of code by bytes and the number of repositories it appears in" width="880" />
   </picture>
+</p>
+
+<p align="center">
+  <sub>两个指标分开看：字节占比说明代码量落在哪儿，仓库覆盖数说明这门语言真正被用在多少个项目里。<br/>只看字节会得出「写 Python 的」这个结论，而 Swift 那 2% 是一整个原生 macOS 应用。</sub>
 </p>
 
 <p align="center">
