@@ -3,7 +3,7 @@
 <rect x="0.5" y="0.5" width="879" height="339" rx="12" fill="#ffffff" stroke="#d0d7de"/>
 <circle cx="32" cy="23" r="4.5" fill="#1a7f37"/>
 <text x="44" y="27" class="kicker" fill="#1a7f37">OPEN TO WORK</text>
-<text x="852" y="27" class="label" text-anchor="end">TYTSXAI  ·  CHINA GMT+8  ·  UPDATED 2026-08-25</text>
+<text x="852" y="27" class="label" text-anchor="end">TYTSXAI  ·  GMT+8  ·  UPDATED 2026-08-25</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#d8dee4"/>
 <text x="28" y="102" class="name">qilai</text>
 <text x="28" y="128" class="role">AI APPLICATION &amp; DELIVERY ENGINEER</text>

@@ -257,7 +257,7 @@ def render_hero(theme: str, stats: dict, weeks: list[int], lang_count: int) -> s
     out.append(f'<text x="{PAD + 16}" y="27" class="kicker" fill="{c["green"]}">OPEN TO WORK</text>')
     out.append(
         f'<text x="{W - PAD}" y="27" class="label" text-anchor="end">'
-        f'{USER.upper()}  ·  CHINA GMT+8  ·  UPDATED {datetime.now(timezone.utc):%Y-%m-%d}</text>'
+        f'{USER.upper()}  ·  GMT+8  ·  UPDATED {datetime.now(timezone.utc):%Y-%m-%d}</text>'
     )
     out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
 

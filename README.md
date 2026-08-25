@@ -9,7 +9,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg" />
-    <img src="assets/hero.svg" alt="qilai — AI application and delivery engineer, China GMT+8, open to work. Live counters for public repositories, stars earned, languages and commits over the last 52 weeks, above a weekly shipping-cadence strip." width="880" />
+    <img src="assets/hero.svg" alt="qilai — AI application and delivery engineer, GMT+8, open to work. Live counters for public repositories, stars earned, languages and commits over the last 52 weeks, above a weekly shipping-cadence strip." width="880" />
   </picture>
 </p>
 
@@ -26,7 +26,7 @@
 
 ---
 
-常驻中国，时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
+时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
 
 核心方向是把模型接到扛得住生产的地方：Agent 工作流、Tool Calling、结构化输出，MCP / RAG 以接入落地为主，不做算法研究；失败可重试、过程可回查、异常留有人工接管路径。主要积累在异步系统的状态机与幂等设计——模型 API、三方平台、链上接口这类外部依赖，通常做成可重试、可回放、可排障的模块，涉及状态一致性与补偿审计。检索方向做过全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重，后续的 RAG 知识库检索层沿用了这条链路。
 
@@ -39,7 +39,7 @@
 
 <br/>
 
-**AI application & delivery engineer**, based in China (GMT+8). Roughly four years of engineering since 2022.03, AI in production since 2023. Available immediately, onsite or remote.
+**AI application & delivery engineer**, working in GMT+8. Roughly four years of engineering since 2022.03, AI in production since 2023. Available immediately, onsite or remote.
 
 Core focus: putting models where they have to survive production — agent workflows, tool calling, structured output, MCP and RAG as integration work rather than research — with retries, replayable state, and a human handoff for anything that can get stuck. Primary strength is async state machines and idempotency: model APIs, third-party platforms and chain interfaces turned into modules that can be retried, replayed and debugged. On the retrieval side: full-text + vector hybrid recall, score fusion, rerank; a later RAG pipeline reused the same recall layer.
 
