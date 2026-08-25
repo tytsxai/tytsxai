@@ -26,10 +26,6 @@
 
 ---
 
-<sub>WHAT</sub>
-
-## 能力方向
-
 常驻中国，时区 GMT+8。工程经验约四年（2022.03 起），2023 年起把 AI 工程化落地到生产环境，目前可随时到岗，远程或驻场都行。
 
 核心方向是把模型接到扛得住生产的地方：Agent 工作流、Tool Calling、结构化输出，MCP / RAG 以接入落地为主，不做算法研究；失败可重试、过程可回查、异常留有人工接管路径。主要积累在异步系统的状态机与幂等设计——模型 API、三方平台、链上接口这类外部依赖，通常做成可重试、可回放、可排障的模块，涉及状态一致性与补偿审计。检索方向做过全文 + 向量混合召回、分数融合与 rerank、中文分词与相似去重，后续的 RAG 知识库检索层沿用了这条链路。
@@ -55,8 +51,6 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
 ---
 
-<sub>TOOLS</sub>
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
@@ -70,11 +64,7 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
 ---
 
-<sub>EVIDENCE</sub>
-
-## 能点开的证据
-
-公开、可运行、在维护。星标数以仓库页为准，正文不手写数字。
+公开、可运行、在维护。下面的星标与语言数据由 CI 每周从 GitHub API 刷新。
 
 | 仓库 | 一句话 |
 | --- | --- |
@@ -100,18 +90,10 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 </p>
 
 <p align="center">
-  <sub>两个指标分开看：字节占比说明代码量落在哪儿，仓库覆盖数说明这门语言真正被用在多少个项目里。<br/>只看字节会得出「写 Python 的」这个结论，而 Swift 那 2% 是一整个原生 macOS 应用。</sub>
-</p>
-
-<p align="center">
-  <sub>上面每张图都由 <a href="scripts/gen_assets.py">scripts/gen_assets.py</a> 从 GitHub API 生成、<a href=".github/workflows/charts.yml">CI</a> 每周刷新。<br/>自建而不挂第三方卡片服务：那些服务限流之后会渲染成裂图，主页裂了传达的信息是错的。</sub>
+  <sub>字节占比说明代码量落在哪儿，仓库覆盖数说明这门语言真正被用在多少个项目里——只看字节会得出「写 Python 的」这个结论，而字节占比垫底的 Swift 是一整个原生 macOS 应用。<br/>每张图都由 <a href="scripts/gen_assets.py">scripts/gen_assets.py</a> 从 API 生成、<a href=".github/workflows/charts.yml">CI</a> 每周刷新；不挂第三方卡片服务，那些服务限流后会渲染成裂图。</sub>
 </p>
 
 ---
-
-<sub>CONTACT</sub>
-
-## 联系
 
 **[wwtvn1937@gmail.com](mailto:wwtvn1937@gmail.com)** —— 本主页唯一的联系方式。
 
