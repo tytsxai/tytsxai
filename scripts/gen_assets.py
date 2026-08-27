@@ -34,7 +34,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-USER = "tytsxai"
+USER = "qilaidev"
 NAME = "qilai"
 ROLE = "AI APPLICATION & DELIVERY ENGINEER"
 TAGLINE = "Agent workflows, retrieval and automation, taken all the way into production"

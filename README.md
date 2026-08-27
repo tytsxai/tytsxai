@@ -1,5 +1,5 @@
 <!-- ============================================================ -->
-<!-- qilai (tytsxai) — GitHub Profile                            -->
+<!-- qilai (qilaidev) — GitHub Profile                            -->
 <!-- 这是技术名片，不是简历：只放卖点和能点开的证据。            -->
 <!-- 经历时间线、公司口径、背景核验这些留在简历里，别搬过来。    -->
 <!-- Contact: email only. Do not add phone / IM / social links.  -->
@@ -21,7 +21,7 @@
 
 <p align="center">
   <a href="mailto:wwtvn1937@gmail.com"><b>wwtvn1937@gmail.com</b></a> ·
-  <a href="https://github.com/tytsxai?tab=repositories">全部仓库</a>
+  <a href="https://github.com/qilaidev?tab=repositories">全部仓库</a>
 </p>
 
 ---
@@ -64,12 +64,12 @@ Contact: **wwtvn1937@gmail.com** — the only channel on this profile.
 
 | 仓库 | 一句话 |
 | --- | --- |
-| [**IDM-Activation-Script-Chinese**](https://github.com/tytsxai/IDM-Activation-Script-Chinese) | Windows 批处理工具集 · GPL-3.0。有真实用户量的分发与维护：issue 承接、GBK / CP936 编码坑、注册表自动备份、失败可回退 |
-| [**cleanplate**](https://github.com/tytsxai/cleanplate) | 本地优先的 AI 视频去水印后端 · FastAPI + ComfyUI DiffuEraser，FFmpeg 降级。异步 job 架构与模型服务化的公开版本 |
-| [**PromptPanel**](https://github.com/tytsxai/PromptPanel) | macOS 提示词与片段启动器 · Swift / SwiftUI，本地优先、全局快捷键。文档、CI、单测、发布与恢复流程全部走完 |
-| [**bilibili-cleaner**](https://github.com/tytsxai/bilibili-cleaner) | 账号批量清理 · FastAPI + Web UI + CLI + Docker。破坏性自动化怎么做得住：扫码登录、限速、复核门、pytest CI |
-| [**macfriends-cli**](https://github.com/tytsxai/macfriends-cli) | macOS 微信好友关系检测 · Rust + ObjC++ agent。系统层深度：原生 agent、ABI 锁版逆向、纯本地不联网 |
-| [**bazi-master**](https://github.com/tytsxai/bazi-master) | 全栈命理平台 · React + Express + PostgreSQL + Prisma。LLM 进产品：解读流水线、多模块领域逻辑、全栈自持 |
+| [**IDM-Activation-Script-Chinese**](https://github.com/qilaidev/IDM-Activation-Script-Chinese) | Windows 批处理工具集 · GPL-3.0。有真实用户量的分发与维护：issue 承接、GBK / CP936 编码坑、注册表自动备份、失败可回退 |
+| [**cleanplate**](https://github.com/qilaidev/cleanplate) | 本地优先的 AI 视频去水印后端 · FastAPI + ComfyUI DiffuEraser，FFmpeg 降级。异步 job 架构与模型服务化的公开版本 |
+| [**PromptPanel**](https://github.com/qilaidev/PromptPanel) | macOS 提示词与片段启动器 · Swift / SwiftUI，本地优先、全局快捷键。文档、CI、单测、发布与恢复流程全部走完 |
+| [**bilibili-cleaner**](https://github.com/qilaidev/bilibili-cleaner) | 账号批量清理 · FastAPI + Web UI + CLI + Docker。破坏性自动化怎么做得住：扫码登录、限速、复核门、pytest CI |
+| [**macfriends-cli**](https://github.com/qilaidev/macfriends-cli) | macOS 微信好友关系检测 · Rust + ObjC++ agent。系统层深度：原生 agent、ABI 锁版逆向、纯本地不联网 |
+| [**bazi-master**](https://github.com/qilaidev/bazi-master) | 全栈命理平台 · React + Express + PostgreSQL + Prisma。LLM 进产品：解读流水线、多模块领域逻辑、全栈自持 |
 
 <p align="center">
   <picture>

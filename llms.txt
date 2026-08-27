@@ -1,11 +1,11 @@
-# tytsxai / qilai — GitHub Profile
+# qilaidev / qilai — GitHub Profile
 
-> Technical calling card for qilai (tytsxai): AI application & delivery engineer working in GMT+8.
+> Technical calling card for qilai (qilaidev): AI application & delivery engineer working in GMT+8.
 > 研发交付工程师 / AI 落地交付。Not a resume — selling points plus public, runnable evidence.
 
 ## Who
 
-- Name/handle: qilai · GitHub: tytsxai
+- Name/handle: qilai · GitHub: qilaidev
 - Role focus: 研发交付工程师 / AI application engineer / Node.js & Python backend
 - Experience: engineering since 2022.03; AI in production since 2023
 - Availability: onsite, remote or client site; available immediately
@@ -46,4 +46,4 @@ mentioned in one line only: no company name, no source, no production data. Arch
 
 研发交付工程师, AI 落地交付, AI application engineer, delivery engineer, LLM engineering, agent workflow,
 tool calling, RAG, hybrid retrieval, async job pipeline, idempotency, Node.js, TypeScript, Python, FastAPI,
-React, Next.js, PostgreSQL, Redis, Docker, open source, tytsxai, qilai
+React, Next.js, PostgreSQL, Redis, Docker, open source, qilaidev, qilai
