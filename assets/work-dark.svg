@@ -2,10 +2,10 @@
 <style>.kicker{font-size:9.5px;letter-spacing:1.7px;font-weight:600;fill:#6e7681}.label{font-size:9.5px;letter-spacing:1.5px;fill:#6e7681}.body{font-size:11.5px;fill:#8b949e}.data{font-size:12px;fill:#e6edf3}.chip{font-size:11px}.name{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:-1.2px;fill:#e6edf3}.num{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:-0.8px}.role{font-size:12px;letter-spacing:2.6px;font-weight:600;fill:#58a6ff}.repo{font-size:13.5px;font-weight:600;fill:#58a6ff}.stars{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;fill:#e3b341}</style>
 <rect x="0.5" y="0.5" width="879" height="331" rx="12" fill="#0d1117" stroke="#30363d"/>
 <text x="28" y="27" class="kicker">SELECTED WORK  ·  PUBLIC AND RUNNING</text>
-<text x="852" y="27" class="label" text-anchor="end">41 REPOS  ·  408 STARS</text>
+<text x="852" y="27" class="label" text-anchor="end">41 REPOS  ·  436 STARS</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#21262d"/>
 <rect x="791.0" y="60.0" width="61.0" height="30" rx="7" fill="#e3b341" fill-opacity="0.18" stroke="#e3b341" stroke-opacity="0.5"/>
-<text x="821.5" y="81.0" class="stars" text-anchor="middle" fill="#e3b341">★ 365</text>
+<text x="821.5" y="81.0" class="stars" text-anchor="middle" fill="#e3b341">★ 393</text>
 <circle cx="32" cy="71.0" r="4.5" fill="#C1F12E"/>
 <text x="46" y="76.0" class="repo">IDM-Activation-Script-Chinese</text>
 <text x="294.9" y="76.0" class="label">BATCHFILE</text>
