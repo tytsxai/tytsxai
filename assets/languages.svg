@@ -2,27 +2,27 @@
 <style>.kicker{font-size:9.5px;letter-spacing:1.7px;font-weight:600;fill:#8c959f}.label{font-size:9.5px;letter-spacing:1.5px;fill:#8c959f}.body{font-size:11.5px;fill:#656d76}.data{font-size:12px;fill:#1f2328}.chip{font-size:11px}.name{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:-1.2px;fill:#1f2328}.num{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:-0.8px}.role{font-size:12px;letter-spacing:2.6px;font-weight:600;fill:#0969da}.repo{font-size:13.5px;font-weight:600;fill:#0969da}.stars{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;fill:#9a6700}</style>
 <rect x="0.5" y="0.5" width="879" height="301" rx="12" fill="#ffffff" stroke="#d0d7de"/>
 <text x="28" y="27" class="kicker">LANGUAGE BOARD  ·  ALL PUBLIC REPOS</text>
-<text x="852" y="27" class="label" text-anchor="end">19 LANGUAGES  ·  41 REPOS</text>
+<text x="852" y="27" class="label" text-anchor="end">19 LANGUAGES  ·  43 REPOS</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#d8dee4"/>
 <clipPath id="bclip"><rect x="28" y="62" width="824" height="18" rx="5"/></clipPath>
 <g clip-path="url(#bclip)">
-<rect x="28.00" y="62" width="472.00" height="18" fill="#3572A5"/>
-<rect x="499.40" y="62" width="182.00" height="18" fill="#3178c6"/>
-<rect x="680.80" y="62" width="98.10" height="18" fill="#f1e05a"/>
-<rect x="778.30" y="62" width="22.86" height="18" fill="#89e051"/>
-<rect x="800.56" y="62" width="17.21" height="18" fill="#F05138"/>
-<rect x="817.17" y="62" width="13.75" height="18" fill="#dea584"/>
-<rect x="830.32" y="62" width="10.13" height="18" fill="#e34c26"/>
-<rect x="839.85" y="62" width="5.44" height="18" fill="#663399"/>
-<rect x="844.69" y="62" width="3.09" height="18" fill="#C1F12E"/>
-<rect x="847.18" y="62" width="2.16" height="18" fill="#b07219"/>
-<rect x="848.74" y="62" width="1.43" height="18" fill="#012456"/>
-<rect x="849.57" y="62" width="1.40" height="18" fill="#6866fb"/>
-<rect x="850.21" y="62" width="1.40" height="18" fill="#384d54"/>
-<rect x="850.72" y="62" width="1.40" height="18" fill="#336790"/>
-<rect x="851.21" y="62" width="1.40" height="18" fill="#264b99"/>
-<rect x="851.50" y="62" width="1.40" height="18" fill="#00ADD8"/>
-<rect x="851.74" y="62" width="1.40" height="18" fill="#427819"/>
+<rect x="28.00" y="62" width="435.12" height="18" fill="#3572A5"/>
+<rect x="462.52" y="62" width="269.49" height="18" fill="#3178c6"/>
+<rect x="731.40" y="62" width="68.92" height="18" fill="#f1e05a"/>
+<rect x="799.72" y="62" width="16.69" height="18" fill="#89e051"/>
+<rect x="815.81" y="62" width="11.66" height="18" fill="#F05138"/>
+<rect x="826.87" y="62" width="9.36" height="18" fill="#dea584"/>
+<rect x="835.63" y="62" width="6.99" height="18" fill="#e34c26"/>
+<rect x="842.02" y="62" width="5.71" height="18" fill="#663399"/>
+<rect x="847.13" y="62" width="2.26" height="18" fill="#C1F12E"/>
+<rect x="848.79" y="62" width="1.64" height="18" fill="#b07219"/>
+<rect x="849.83" y="62" width="1.40" height="18" fill="#012456"/>
+<rect x="850.38" y="62" width="1.40" height="18" fill="#6866fb"/>
+<rect x="850.81" y="62" width="1.40" height="18" fill="#384d54"/>
+<rect x="851.15" y="62" width="1.40" height="18" fill="#336790"/>
+<rect x="851.47" y="62" width="1.40" height="18" fill="#264b99"/>
+<rect x="851.66" y="62" width="1.40" height="18" fill="#00ADD8"/>
+<rect x="851.83" y="62" width="1.40" height="18" fill="#427819"/>
 <rect x="851.98" y="62" width="1.40" height="18" fill="#7e858d"/>
 <rect x="851.99" y="62" width="1.40" height="18" fill="#f34b7d"/>
 </g>
@@ -32,62 +32,62 @@
 <circle cx="32.0" cy="118.0" r="4" fill="#3572A5"/>
 <text x="43.0" y="122.0" class="data">Python</text>
 <rect x="149.0" y="111.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="149.0" y="111.0" width="63.4" height="8" rx="4" fill="#3572A5"/>
-<text x="295.0" y="122.0" class="data" text-anchor="end" fill="#656d76">57.2%</text>
-<text x="307.0" y="122.0" class="body">26 repos</text>
+<rect x="149.0" y="111.0" width="65.1" height="8" rx="4" fill="#3572A5"/>
+<text x="295.0" y="122.0" class="data" text-anchor="end" fill="#656d76">52.7%</text>
+<text x="307.0" y="122.0" class="body">28 repos</text>
 <circle cx="32.0" cy="144.0" r="4" fill="#3178c6"/>
 <text x="43.0" y="148.0" class="data">TypeScript</text>
 <rect x="149.0" y="137.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="149.0" y="137.0" width="22.0" height="8" rx="4" fill="#3178c6"/>
-<text x="295.0" y="148.0" class="data" text-anchor="end" fill="#656d76">22.0%</text>
-<text x="307.0" y="148.0" class="body">9 repos</text>
+<rect x="149.0" y="137.0" width="23.3" height="8" rx="4" fill="#3178c6"/>
+<text x="295.0" y="148.0" class="data" text-anchor="end" fill="#656d76">32.6%</text>
+<text x="307.0" y="148.0" class="body">10 repos</text>
 <circle cx="32.0" cy="170.0" r="4" fill="#f1e05a"/>
 <text x="43.0" y="174.0" class="data">JavaScript</text>
 <rect x="149.0" y="163.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="149.0" y="163.0" width="39.0" height="8" rx="4" fill="#f1e05a"/>
-<text x="295.0" y="174.0" class="data" text-anchor="end" fill="#656d76">11.8%</text>
-<text x="307.0" y="174.0" class="body">16 repos</text>
+<rect x="149.0" y="163.0" width="39.5" height="8" rx="4" fill="#f1e05a"/>
+<text x="295.0" y="174.0" class="data" text-anchor="end" fill="#656d76">8.3%</text>
+<text x="307.0" y="174.0" class="body">17 repos</text>
 <circle cx="32.0" cy="196.0" r="4" fill="#89e051"/>
 <text x="43.0" y="200.0" class="data">Shell</text>
 <rect x="149.0" y="189.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="149.0" y="189.0" width="63.4" height="8" rx="4" fill="#89e051"/>
-<text x="295.0" y="200.0" class="data" text-anchor="end" fill="#656d76">2.7%</text>
-<text x="307.0" y="200.0" class="body">26 repos</text>
+<rect x="149.0" y="189.0" width="62.8" height="8" rx="4" fill="#89e051"/>
+<text x="295.0" y="200.0" class="data" text-anchor="end" fill="#656d76">2.0%</text>
+<text x="307.0" y="200.0" class="body">27 repos</text>
 <circle cx="32.0" cy="222.0" r="4" fill="#F05138"/>
 <text x="43.0" y="226.0" class="data">Swift</text>
 <rect x="149.0" y="215.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
 <rect x="149.0" y="215.0" width="4.0" height="8" rx="4" fill="#F05138"/>
-<text x="295.0" y="226.0" class="data" text-anchor="end" fill="#656d76">2.0%</text>
+<text x="295.0" y="226.0" class="data" text-anchor="end" fill="#656d76">1.3%</text>
 <text x="307.0" y="226.0" class="body">1 repo</text>
 <circle cx="32.0" cy="248.0" r="4" fill="#dea584"/>
 <text x="43.0" y="252.0" class="data">Rust</text>
 <rect x="149.0" y="241.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="149.0" y="241.0" width="4.9" height="8" rx="4" fill="#dea584"/>
-<text x="295.0" y="252.0" class="data" text-anchor="end" fill="#656d76">1.6%</text>
+<rect x="149.0" y="241.0" width="4.7" height="8" rx="4" fill="#dea584"/>
+<text x="295.0" y="252.0" class="data" text-anchor="end" fill="#656d76">1.1%</text>
 <text x="307.0" y="252.0" class="body">2 repos</text>
 <circle cx="466.0" cy="118.0" r="4" fill="#e34c26"/>
 <text x="477.0" y="122.0" class="data">HTML</text>
 <rect x="583.0" y="111.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="583.0" y="111.0" width="29.3" height="8" rx="4" fill="#e34c26"/>
-<text x="729.0" y="122.0" class="data" text-anchor="end" fill="#656d76">1.2%</text>
-<text x="741.0" y="122.0" class="body">12 repos</text>
+<rect x="583.0" y="111.0" width="30.2" height="8" rx="4" fill="#e34c26"/>
+<text x="729.0" y="122.0" class="data" text-anchor="end" fill="#656d76">0.8%</text>
+<text x="741.0" y="122.0" class="body">13 repos</text>
 <circle cx="466.0" cy="144.0" r="4" fill="#663399"/>
 <text x="477.0" y="148.0" class="data">CSS</text>
 <rect x="583.0" y="137.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="583.0" y="137.0" width="19.5" height="8" rx="4" fill="#663399"/>
+<rect x="583.0" y="137.0" width="20.9" height="8" rx="4" fill="#663399"/>
 <text x="729.0" y="148.0" class="data" text-anchor="end" fill="#656d76">0.6%</text>
-<text x="741.0" y="148.0" class="body">8 repos</text>
+<text x="741.0" y="148.0" class="body">9 repos</text>
 <circle cx="466.0" cy="170.0" r="4" fill="#C1F12E"/>
 <text x="477.0" y="174.0" class="data">Batchfile</text>
 <rect x="583.0" y="163.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
-<rect x="583.0" y="163.0" width="9.8" height="8" rx="4" fill="#C1F12E"/>
-<text x="729.0" y="174.0" class="data" text-anchor="end" fill="#656d76">0.3%</text>
+<rect x="583.0" y="163.0" width="9.3" height="8" rx="4" fill="#C1F12E"/>
+<text x="729.0" y="174.0" class="data" text-anchor="end" fill="#656d76">0.2%</text>
 <text x="741.0" y="174.0" class="body">4 repos</text>
 <circle cx="466.0" cy="196.0" r="4" fill="#b07219"/>
 <text x="477.0" y="200.0" class="data">Java</text>
 <rect x="583.0" y="189.0" width="100.0" height="8" rx="4" fill="#f6f8fa" stroke="#d0d7de" stroke-opacity="0.6"/>
 <rect x="583.0" y="189.0" width="4.0" height="8" rx="4" fill="#b07219"/>
-<text x="729.0" y="200.0" class="data" text-anchor="end" fill="#656d76">0.2%</text>
+<text x="729.0" y="200.0" class="data" text-anchor="end" fill="#656d76">0.1%</text>
 <text x="741.0" y="200.0" class="body">1 repo</text>
 <circle cx="466.0" cy="222.0" r="4" fill="#012456"/>
 <text x="477.0" y="226.0" class="data">PowerShell</text>
