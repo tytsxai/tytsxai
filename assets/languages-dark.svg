@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="302" viewBox="0 0 880 302" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace" role="img">
-<style>.kicker{font-size:9.5px;letter-spacing:1.7px;font-weight:600;fill:#6e7681}.label{font-size:9.5px;letter-spacing:1.5px;fill:#6e7681}.body{font-size:11.5px;fill:#8b949e}.data{font-size:12px;fill:#e6edf3}.chip{font-size:11px}.name{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:44px;font-weight:700;letter-spacing:-1.2px;fill:#e6edf3}.num{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:29px;font-weight:700;letter-spacing:-0.8px}.role{font-size:12px;letter-spacing:2.6px;font-weight:600;fill:#58a6ff}.repo{font-size:13.5px;font-weight:600;fill:#58a6ff}.stars{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;fill:#e3b341}</style>
-<rect x="0.5" y="0.5" width="879" height="301" rx="12" fill="#0d1117" stroke="#30363d"/>
-<text x="28" y="27" class="kicker">LANGUAGE BOARD  ·  ALL PUBLIC REPOS</text>
-<text x="852" y="27" class="label" text-anchor="end">19 LANGUAGES  ·  43 REPOS</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="308" viewBox="0 0 880 308" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace" role="img">
+<style>
+.kicker{font-size:10px;letter-spacing:1.8px;font-weight:700;fill:#6e7681}
+.label{font-size:10px;letter-spacing:1.5px;font-weight:600;fill:#6e7681}
+.body{font-size:11.5px;fill:#8b949e}
+.data{font-size:12px;fill:#e6edf3}
+.chip{font-size:11px;font-weight:500}
+.name{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:42px;font-weight:800;letter-spacing:-1.2px;fill:#e6edf3}
+.num{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.6px}
+.role{font-size:12px;letter-spacing:2.2px;font-weight:700;fill:#58a6ff}
+.repo{font-size:14px;font-weight:700;fill:#58a6ff}
+.stars{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;fill:#f59e0b}
+</style>
+<rect x="0.5" y="0.5" width="879" height="307" rx="14" fill="#0d1117" stroke="#30363d"/>
+<text x="28" y="27" class="kicker">LANGUAGE ECOSYSTEM  ·  ALL PUBLIC REPOSITORIES</text>
+<text x="852" y="27" class="label" text-anchor="end">19 LANGUAGES  ·  43 REPOSITORIES</text>
 <line x1="0" y1="44" x2="880" y2="44" stroke="#21262d"/>
-<clipPath id="bclip"><rect x="28" y="62" width="824" height="18" rx="5"/></clipPath>
+<clipPath id="bclip"><rect x="28" y="62" width="824" height="18" rx="6"/></clipPath>
 <g clip-path="url(#bclip)">
 <rect x="28.00" y="62" width="435.12" height="18" fill="#3572A5"/>
 <rect x="462.52" y="62" width="269.49" height="18" fill="#3178c6"/>
@@ -26,80 +37,80 @@
 <rect x="851.98" y="62" width="1.40" height="18" fill="#7e858d"/>
 <rect x="851.99" y="62" width="1.40" height="18" fill="#f34b7d"/>
 </g>
-<text x="28" y="100" class="label">ABOVE  =  SHARE OF CODE BY BYTES</text>
-<text x="852" y="100" class="label" text-anchor="end">METERS BELOW  =  REPOSITORIES IT APPEARS IN</text>
-<line x1="440.0" y1="104.0" x2="440.0" y2="258.0" stroke="#30363d"/>
+<text x="28" y="100" class="label">BAR  =  CODE VOLUME SHARE BY BYTES</text>
+<text x="852" y="100" class="label" text-anchor="end">METERS  =  PROJECTS UTILIZED</text>
+<line x1="440.0" y1="104.0" x2="440.0" y2="263.0" stroke="#30363d"/>
 <circle cx="32.0" cy="118.0" r="4" fill="#3572A5"/>
 <text x="43.0" y="122.0" class="data">Python</text>
 <rect x="149.0" y="111.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
 <rect x="149.0" y="111.0" width="65.1" height="8" rx="4" fill="#3572A5"/>
 <text x="295.0" y="122.0" class="data" text-anchor="end" fill="#8b949e">52.7%</text>
 <text x="307.0" y="122.0" class="body">28 repos</text>
-<circle cx="32.0" cy="144.0" r="4" fill="#3178c6"/>
-<text x="43.0" y="148.0" class="data">TypeScript</text>
-<rect x="149.0" y="137.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="149.0" y="137.0" width="23.3" height="8" rx="4" fill="#3178c6"/>
-<text x="295.0" y="148.0" class="data" text-anchor="end" fill="#8b949e">32.6%</text>
-<text x="307.0" y="148.0" class="body">10 repos</text>
-<circle cx="32.0" cy="170.0" r="4" fill="#f1e05a"/>
-<text x="43.0" y="174.0" class="data">JavaScript</text>
-<rect x="149.0" y="163.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="149.0" y="163.0" width="39.5" height="8" rx="4" fill="#f1e05a"/>
-<text x="295.0" y="174.0" class="data" text-anchor="end" fill="#8b949e">8.3%</text>
-<text x="307.0" y="174.0" class="body">17 repos</text>
-<circle cx="32.0" cy="196.0" r="4" fill="#89e051"/>
-<text x="43.0" y="200.0" class="data">Shell</text>
-<rect x="149.0" y="189.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="149.0" y="189.0" width="62.8" height="8" rx="4" fill="#89e051"/>
-<text x="295.0" y="200.0" class="data" text-anchor="end" fill="#8b949e">2.0%</text>
-<text x="307.0" y="200.0" class="body">27 repos</text>
-<circle cx="32.0" cy="222.0" r="4" fill="#F05138"/>
-<text x="43.0" y="226.0" class="data">Swift</text>
-<rect x="149.0" y="215.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="149.0" y="215.0" width="4.0" height="8" rx="4" fill="#F05138"/>
-<text x="295.0" y="226.0" class="data" text-anchor="end" fill="#8b949e">1.3%</text>
-<text x="307.0" y="226.0" class="body">1 repo</text>
-<circle cx="32.0" cy="248.0" r="4" fill="#dea584"/>
-<text x="43.0" y="252.0" class="data">Rust</text>
-<rect x="149.0" y="241.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="149.0" y="241.0" width="4.7" height="8" rx="4" fill="#dea584"/>
-<text x="295.0" y="252.0" class="data" text-anchor="end" fill="#8b949e">1.1%</text>
-<text x="307.0" y="252.0" class="body">2 repos</text>
+<circle cx="32.0" cy="145.0" r="4" fill="#3178c6"/>
+<text x="43.0" y="149.0" class="data">TypeScript</text>
+<rect x="149.0" y="138.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="149.0" y="138.0" width="23.3" height="8" rx="4" fill="#3178c6"/>
+<text x="295.0" y="149.0" class="data" text-anchor="end" fill="#8b949e">32.6%</text>
+<text x="307.0" y="149.0" class="body">10 repos</text>
+<circle cx="32.0" cy="172.0" r="4" fill="#f1e05a"/>
+<text x="43.0" y="176.0" class="data">JavaScript</text>
+<rect x="149.0" y="165.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="149.0" y="165.0" width="39.5" height="8" rx="4" fill="#f1e05a"/>
+<text x="295.0" y="176.0" class="data" text-anchor="end" fill="#8b949e">8.3%</text>
+<text x="307.0" y="176.0" class="body">17 repos</text>
+<circle cx="32.0" cy="199.0" r="4" fill="#89e051"/>
+<text x="43.0" y="203.0" class="data">Shell</text>
+<rect x="149.0" y="192.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="149.0" y="192.0" width="62.8" height="8" rx="4" fill="#89e051"/>
+<text x="295.0" y="203.0" class="data" text-anchor="end" fill="#8b949e">2.0%</text>
+<text x="307.0" y="203.0" class="body">27 repos</text>
+<circle cx="32.0" cy="226.0" r="4" fill="#F05138"/>
+<text x="43.0" y="230.0" class="data">Swift</text>
+<rect x="149.0" y="219.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="149.0" y="219.0" width="4.0" height="8" rx="4" fill="#F05138"/>
+<text x="295.0" y="230.0" class="data" text-anchor="end" fill="#8b949e">1.3%</text>
+<text x="307.0" y="230.0" class="body">1 repo</text>
+<circle cx="32.0" cy="253.0" r="4" fill="#dea584"/>
+<text x="43.0" y="257.0" class="data">Rust</text>
+<rect x="149.0" y="246.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="149.0" y="246.0" width="4.7" height="8" rx="4" fill="#dea584"/>
+<text x="295.0" y="257.0" class="data" text-anchor="end" fill="#8b949e">1.1%</text>
+<text x="307.0" y="257.0" class="body">2 repos</text>
 <circle cx="466.0" cy="118.0" r="4" fill="#e34c26"/>
 <text x="477.0" y="122.0" class="data">HTML</text>
 <rect x="583.0" y="111.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
 <rect x="583.0" y="111.0" width="30.2" height="8" rx="4" fill="#e34c26"/>
 <text x="729.0" y="122.0" class="data" text-anchor="end" fill="#8b949e">0.8%</text>
 <text x="741.0" y="122.0" class="body">13 repos</text>
-<circle cx="466.0" cy="144.0" r="4" fill="#663399"/>
-<text x="477.0" y="148.0" class="data">CSS</text>
-<rect x="583.0" y="137.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="583.0" y="137.0" width="20.9" height="8" rx="4" fill="#663399"/>
-<text x="729.0" y="148.0" class="data" text-anchor="end" fill="#8b949e">0.6%</text>
-<text x="741.0" y="148.0" class="body">9 repos</text>
-<circle cx="466.0" cy="170.0" r="4" fill="#C1F12E"/>
-<text x="477.0" y="174.0" class="data">Batchfile</text>
-<rect x="583.0" y="163.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="583.0" y="163.0" width="9.3" height="8" rx="4" fill="#C1F12E"/>
-<text x="729.0" y="174.0" class="data" text-anchor="end" fill="#8b949e">0.2%</text>
-<text x="741.0" y="174.0" class="body">4 repos</text>
-<circle cx="466.0" cy="196.0" r="4" fill="#b07219"/>
-<text x="477.0" y="200.0" class="data">Java</text>
-<rect x="583.0" y="189.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="583.0" y="189.0" width="4.0" height="8" rx="4" fill="#b07219"/>
-<text x="729.0" y="200.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
-<text x="741.0" y="200.0" class="body">1 repo</text>
-<circle cx="466.0" cy="222.0" r="4" fill="#012456"/>
-<text x="477.0" y="226.0" class="data">PowerShell</text>
-<rect x="583.0" y="215.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="583.0" y="215.0" width="4.0" height="8" rx="4" fill="#012456"/>
-<text x="729.0" y="226.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
-<text x="741.0" y="226.0" class="body">1 repo</text>
-<circle cx="466.0" cy="248.0" r="4" fill="#6866fb"/>
-<text x="477.0" y="252.0" class="data">Objective-C++</text>
-<rect x="583.0" y="241.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
-<rect x="583.0" y="241.0" width="4.0" height="8" rx="4" fill="#6866fb"/>
-<text x="729.0" y="252.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
-<text x="741.0" y="252.0" class="body">1 repo</text>
-<text x="28" y="288.0" class="body">also shipped: Dockerfile, PLpgSQL, Inno Setup, Go Template, Makefile, Mako, C++</text>
+<circle cx="466.0" cy="145.0" r="4" fill="#663399"/>
+<text x="477.0" y="149.0" class="data">CSS</text>
+<rect x="583.0" y="138.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="583.0" y="138.0" width="20.9" height="8" rx="4" fill="#663399"/>
+<text x="729.0" y="149.0" class="data" text-anchor="end" fill="#8b949e">0.6%</text>
+<text x="741.0" y="149.0" class="body">9 repos</text>
+<circle cx="466.0" cy="172.0" r="4" fill="#C1F12E"/>
+<text x="477.0" y="176.0" class="data">Batchfile</text>
+<rect x="583.0" y="165.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="583.0" y="165.0" width="9.3" height="8" rx="4" fill="#C1F12E"/>
+<text x="729.0" y="176.0" class="data" text-anchor="end" fill="#8b949e">0.2%</text>
+<text x="741.0" y="176.0" class="body">4 repos</text>
+<circle cx="466.0" cy="199.0" r="4" fill="#b07219"/>
+<text x="477.0" y="203.0" class="data">Java</text>
+<rect x="583.0" y="192.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="583.0" y="192.0" width="4.0" height="8" rx="4" fill="#b07219"/>
+<text x="729.0" y="203.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
+<text x="741.0" y="203.0" class="body">1 repo</text>
+<circle cx="466.0" cy="226.0" r="4" fill="#012456"/>
+<text x="477.0" y="230.0" class="data">PowerShell</text>
+<rect x="583.0" y="219.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="583.0" y="219.0" width="4.0" height="8" rx="4" fill="#012456"/>
+<text x="729.0" y="230.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
+<text x="741.0" y="230.0" class="body">1 repo</text>
+<circle cx="466.0" cy="253.0" r="4" fill="#6866fb"/>
+<text x="477.0" y="257.0" class="data">Objective-C++</text>
+<rect x="583.0" y="246.0" width="100.0" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.6"/>
+<rect x="583.0" y="246.0" width="4.0" height="8" rx="4" fill="#6866fb"/>
+<text x="729.0" y="257.0" class="data" text-anchor="end" fill="#8b949e">0.1%</text>
+<text x="741.0" y="257.0" class="body">1 repo</text>
+<text x="28" y="294.0" class="body">also shipped: Dockerfile, PLpgSQL, Inno Setup, Go Template, Makefile, Mako, C++</text>
 </svg>
