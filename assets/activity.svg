@@ -23,7 +23,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <rect x="28.00" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="37.67" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="47.35" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
-<rect x="57.02" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
+<rect x="57.02" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="66.69" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="76.37" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="86.04" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
@@ -31,7 +31,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <rect x="105.38" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="115.06" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="124.73" y="126.36" width="6.67" height="29.64" rx="1.5" fill="#0a4a9e"/>
-<rect x="134.40" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#4f9cf0"/>
+<rect x="134.40" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="144.08" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="153.75" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="163.42" y="152.33" width="6.67" height="3.67" rx="1.5" fill="#4f9cf0"/>
@@ -42,8 +42,8 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <rect x="211.79" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="221.46" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="231.13" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
-<rect x="240.81" y="99.17" width="6.67" height="56.83" rx="1.5" fill="#0a4a9e"/>
-<rect x="250.48" y="127.58" width="6.67" height="28.42" rx="1.5" fill="#0969da"/>
+<rect x="240.81" y="99.47" width="6.67" height="56.53" rx="1.5" fill="#0a4a9e"/>
+<rect x="250.48" y="127.28" width="6.67" height="28.72" rx="1.5" fill="#0969da"/>
 <rect x="260.15" y="144.39" width="6.67" height="11.61" rx="1.5" fill="#0969da"/>
 <rect x="269.83" y="152.64" width="6.67" height="3.36" rx="1.5" fill="#4f9cf0"/>
 <rect x="279.50" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
@@ -60,7 +60,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <rect x="385.90" y="148.67" width="6.67" height="7.33" rx="1.5" fill="#0969da"/>
 <rect x="395.58" y="152.94" width="6.67" height="3.06" rx="1.5" fill="#4f9cf0"/>
 <rect x="405.25" y="129.11" width="6.67" height="26.89" rx="1.5" fill="#0969da"/>
-<rect x="414.92" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#4f9cf0"/>
+<rect x="414.92" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
 <rect x="424.60" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="434.27" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#e6eaef"/>
 <rect x="443.94" y="154.00" width="6.67" height="2.00" rx="1.5" fill="#9ec5f5"/>
@@ -71,10 +71,10 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <rect x="492.31" y="148.97" width="6.67" height="7.03" rx="1.5" fill="#0969da"/>
 <rect x="501.98" y="153.56" width="6.67" height="2.44" rx="1.5" fill="#4f9cf0"/>
 <rect x="511.65" y="144.69" width="6.67" height="11.31" rx="1.5" fill="#0969da"/>
-<rect x="521.33" y="143.17" width="6.67" height="12.83" rx="1.5" fill="#0969da"/>
+<rect x="521.33" y="142.56" width="6.67" height="13.44" rx="1.5" fill="#0969da"/>
 <text x="28" y="172" class="label" font-size="9px">52 WEEKS AGO</text>
 <text x="528" y="172" class="label" font-size="9px" text-anchor="end">NOW</text>
-<text x="28" y="198" class="num" fill="#1f2328">1,708</text>
+<text x="28" y="198" class="num" fill="#1f2328">1,710</text>
 <text x="111.5" y="198" class="label">CONTRIBUTIONS</text>
 <text x="576" y="70" class="label">LANGUAGES · BY BYTES</text>
 <text x="852" y="70" class="label" text-anchor="end">TOP 6 OF 19</text>

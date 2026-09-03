@@ -310,7 +310,7 @@ def tag(x: float, y: float, label: str, colour: str, c: dict) -> tuple[str, floa
 
 # ------------------------------------------------------------------ hero
 
-HERO_H = 252
+HERO_H = 236
 
 
 def render_hero(theme: str, d: dict) -> str:
@@ -321,18 +321,16 @@ def render_hero(theme: str, d: dict) -> str:
     out.append(f'<text x="{PAD}" y="86" class="name">{esc(NAME_CJK)}</text>')
     out.append(f'<text x="{PAD + 120}" y="86" class="handle">{esc(NAME_LATIN)}</text>')
     out.append(f'<text x="{PAD}" y="118" class="role">软件工程师 · AI 应用工程化落地 · 全栈系统交付</text>')
-    out.append(f'<text x="{PAD}" y="140" class="body">LLM 应用 · AI Agent · 多 Agent 系统 · 智能自动化 · 从需求到上线的全流程交付</text>')
-
-    x, y = float(PAD), 158.0
+    x, y = float(PAD), 138.0
     for f in FOCUS:
         s, w = tag(x, y, f, c["accent"], c)
         out.append(s)
         x += w + 6
 
-    out.append(f'<text x="{PAD}" y="206" class="label">GMT+8</text>')
-    out.append(f'<text x="{PAD + 56}" y="206" class="ink">远程全职 · 合同制 · 技术咨询</text>')
-    out.append(f'<text x="{PAD}" y="228" class="label">EMAIL</text>')
-    out.append(f'<text x="{PAD + 56}" y="228" class="ink mono" fill="{c["accent"]}">{esc(EMAIL)}</text>')
+    out.append(f'<text x="{PAD}" y="190" class="label">GMT+8</text>')
+    out.append(f'<text x="{PAD + 56}" y="190" class="ink">远程全职 · 合同制 · 技术咨询</text>')
+    out.append(f'<text x="{PAD}" y="212" class="label">EMAIL</text>')
+    out.append(f'<text x="{PAD + 56}" y="212" class="ink mono" fill="{c["accent"]}">{esc(EMAIL)}</text>')
 
     tiles = [
         (f'{d["repos"]}', "PUBLIC REPOS", c["accent"]),
@@ -380,7 +378,6 @@ def render_stack(theme: str) -> str:
     height = 56 + sum(len(rows) * ROW_H + 12 for _, rows in lanes)
     out = card_open(W, height, c)
     out.append(f'<text x="{PAD}" y="34" class="kicker">TECH STACK</text>')
-    out.append(f'<text x="{W - PAD}" y="34" class="label" text-anchor="end">主力 · 也在用 · 不追新，追稳</text>')
     out.append(f'<line x1="{PAD}" y1="44" x2="{W - PAD}" y2="44" stroke="{c["rule"]}"/>')
 
     y = 56
