@@ -6,73 +6,104 @@
 </p>
 
 <p align="center">
-  <a href="mailto:wwtvn1937@gmail.com"><img src="https://img.shields.io/badge/Email-wwtvn1937%40gmail.com-0969da?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Experience-4%2B_Years_AI_Delivery-10b981?style=flat-square&logo=git&logoColor=white" alt="Experience" /></a>
-  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Timezone-GMT%2B8_(Flexible_Overlap)-8250df?style=flat-square&logo=clock&logoColor=white" alt="Timezone" /></a>
-  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Status-Remote_%2F_Contract_%2F_Consulting-success?style=flat-square" alt="Status" /></a>
+  <a href="mailto:wwtvn1937@gmail.com"><img src="https://img.shields.io/badge/Email-wwtvn1937%40gmail.com-1e293b?style=flat-square&logo=gmail&logoColor=f8fafc" alt="Email" /></a>
+  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Experience-4_Years_AI_Delivery-0f766e?style=flat-square&logo=codewars&logoColor=f8fafc" alt="Experience" /></a>
+  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Role-AI_FDE_%2F_Full--Stack-2563eb?style=flat-square&logo=databricks&logoColor=f8fafc" alt="Role" /></a>
+  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Timezone-GMT%2B8_(Flexible)-475569?style=flat-square&logo=clock&logoColor=f8fafc" alt="Timezone" /></a>
+  <a href="https://github.com/qilaidev"><img src="https://img.shields.io/badge/Status-Open_for_Opportunities-047857?style=flat-square" alt="Status" /></a>
 </p>
+
+---
+
+> **工程原则**  
+> **不追新，追稳。**  
+> **构建有韧性的系统，让 AI 在生产环境中存活；把混沌拆成系统，把系统交给机器。**
 
 ---
 
 ### 👋 关于我 (About Me)
 
-你好，我是 **绮莱 (qilai)**，一名专注于 **AI 应用工程化落地、企业级 Agent 系统架构与全栈交付** 的软件工程师 / AI 前线交付工程师（AI FDE）。
+你好，我是 **绮莱 (qilai)**，一名软件工程师，专注 **AI 应用工程化落地与全栈系统交付**。
 
-拥有 **4 年 AI 落地实战经验**，深耕 LLM 落地应用、企业级 AI Agent 与多 Agent 协作系统。我致力于将技术从概念验证（PoC）推向扛得住真实业务流量的生产环境，能独立闭环从 **需求剖析、架构设计、端到端研发、模型与 Agent 集成，到高可用部署与全链路排障** 的完整流程。
-
-> **工程信条**：*不追新，追稳。把混沌拆成系统，把系统交给机器；构建有韧性的架构，让 AI 在真实生产中存活。*
-
-* 🤖 **AI 核心落地**：专注企业级 AI Agent、多 Agent 协作、工具调用（Tool Calling）、严格结构化输出（Structured Output）、上下文动态管理与混合检索增强（Hybrid RAG）。
-* 🛡️ **生产级韧性架构**：优先采用状态持久化、异步状态机、幂等重试与异常容错兜底机制，杜绝“黑盒失控”，确保全链路可观测与易排障。
-* 🧱 **全栈与系统工程**：以 **TypeScript / React / Electron** 与 **Python / FastAPI** 为主力栈，深度结合 **PostgreSQL、Redis、Docker**，兼顾系统级工具开发与端到端交付。
-* 📐 **复用与范式沉淀**：结合深度提示词工程，持续将 4 年交付经验抽象沉淀为可开箱复用的工程模板与 Agent 生产范式。
+* 🛠️ **4 年 AI 落地实战**：深耕 LLM 应用、企业级 AI Agent、多 Agent 系统与智能自动化，拥有坚实的真实生产环境项目交付经验。
+* 🔄 **独立全流程闭环**：具备完整的单兵交付能力，独立闭环从 **需求分析 ➔ 架构设计 ➔ 开发实现 ➔ AI 能力集成 ➔ 部署上线 ➔ 持续迭代** 的完整生命周期。
+* 🎯 **当前重点方向**：聚焦 **AI FDE（Forward Deployed Engineering）**、AI 应用工程、企业级 Agent 与多 Agent 协作系统架构；同时持续进行独立研发与提示词工程实践，致力于将 4 年一线经验沉淀为可复用的工程模板与 Agent 构建范式。
 
 ---
 
-### 🚀 精选实战与开源项目 (Featured Projects)
+### 🧩 核心能力与工程实践 (Capabilities & Architecture)
 
-#### ⚡ AI & Agent 智能体与推理工程
-* 🎬 [**cleanplate**](https://github.com/qilaidev/cleanplate) — **本地优先的生产级 AI 视频去水印服务**
-  `FastAPI` · `ComfyUI DiffuEraser` · `FFmpeg` · `Docker`
-  > 具备高吞吐与容错能力的视频修复服务。采用异步 Job 任务队列分发、多级降级兜底方案与本地 GPU 推理优化，保证大文件处理下的系统稳定性。
-* 🔮 [**bazi-master**](https://github.com/qilaidev/bazi-master) — **全栈 AI 领域专家解读与流式推理系统**
-  `React` · `Express` · `PostgreSQL` · `Prisma` · `LLM Pipeline`
-  > 融合流式生成与传统专业规则的多阶段 Agent 编排流水线，支持上下文状态管理、结构化数据持久化与端到端高可用交互。
-
-#### 🛠️ 系统工具、逆向与自动化
-* ⚡ [**PromptPanel**](https://github.com/qilaidev/PromptPanel) — **macOS 原生 AI 提示词与片段流转启动器**
-  `Swift` · `SwiftUI` · `macOS Native` · `Local-First`
-  > 面向高频 AI 交互的轻量级全局呼出工具。极致内存占用、纯本地离线优先存储，具备标准化单测、CI/CD 与代码签名发布链路。
-* 🌟 [**IDM-Activation-Script-Chinese**](https://github.com/qilaidev/IDM-Activation-Script-Chinese) `★ 440+` — **IDM 激活与维护套件**
-  `Batchfile` · `Windows Script` · `GPL-3.0`
-  > 高容错 Windows 自动化工具集，深度适配 GBK/CP936 编码与注册表原子化备份回退机制，服务数万活跃用户。
-* 🔍 [**macfriends-cli**](https://github.com/qilaidev/macfriends-cli) — **macOS 关系检测与逆向工程 CLI**
-  `Rust` · `Objective-C++` · `Reverse Engineering` · `Local-Only`
-  > 无网络依赖的轻量级底层探测工具，基于 Rust 编写的高性能系统级 Agent，零外部流量外发，严格保障本地隐私。
-* 🧹 [**bilibili-cleaner**](https://github.com/qilaidev/bilibili-cleaner) — **健壮的账号数据批量管理系统**
-  `Python` · `FastAPI` · `Vue` · `Docker`
-  > 具备自适应速率限制（Rate Limiting）、会话保活、高危操作双重校验确认机制与完备 pytest 自动化测试套件。
+<table>
+  <tr>
+    <th width="26%" align="left">维度</th>
+    <th width="74%" align="left">实践重点与技术选型</th>
+  </tr>
+  <tr>
+    <td><b>🤖 AI & Agent 关键能力</b></td>
+    <td>
+      <code>Tool Calling</code> · <code>结构化输出</code> · <code>上下文管理</code> · <code>混合 RAG</code> · <code>任务编排</code> · <code>多 Agent 协作</code>
+    </td>
+  </tr>
+  <tr>
+    <td><b>🛡️ 韧性工程标准</b></td>
+    <td>
+      拒绝脆弱 Demo。架构重心聚焦在 <b>状态持久化</b>、<b>异步状态机</b>、<b>幂等重试机制</b> 与 <b>多级异常兜底</b>，目标是交付<b>可承受实际生产流量、全链路可观测、低排障成本</b>的高可用系统。
+    </td>
+  </tr>
+  <tr>
+    <td><b>💻 主力全栈技术栈</b></td>
+    <td>
+      <b>前端 & 客户端</b>：<code>TypeScript</code> · <code>React</code> · <code>Electron</code><br/>
+      <b>后端 & 数据层</b>：<code>Python</code> · <code>FastAPI</code> · <code>PostgreSQL</code> · <code>Redis</code>
+    </td>
+  </tr>
+  <tr>
+    <td><b>⚖️ 技术选型哲学</b></td>
+    <td>
+      <b>不盲目追求新颖性</b>，技术栈必须服务于业务价值。选型始终将<b>稳定性</b>、<b>可维护性</b>、<b>算力/开发成本</b>与<b>真实业务回报</b>置于首位。
+    </td>
+  </tr>
+</table>
 
 ---
 
-### 🛠️ 技术雷达 (Technical Radar)
+### 🚀 精选项目 (Featured Projects)
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
-    <img src="assets/stack.svg" alt="Tech Stack" width="880" />
-  </picture>
-</p>
+> 📦 **精选开源与实战项目已统一置顶在 GitHub 首页仓库列表。**  
+> 包含本地 AI 视频推理服务、原生系统效率工具、全栈流式 AI 应用与系统级自动化脚本。
 
 ---
 
-### 🤝 协作模式与技术偏好 (Work & Collaboration)
+### 🤝 协作模式与偏好 (Collaboration & Work Mode)
 
-* **交付角色**：AI FDE（前线交付工程师）、全栈架构与开发、Agent 解决方案顾问。
-* **合作形式**：开放 **远程全职 (Remote Full-Time)**、**项目合同制 (Contract)** 及 **架构咨询 (Consulting)**。
-* **团队偏好**：偏好与产品/业务紧密协同的敏捷小团队、极客文化驱动团队或单兵端到端交付场景。
-* **时区弹性**：常驻 **GMT+8**（完整覆盖亚太时段），可根据需求部分重叠欧美工作窗口。
-* **工作语言**：中文（母语）、English（工作熟练，支持跨国异步协作）。
+<table>
+  <tr>
+    <td width="50%">
+      <b>💼 合作形式</b><br/>
+      • <b>远程全职</b> (Remote Full-Time)<br/>
+      • <b>项目合同制</b> (Contract-Based)<br/>
+      • <b>技术咨询 / 架构顾问</b> (Technical Consulting)
+    </td>
+    <td width="50%">
+      <b>🎯 团队与场景偏好</b><br/>
+      • 偏好与产品、业务紧密协作的小型敏捷团队<br/>
+      • 独立端到端交付场景<br/>
+      • 重视工程质量与真实产出的务实文化
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>🕒 时区与排期</b><br/>
+      • <b>常驻时区</b>：<code>GMT+8</code>（完整覆盖亚太时段）<br/>
+      • <b>跨区协作</b>：可弹性配合欧美团队部分工作时间重叠
+    </td>
+    <td>
+      <b>🗣️ 工作语言</b><br/>
+      • <b>中文</b>（母语）<br/>
+      • <b>English</b>（熟练，可作为独立工作语言）
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -80,36 +111,18 @@
 
 > *“不跟世界比赛，慢慢品味这一生。”*
 
-* 🔭 **长期探索**：AI Agent 范式演进 · 元宇宙交互 · 密码学与分布式系统
-* 🍃 **灵感来源**：理论物理与科幻 · 东方哲学与修仙叙事 · 徒步山野与放空
-
----
-
-### 🌐 English Overview
-
-<details>
-<summary><b>Click to expand English Profile</b></summary>
-
-<br/>
-
-**qilai (绮莱)** is a **Software Engineer & AI Forward Deployed Engineer (FDE)** specializing in AI Agent engineering and resilient full-stack systems with **4+ years of real-world AI delivery experience**.
-
-* **Core Focus**: Production-ready LLM systems, enterprise AI Agents, Multi-Agent orchestration, Tool Calling, Structured Outputs, and Hybrid RAG.
-* **Engineering Principles**: *Stability over novelty.* Designing resilient architectures capable of sustaining real production traffic using async state machines, idempotency, and robust fallback patterns.
-* **Primary Stack**: TypeScript, React, Electron, Python, FastAPI, PostgreSQL, Redis, Docker, and Linux environments.
-* **Availability**: Open for **Remote Full-Time**, **Contract**, and **Technical Consulting** roles. Based in GMT+8 with flexible overlap for US/EU teams.
-
-</details>
+* 🔭 **长期关注**：AI Agent 演进范式 · 元宇宙形态 · 密码学与去中心化协议
+* 🍃 **灵感与生活**：哲学思辨 · 理论物理 · 硬核科幻 · 东方修仙与精神叙事 · 行走山野
 
 ---
 
 ### 📫 交流与联系 (Contact)
 
-无论是有明确的 **AI/Agent 落地项目需求**、**全栈系统交付合作**，或是进行 **深度技术与哲学探讨**，随时欢迎通过邮件交流：
+探讨相关工作机会、项目交付合作或技术交流，欢迎直接来信：
 
 <p align="center">
   <a href="mailto:wwtvn1937@gmail.com">
-    <img src="https://img.shields.io/badge/Contact_Me-wwtvn1937%40gmail.com-blue?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact Email" />
+    <img src="https://img.shields.io/badge/Contact%20Me-wwtvn1937%40gmail.com-0969da?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
