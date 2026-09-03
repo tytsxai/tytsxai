@@ -39,20 +39,20 @@
 ## 项目
 
 <p align="center">
-  <a href="https://github.com/qilaidev/bazi-master"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-bazi-master-dark.svg" /><img src="assets/project-bazi-master.svg" alt="bazi-master：React + Express + Prisma + PostgreSQL + Redis 全栈应用，LLM 解读 Provider 可切换" width="430" /></picture></a>
-  <a href="https://github.com/qilaidev/cleanplate"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cleanplate-dark.svg" /><img src="assets/project-cleanplate.svg" alt="cleanplate：本地优先的 AI 视频去水印后端，FastAPI + 异步 worker + FFmpeg 回退" width="430" /></picture></a>
+  <a href="https://github.com/qilaidev/bazi-master"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-bazi-master-dark.svg" /><img src="assets/project-bazi-master.svg" alt="bazi-master：React + Express + Prisma + PostgreSQL + Redis 全栈应用，LLM 解读 Provider 可切换" width="49%" /></picture></a>
+  <a href="https://github.com/qilaidev/cleanplate"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-cleanplate-dark.svg" /><img src="assets/project-cleanplate.svg" alt="cleanplate：本地优先的 AI 视频去水印后端，FastAPI + 异步 worker + FFmpeg 回退" width="49%" /></picture></a>
 </p>
 <p align="center">
-  <a href="https://github.com/qilaidev/metaphysics-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-metaphysics-engine-dark.svg" /><img src="assets/project-metaphysics-engine.svg" alt="metaphysics-engine：无状态术数计算引擎，HTTP API、CLI 与 MCP 三种接入" width="430" /></picture></a>
-  <a href="https://github.com/qilaidev/mac-machina"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-mac-machina-dark.svg" /><img src="assets/project-mac-machina.svg" alt="mac-machina：自托管 AI macOS 自动化平台，自然语言触发本地工具调用" width="430" /></picture></a>
+  <a href="https://github.com/qilaidev/metaphysics-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-metaphysics-engine-dark.svg" /><img src="assets/project-metaphysics-engine.svg" alt="metaphysics-engine：无状态术数计算引擎，HTTP API、CLI 与 MCP 三种接入" width="49%" /></picture></a>
+  <a href="https://github.com/qilaidev/mac-machina"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-mac-machina-dark.svg" /><img src="assets/project-mac-machina.svg" alt="mac-machina：自托管 AI macOS 自动化平台，自然语言触发本地工具调用" width="49%" /></picture></a>
 </p>
 <p align="center">
-  <a href="https://github.com/qilaidev/quant-agent-cli"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-quant-agent-cli-dark.svg" /><img src="assets/project-quant-agent-cli.svg" alt="quant-agent-cli：面向 AI Agent 调用的风控优先交易命令面" width="430" /></picture></a>
-  <a href="https://github.com/qilaidev/bilibili-cleaner"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-bilibili-cleaner-dark.svg" /><img src="assets/project-bilibili-cleaner.svg" alt="bilibili-cleaner：自托管账号批量清理工作台，Web UI / API / CLI" width="430" /></picture></a>
+  <a href="https://github.com/qilaidev/quant-agent-cli"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-quant-agent-cli-dark.svg" /><img src="assets/project-quant-agent-cli.svg" alt="quant-agent-cli：面向 AI Agent 调用的风控优先交易命令面" width="49%" /></picture></a>
+  <a href="https://github.com/qilaidev/bilibili-cleaner"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-bilibili-cleaner-dark.svg" /><img src="assets/project-bilibili-cleaner.svg" alt="bilibili-cleaner：自托管账号批量清理工作台，Web UI / API / CLI" width="49%" /></picture></a>
 </p>
 <p align="center">
-  <a href="https://github.com/qilaidev/PromptPanel"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-promptpanel-dark.svg" /><img src="assets/project-promptpanel.svg" alt="PromptPanel：macOS 原生提示词与片段启动器，本地优先" width="430" /></picture></a>
-  <a href="https://github.com/qilaidev/IDM-Activation-Script-Chinese"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-idm-activation-script-chinese-dark.svg" /><img src="assets/project-idm-activation-script-chinese.svg" alt="IDM-Activation-Script-Chinese：Windows 脚本套件，GBK 编码适配与注册表备份回退" width="430" /></picture></a>
+  <a href="https://github.com/qilaidev/PromptPanel"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-promptpanel-dark.svg" /><img src="assets/project-promptpanel.svg" alt="PromptPanel：macOS 原生提示词与片段启动器，本地优先" width="49%" /></picture></a>
+  <a href="https://github.com/qilaidev/IDM-Activation-Script-Chinese"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/project-idm-activation-script-chinese-dark.svg" /><img src="assets/project-idm-activation-script-chinese.svg" alt="IDM-Activation-Script-Chinese：Windows 脚本套件，GBK 编码适配与注册表备份回退" width="49%" /></picture></a>
 </p>
 
 更多项目见置顶仓库与[仓库列表](https://github.com/qilaidev?tab=repositories)。
