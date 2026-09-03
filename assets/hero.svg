@@ -41,7 +41,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 <text x="734" y="102" class="label">STARS</text>
 <rect x="546" y="134" width="150" height="78" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
 <rect x="560" y="150" width="3" height="18" rx="1.5" fill="#1a7f37"/>
-<text x="572" y="168" class="num" fill="#1a7f37">1,707</text>
+<text x="572" y="168" class="num" fill="#1a7f37">1,708</text>
 <text x="572" y="192" class="label">CONTRIBUTIONS</text>
 <rect x="708" y="134" width="150" height="78" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
 <rect x="722" y="150" width="3" height="18" rx="1.5" fill="#8250df"/>
