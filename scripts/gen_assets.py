@@ -212,7 +212,7 @@ def tw(text: str, size: float, mono: bool = False) -> float:
 
 def wrap(text: str, size: float, width: float, max_lines: int) -> list[str]:
     """Wrap by tokens: each CJK glyph is a token, each ASCII word (with its trailing space) is one."""
-    tokens = re.findall(r"[^\x00-\x2E7F]|[\x00-\x2E7F]+?(?=\s|[^\x00-\x2E7F]|$)\s*", text)
+    tokens = re.findall(r"[^\x00-\u2e7f]|[\x00-\u2e7f]+?(?=\s|[^\x00-\u2e7f]|$)\s*", text)
     lines: list[str] = []
     cur = ""
     for tok in tokens:
