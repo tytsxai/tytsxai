@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-"""Generate every visual on the profile as a self-hosted SVG.
+"""Render the profile's visuals as self-hosted SVG "engineering sheets".
 
-Design direction — "modern engineering dashboard":
-Clean, polished, high-contrast SVG panels that seamlessly integrate with GitHub's
-Dark and Light themes. Committed SVGs ensure zero broken image states or rate limits.
+Three sheets, each in a light and a dark variant (six files under assets/):
 
-Refreshed weekly by .github/workflows/charts.yml.
-Reads public GitHub data only; writes only into assets/.
+  01 identity.svg   who / what / how to reach — plus a schematic of the
+                    production shape most of my systems end up in
+  02 process.svg    the six-stage delivery loop I own end to end
+  03 activity.svg   live data: 52-week contribution cadence, language share,
+                    repository and star totals (the only place numbers live)
+
+Sheets 01 and 02 are static; sheet 03 reads public GitHub data. Refreshed
+weekly by .github/workflows/charts.yml so the README never embeds a number
+that goes stale, and never depends on a third-party card service that can
+rate-limit into a broken image.
 """
 
 from __future__ import annotations
@@ -22,52 +28,45 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 USER = "qilaidev"
-NAME = "qilai"
-ROLE = "AI APPLICATION & DELIVERY ENGINEER"
-TAGLINE = "Agent Workflows, RAG & Resilient Full-Stack Systems in Production"
-SIGNOFF = "RELIABILITY  ·  IDEMPOTENCY  ·  OBSERVABILITY  ·  SPEED"
+NAME_CJK = "绮莱"
+NAME_LATIN = "qilai"
 EMAIL = "wwtvn1937@gmail.com"
 
-WORK_REPOS = [
-    ("IDM-Activation-Script-Chinese", "Windows utility toolkit with high adoption — GBK encoding, registry rollback & safety gates"),
-    ("cleanplate", "Local-first AI video watermark removal — FastAPI + ComfyUI DiffuEraser, async job queue & fallback"),
-    ("PromptPanel", "Native macOS AI prompt & snippet launcher — Swift, SwiftUI, global hotkey, local-first architecture"),
-    ("bazi-master", "Full-stack divination & AI reading platform — React, Express, PostgreSQL, Prisma, LLM pipeline"),
-    ("bilibili-cleaner", "Safe account bulk automation — QR auth, adaptive rate limits, review gates & Dockerized"),
-    ("macfriends-cli", "Systems-level Rust + ObjC++ relationship inspector, ABI-pinned, privacy-first zero-network"),
-]
-
 ASSETS = Path(__file__).resolve().parent.parent / "assets"
+SHEETS = 3
 
-MONO = "ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace"
-SANS = "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
+W = 880
+PAD = 32
 
-MONO_RATIO = 0.605
-
-
-def mw(size: float, text: str) -> float:
-    return len(text) * size * MONO_RATIO
-
+SANS = (
+    '-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB",'
+    '"Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",Helvetica,Arial,sans-serif'
+)
+MONO = 'ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace'
 
 THEMES = {
     "light": {
-        "surface": "#ffffff", "sunken": "#f6f8fa", "card_bg": "#f9fafb", "border": "#d0d7de", "rule": "#e1e4e8",
+        "paper": "#ffffff", "grid": "#edf1f5", "border": "#d0d7de", "rule": "#e6eaef",
         "ink": "#1f2328", "muted": "#57606a", "faint": "#8c959f",
-        "green": "#1a7f37", "amber": "#d97706", "blue": "#0969da", "purple": "#8250df", "cyan": "#0284c7",
-        "heat": ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-        "chip_fill": 0.08, "chip_stroke": 0.35,
+        "accent": "#0969da", "amber": "#bf6a02", "green": "#1a7f37", "box": "#f6f8fa",
+        "bars": ["#e6eaef", "#9ec5f5", "#4f9cf0", "#0969da", "#0a4a9e"],
     },
     "dark": {
-        "surface": "#0d1117", "sunken": "#161b22", "card_bg": "#1c2128", "border": "#30363d", "rule": "#21262d",
+        "paper": "#0d1117", "grid": "#161d27", "border": "#30363d", "rule": "#21262d",
         "ink": "#e6edf3", "muted": "#8b949e", "faint": "#6e7681",
-        "green": "#3fb950", "amber": "#f59e0b", "blue": "#58a6ff", "purple": "#bc8cff", "cyan": "#38bdf8",
-        "heat": ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-        "chip_fill": 0.16, "chip_stroke": 0.45,
+        "accent": "#58a6ff", "amber": "#e3b341", "green": "#3fb950", "box": "#161b22",
+        "bars": ["#1c2330", "#1f4b82", "#2f6fb5", "#58a6ff", "#9ccbff"],
     },
 }
 
-W = 880
-PAD = 28
+LANG_COLORS = {
+    "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a",
+    "Rust": "#dea584", "Swift": "#F05138", "Shell": "#89e051", "Go": "#00ADD8",
+    "Batchfile": "#C1F12E", "HTML": "#e34c26", "CSS": "#663399", "C": "#555555",
+    "C++": "#f34b7d", "Java": "#b07219", "Objective-C++": "#6866fb",
+    "PowerShell": "#012456", "Dockerfile": "#384d54", "Makefile": "#427819",
+    "PLpgSQL": "#336790", "Vue": "#41b883", "Kotlin": "#A97BFF", "Ruby": "#701516",
+}
 
 
 # ---------------------------------------------------------------- data layer
@@ -75,45 +74,38 @@ PAD = 28
 def get_token() -> str | None:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
-        try:
-            token = os.popen("gh auth token 2>/dev/null").read().strip()
-        except Exception:
-            token = None
+        token = os.popen("gh auth token 2>/dev/null").read().strip()
     return token or None
 
 
-def api(path: str, accept: str = "application/vnd.github+json"):
+def api(path: str):
     url = path if path.startswith("http") else f"https://api.github.com{path}"
     req = urllib.request.Request(url)
-    req.add_header("Accept", accept)
+    req.add_header("Accept", "application/vnd.github+json")
     req.add_header("User-Agent", f"{USER}-profile-assets")
     token = get_token()
     if token:
         req.add_header("Authorization", f"Bearer {token}")
     with urllib.request.urlopen(req, timeout=30) as resp:
         body = resp.read().decode()
-        return (json.loads(body) if body else None), resp.status
+        return json.loads(body) if body else None
 
 
-def fetch_contributions_graphql() -> tuple[int, list[int]] | None:
+def fetch_contributions() -> tuple[int, list[int]] | None:
     token = get_token()
     if not token:
         return None
-    try:
-        query = """query {
-          user(login: "%s") {
-            contributionsCollection {
-              contributionCalendar {
-                totalContributions
-                weeks {
-                  contributionDays {
-                    contributionCount
-                  }
-                }
-              }
-            }
+    query = """query {
+      user(login: "%s") {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks { contributionDays { contributionCount } }
           }
-        }""" % USER
+        }
+      }
+    }""" % USER
+    try:
         req = urllib.request.Request(
             "https://api.github.com/graphql",
             data=json.dumps({"query": query}).encode(),
@@ -124,46 +116,55 @@ def fetch_contributions_graphql() -> tuple[int, list[int]] | None:
             },
         )
         with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode())
-            cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
-            total = cal["totalContributions"]
-            weekly = [sum(d["contributionCount"] for d in w["contributionDays"]) for w in cal["weeks"]]
-            return total, weekly[-52:]
-    except Exception as exc:
-        print(f"  ! GraphQL contribution fetch fallback: {exc}", file=sys.stderr)
+            cal = json.loads(resp.read().decode())["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+        weekly = [sum(d["contributionCount"] for d in w["contributionDays"]) for w in cal["weeks"]]
+        return cal["totalContributions"], weekly[-52:]
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ! contributions via GraphQL failed, falling back: {exc}", file=sys.stderr)
         return None
-
-
-def work_rows() -> list[dict]:
-    rows: list[dict] = []
-    for name, blurb in WORK_REPOS:
-        try:
-            repo, _ = api(f"/repos/{USER}/{name}")
-        except (urllib.error.HTTPError, urllib.error.URLError) as exc:
-            print(f"  ! {name}: {exc}", file=sys.stderr)
-            continue
-        rows.append(
-            {
-                "name": name,
-                "blurb": blurb,
-                "lang": repo.get("language") or "—",
-                "stars": repo.get("stargazers_count", 0),
-            }
-        )
-    return rows
 
 
 def weekly_commits_fallback(repos: list[str]) -> list[int]:
     weeks = [0] * 52
     for repo in repos:
         try:
-            data, status = api(f"/repos/{USER}/{repo}/stats/commit_activity")
-            if status == 200 and data:
-                for i, week in enumerate(data[-52:]):
-                    weeks[i] += week.get("total", 0)
-        except Exception:
+            data = api(f"/repos/{USER}/{repo}/stats/commit_activity")
+        except Exception:  # noqa: BLE001
             continue
+        for i, week in enumerate((data or [])[-52:]):
+            weeks[i] += week.get("total", 0)
     return weeks
+
+
+def collect() -> dict:
+    repos = api(f"/users/{USER}/repos?per_page=100&type=owner") or []
+    owned = [r for r in repos if not r.get("fork")]
+    stars = sum(r.get("stargazers_count", 0) for r in owned)
+
+    totals: dict[str, int] = {}
+
+    def fetch_lang(repo):
+        if repo.get("archived"):
+            return None
+        try:
+            return api(f"/repos/{USER}/{repo['name']}/languages")
+        except Exception:  # noqa: BLE001
+            return None
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+        for langs in pool.map(fetch_lang, owned):
+            for name, size in (langs or {}).items():
+                totals[name] = totals.get(name, 0) + size
+
+    got = fetch_contributions()
+    if got:
+        total_contribs, weeks = got
+    else:
+        weeks = weekly_commits_fallback([r["name"] for r in owned])
+        total_contribs = sum(weeks)
+
+    print(f"  {len(owned)} repos · {stars} stars · {len(totals)} languages · {total_contribs} contributions/52w")
+    return {"repos": len(owned), "stars": stars, "langs": totals, "weeks": weeks, "contribs": total_contribs}
 
 
 # ------------------------------------------------------------- svg plumbing
@@ -172,372 +173,271 @@ def esc(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def head(height: int, c: dict) -> list[str]:
+def sheet_open(height: int, c: dict, uid: str) -> list[str]:
+    """Paper, faint drafting grid, corner marks, shared styles."""
     return [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" '
-        f'viewBox="0 0 {W} {height}" font-family="{MONO}" role="img">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" viewBox="0 0 {W} {height}" role="img">',
         "<style>",
-        f".kicker{{font-size:10px;letter-spacing:1.8px;font-weight:700;fill:{c['faint']}}}",
-        f".label{{font-size:10px;letter-spacing:1.5px;font-weight:600;fill:{c['faint']}}}",
-        f".body{{font-size:11.5px;fill:{c['muted']}}}",
-        f".data{{font-size:12px;fill:{c['ink']}}}",
-        ".chip{font-size:11px;font-weight:500}",
-        f".name{{font-family:{SANS};font-size:42px;font-weight:800;letter-spacing:-1.2px;fill:{c['ink']}}}",
-        f".num{{font-family:{SANS};font-size:28px;font-weight:800;letter-spacing:-0.6px}}",
-        f".role{{font-size:12px;letter-spacing:2.2px;font-weight:700;fill:{c['blue']}}}",
-        f".repo{{font-size:14px;font-weight:700;fill:{c['blue']}}}",
-        f".stars{{font-family:{SANS};font-size:14px;font-weight:700;fill:{c['amber']}}}",
+        f"text{{font-family:{MONO}}}",
+        f".cjk{{font-family:{SANS}}}",
+        f".kicker{{font-size:10.5px;letter-spacing:2px;font-weight:700;fill:{c['accent']}}}",
+        f".label{{font-size:10px;letter-spacing:1.4px;font-weight:600;fill:{c['faint']}}}",
+        f".mono{{font-size:12px;fill:{c['ink']}}}",
+        f".muted{{font-size:11.5px;fill:{c['muted']}}}",
+        f".small{{font-size:10px;fill:{c['muted']}}}",
+        f".name{{font-size:58px;font-weight:700;letter-spacing:-1px;fill:{c['ink']}}}",
+        f".handle{{font-size:22px;font-weight:600;fill:{c['muted']}}}",
+        f".role{{font-size:15px;font-weight:600;fill:{c['ink']}}}",
+        f".stage{{font-size:13px;font-weight:700;fill:{c['ink']}}}",
+        f".bullet{{font-size:10.5px;fill:{c['muted']}}}",
+        f".big{{font-size:26px;font-weight:700;letter-spacing:-0.5px;fill:{c['ink']}}}",
         "</style>",
-        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="14" '
-        f'fill="{c["surface"]}" stroke="{c["border"]}"/>',
+        "<defs>",
+        f'<pattern id="grid-{uid}" width="24" height="24" patternUnits="userSpaceOnUse">'
+        f'<path d="M24 0H0V24" fill="none" stroke="{c["grid"]}" stroke-width="0.8"/></pattern>',
+        f'<clipPath id="clip-{uid}"><rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="10"/></clipPath>',
+        f'<marker id="arr-{uid}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">'
+        f'<path d="M0 0L8 4L0 8z" fill="{c["accent"]}"/></marker>',
+        f'<marker id="arl-{uid}" viewBox="0 0 8 8" refX="1" refY="4" markerWidth="7" markerHeight="7" orient="auto">'
+        f'<path d="M8 0L0 4L8 8z" fill="{c["accent"]}"/></marker>',
+        "</defs>",
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="10" fill="{c["paper"]}" stroke="{c["border"]}"/>',
+        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{height - 1}" rx="10" fill="url(#grid-{uid})" clip-path="url(#clip-{uid})"/>',
+        # corner registration marks
+        *[
+            f'<path d="{d}" fill="none" stroke="{c["faint"]}" stroke-width="1"/>'
+            for d in (
+                f"M{PAD - 12} {PAD - 2}v-10h10",
+                f"M{W - PAD + 12} {PAD - 2}v-10h-10",
+                f"M{PAD - 12} {height - PAD + 2}v10h10",
+                f"M{W - PAD + 12} {height - PAD + 2}v10h-10",
+            )
+        ],
     ]
 
 
-def kicker(y: float, left: str, right: str, c: dict) -> list[str]:
+def title_block(height: int, c: dict, sheet: int, footer_left: str) -> list[str]:
+    """Bottom-right title block like an engineering drawing, plus a left footer."""
+    y = height - 38
+    cells = [("SHEET", f"{sheet:02d} / {SHEETS:02d}", 90), ("REV", f"{datetime.now(timezone.utc):%Y-%m-%d}", 118), ("ID", f"github.com/{USER}", 168)]
+    total = sum(w for _, _, w in cells)
+    x = W - PAD - total
+    out = [f'<rect x="{x}" y="{y}" width="{total}" height="26" rx="4" fill="{c["box"]}" stroke="{c["border"]}"/>']
+    for i, (k, v, w) in enumerate(cells):
+        if i:
+            out.append(f'<line x1="{x}" y1="{y}" x2="{x}" y2="{y + 26}" stroke="{c["border"]}"/>')
+        out.append(f'<text x="{x + 9}" y="{y + 11}" class="label" font-size="8.5px">{esc(k)}</text>')
+        out.append(f'<text x="{x + 9}" y="{y + 22}" class="mono" font-size="10.5px">{esc(v)}</text>')
+        x += w
+    out.append(f'<text x="{PAD}" y="{y + 18}" class="muted cjk">{esc(footer_left)}</text>')
+    return out
+
+
+def kicker(y: int, text: str, c: dict) -> list[str]:
     return [
-        f'<text x="{PAD}" y="{y}" class="kicker">{esc(left)}</text>',
-        f'<text x="{W - PAD}" y="{y}" class="label" text-anchor="end">{esc(right)}</text>',
-        f'<line x1="0" y1="{y + 17}" x2="{W}" y2="{y + 17}" stroke="{c["rule"]}"/>',
+        f'<text x="{PAD}" y="{y}" class="kicker">{esc(text)}</text>',
+        f'<line x1="{PAD}" y1="{y + 9}" x2="{W - PAD}" y2="{y + 9}" stroke="{c["rule"]}"/>',
     ]
 
 
-CHIP_H = 24
-CHIP_TEXT = 11
-
-
-def chip_width(text: str) -> float:
-    return 22 + mw(CHIP_TEXT, text) + 12
-
-
-def chip(x: float, y: float, text: str, color: str, c: dict) -> str:
+def box(x: float, y: float, w: float, h: float, label: str, c: dict, cls: str = "mono", fs: str = "10.5px") -> str:
     return (
-        f'<g><rect x="{x:.1f}" y="{y:.1f}" width="{chip_width(text):.1f}" height="{CHIP_H}" rx="6" '
-        f'fill="{color}" fill-opacity="{c["chip_fill"]}" '
-        f'stroke="{color}" stroke-opacity="{c["chip_stroke"]}"/>'
-        f'<circle cx="{x + 11:.1f}" cy="{y + CHIP_H / 2:.1f}" r="3.2" fill="{color}"/>'
-        f'<text x="{x + 20:.1f}" y="{y + CHIP_H / 2 + 4:.1f}" class="chip" fill="{c["ink"]}">{esc(text)}</text></g>'
+        f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="5" fill="{c["box"]}" stroke="{c["border"]}"/>'
+        f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + 4:.1f}" class="{cls}" font-size="{fs}" text-anchor="middle">{esc(label)}</text>'
     )
 
 
-# -------------------------------------------------------------------- hero
-
-HERO_H = 340
-
-
-def cadence_tiers(weeks: list[int]):
-    active = sorted(c for c in weeks if c > 0)
-    if not active:
-        return lambda count: 0
-    cuts = [active[int(len(active) * q)] for q in (0.25, 0.55, 0.85)]
-
-    def tier(count: int) -> int:
-        if count == 0:
-            return 0
-        return 1 + sum(count > cut for cut in cuts)
-
-    return tier
+def arrow(x1: float, y1: float, x2: float, y2: float, c: dict, uid: str, dashed: bool = False) -> str:
+    dash = ' stroke-dasharray="3 3"' if dashed else ""
+    return (
+        f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{c["accent"]}" '
+        f'stroke-width="1.2"{dash} marker-end="url(#arr-{uid})"/>'
+    )
 
 
-def render_hero(theme: str, stats: dict, weeks: list[int], lang_count: int, total_contribs: int) -> str:
+# ------------------------------------------------------- sheet 01: identity
+
+ID_H = 312
+
+
+def render_identity(theme: str) -> str:
     c = THEMES[theme]
-    out = head(HERO_H, c)
+    uid = f"id-{theme}"
+    out = sheet_open(ID_H, c, uid)
+    out += kicker(40, "01 · IDENTITY", c)
 
-    # Top rail
-    pill_w = 196
-    out.append(
-        f'<rect x="{PAD}" y="12" width="{pill_w}" height="22" rx="11" fill="{c["green"]}" fill-opacity="0.12" stroke="{c["green"]}" stroke-opacity="0.3"/>'
-    )
-    out.append(f'<circle cx="{PAD + 12}" cy="23" r="4" fill="{c["green"]}"/>')
-    out.append(f'<text x="{PAD + 22}" y="26.5" class="kicker" fill="{c["green"]}">OPEN TO OPPORTUNITIES</text>')
+    # Name block
+    out.append(f'<text x="{PAD}" y="118" class="name cjk">{esc(NAME_CJK)}</text>')
+    out.append(f'<text x="{PAD + 132}" y="118" class="handle">{esc(NAME_LATIN)}</text>')
+    out.append(f'<text x="{PAD}" y="152" class="role cjk">软件工程师 · AI 应用工程化落地 · 全栈系统交付</text>')
+    out.append(f'<text x="{PAD}" y="174" class="label" fill="{c["accent"]}">AI APPLICATION ENGINEERING  ·  FULL-STACK DELIVERY  ·  FDE</text>')
 
-    out.append(
-        f'<text x="{W - PAD}" y="26.5" class="label" text-anchor="end">'
-        f'{USER.upper()}  ·  GMT+8  ·  UPDATED {datetime.now(timezone.utc):%Y-%m-%d}</text>'
-    )
-    out.append(f'<line x1="0" y1="44" x2="{W}" y2="44" stroke="{c["rule"]}"/>')
-
-    # Identity
-    out.append(f'<text x="{PAD}" y="100" class="name">{esc(NAME)}</text>')
-    out.append(f'<text x="{PAD}" y="126" class="role">{esc(ROLE)}</text>')
-    out.append(f'<text x="{PAD}" y="150" class="body">{esc(TAGLINE)}</text>')
-
-    # 4 Stat Tiles
-    tiles = [
-        (f"{stats['repos']}", "PUBLIC REPOSITORIES", c["blue"]),
-        (f"{stats['stars']:,}+", "TOTAL STARS EARNED", c["amber"]),
-        (f"{lang_count}", "LANGUAGES MASTERED", c["purple"]),
-        (f"{total_contribs:,}", "YEARLY CONTRIBUTIONS", c["green"]),
+    rows = [
+        ("TIMEZONE", "GMT+8 · 覆盖亚太时段，可配合欧美团队部分重叠时间"),
+        ("OPEN TO", "远程全职 · 合同制 · 技术咨询"),
+        ("LANGUAGE", "中文（母语） · 英文（工作语言）"),
+        ("CONTACT", EMAIL),
     ]
-    tw, gap = (W - 2 * PAD - 3 * 12) / 4, 12
-    ty = 172
-    for i, (num, cap, fill) in enumerate(tiles):
-        tx = PAD + i * (tw + gap)
-        out.append(
-            f'<rect x="{tx:.1f}" y="{ty}" width="{tw:.1f}" height="68" rx="10" '
-            f'fill="{c["sunken"]}" stroke="{c["border"]}"/>'
-        )
-        out.append(f'<text x="{tx + 16:.1f}" y="{ty + 36}" class="num" fill="{fill}">{esc(num)}</text>')
-        out.append(f'<text x="{tx + 17:.1f}" y="{ty + 54}" class="label">{esc(cap)}</text>')
+    y = 208
+    for k, v in rows:
+        out.append(f'<text x="{PAD}" y="{y}" class="label">{esc(k)}</text>')
+        cls = "mono" if k == "CONTACT" else "mono cjk"
+        fill = f' fill="{c["accent"]}"' if k == "CONTACT" else ""
+        out.append(f'<text x="{PAD + 96}" y="{y}" class="{cls}"{fill}>{esc(v)}</text>')
+        y += 20
 
-    # Cadence Strip
-    strip_y = 272
-    out.append(f'<text x="{PAD}" y="{strip_y - 8}" class="label">SHIPPING CADENCE  ·  52 WEEKS</text>')
-    out.append(f'<text x="{W - PAD}" y="{strip_y - 8}" class="label" text-anchor="end">{esc(SIGNOFF)}</text>')
-    n = len(weeks)
-    bar_gap = 2.6
-    bw = (W - 2 * PAD - bar_gap * (n - 1)) / n
-    tier_of = cadence_tiers(weeks)
-    for i, count in enumerate(weeks):
-        tier = tier_of(count)
-        x = PAD + i * (bw + bar_gap)
-        out.append(
-            f'<rect x="{x:.2f}" y="{strip_y}" width="{bw:.2f}" height="22" rx="3" fill="{c["heat"][tier]}"/>'
-        )
-
+    # Schematic: the production shape
+    sx = 500
+    out.append(f'<text x="{sx}" y="66" class="label">SCHEMATIC · 生产形态</text>')
+    bw, bh, gap = 56, 28, 16
+    by = 96
+    names = ["request", "api", "queue", "worker", "llm+tools"]
+    xs = [sx + i * (bw + gap) for i in range(len(names))]
+    for x, n in zip(xs, names):
+        out.append(box(x, by, bw, bh, n, c))
+    for i in range(len(names) - 2):
+        out.append(arrow(xs[i] + bw, by + bh / 2, xs[i + 1] - 1, by + bh / 2, c, uid))
+    # worker <-> llm+tools is a two-way exchange
     out.append(
-        f'<text x="{PAD}" y="{strip_y + 46}" class="data" fill="{c["muted"]}">'
-        f'email  <tspan fill="{c["blue"]}">{esc(EMAIL)}</tspan></text>'
+        f'<line x1="{xs[3] + bw + 1}" y1="{by + bh / 2}" x2="{xs[4] - 1}" y2="{by + bh / 2}" stroke="{c["accent"]}" '
+        f'stroke-width="1.2" marker-start="url(#arl-{uid})" marker-end="url(#arr-{uid})"/>'
     )
+    # retry loop above: worker -> queue
+    qx, wx = xs[2] + bw / 2, xs[3] + bw / 2
     out.append(
-        f'<text x="{W - PAD}" y="{strip_y + 46}" class="label" text-anchor="end">'
-        f'REMOTE  ·  ONSITE  ·  FULL-STACK &amp; AI DELIVERY</text>'
+        f'<path d="M{wx} {by}v-12H{qx}v11" fill="none" stroke="{c["accent"]}" stroke-width="1.2" '
+        f'stroke-dasharray="3 3" marker-end="url(#arr-{uid})"/>'
     )
+    out.append(f'<text x="{(qx + wx) / 2:.1f}" y="78" class="small" text-anchor="middle">retry · idempotent</text>')
+    # state store below worker/queue
+    stx, stw = xs[2], (xs[3] + bw) - xs[2]
+    out.append(box(stx, by + 60, stw, 26, "state · postgres / redis", c))
+    out.append(arrow(wx, by + bh, wx, by + 59, c, uid))
+    out.append(arrow(qx, by + bh, qx, by + 59, c, uid, dashed=True))
+    # observability rail
+    out.append(f'<line x1="{sx}" y1="{by + 104}" x2="{xs[4] + bw}" y2="{by + 104}" stroke="{c["green"]}" stroke-width="1.2" stroke-dasharray="2 4"/>')
+    out.append(f'<text x="{sx}" y="{by + 118}" class="small">structured logs · metrics · alerts · human takeover</text>')
 
+    out += title_block(ID_H, c, 1, "不追新，追稳 · 让 AI 在生产环境中存活")
     out.append("</svg>")
-    return chr(10).join(out)
+    return "\n".join(out)
 
 
-# ------------------------------------------------------------------- stack
+# -------------------------------------------------------- sheet 02: process
 
-STACK = [
-    ("LANGUAGES", "#3776AB", [
-        ("Python", "#3776AB"), ("TypeScript", "#3178C6"), ("JavaScript", "#F0DB4F"),
-        ("Rust", "#CE422B"), ("Swift", "#F05138"), ("Java", "#ED8B00"),
-        ("Bash", "#4EAA25"), ("SQL", "#4479A1"), ("Objective-C++", "#6866FB"),
-    ]),
-    ("AI  /  LLM", "#8250df", [
-        ("Claude", "#D97757"), ("OpenAI", "#10A37F"), ("MCP", "#7C3AED"),
-        ("Tool Calling", "#8250df"), ("Multi-Agent", "#8250df"), ("RAG", "#8250df"),
-        ("Structured Output", "#8250df"), ("ComfyUI", "#EA580C"), ("Evals & Guardrails", "#8250df"),
-    ]),
-    ("BACKEND", "#009688", [
-        ("FastAPI", "#009688"), ("Node.js", "#5FA04E"), ("Express", None),
-        ("PostgreSQL", "#4169E1"), ("Redis", "#FF4438"), ("Prisma", "#5A67D8"),
-        ("SQLAlchemy", "#D71F00"), ("Celery", "#37814A"), ("BullMQ", "#EA4335"),
-    ]),
-    ("FRONTEND", "#61DAFB", [
-        ("React", "#61DAFB"), ("Next.js", None), ("Vite", "#646CFF"),
-        ("Tailwind CSS", "#06B6D4"), ("shadcn/ui", None), ("SwiftUI", "#F05138"),
-    ]),
-    ("DATA  /  SEARCH", "#FF5CAA", [
-        ("Meilisearch", "#FF5CAA"), ("pgvector", "#4169E1"), ("Hybrid Recall", "#0969da"),
-        ("Rerank Models", "#0969da"), ("Chinese Tokenization", "#0969da"), ("SimHash Dedup", "#0969da"),
-    ]),
-    ("INFRA  /  OPS", "#2496ED", [
-        ("Docker", "#2496ED"), ("Linux", "#FCC624"), ("Nginx", "#009639"),
-        ("GitHub Actions", "#2088FF"), ("Cloudflare", "#F38020"), ("GPU Serving", "#76B900"),
-    ]),
-    ("PRACTICE", "#1a7f37", [
-        ("Idempotent Retries", "#1a7f37"), ("Async State Machines", "#1a7f37"),
-        ("Dry-run Gates", "#1a7f37"), ("Adaptive Rate Limits", "#1a7f37"),
-        ("Structured Logs", "#1a7f37"), ("Human-in-the-loop", "#1a7f37"),
-    ]),
+STAGES = [
+    ("需求分析", ["边界与验收标准", "数据与合规约束", "风险与可行性"]),
+    ("架构设计", ["状态模型与状态机", "幂等与重试策略", "降级与兜底路径"]),
+    ("开发实现", ["TypeScript · Python", "API 契约与测试", "结构化日志"]),
+    ("AI 能力集成", ["工具调用 · 结构化输出", "RAG · 上下文管理", "多 Agent 编排"]),
+    ("部署上线", ["Docker · CI/CD", "可观测与告警", "灰度与回滚"]),
+    ("持续迭代", ["线上排障", "评估与提示词迭代", "成本与效果复盘"]),
 ]
 
-LANE_X = 152
-CHIP_GAP = 7
-CHIP_ROW = 31
+PR_H = 246
 
 
-def _lane_rows(items):
-    limit = W - PAD
-    rows, row, x = [], [], float(LANE_X)
-    for name, color in items:
-        width = chip_width(name)
-        if row and x + width > limit:
-            rows.append(row)
-            row, x = [], float(LANE_X)
-        row.append((name, color, width))
-        x += width + CHIP_GAP
-    if row:
-        rows.append(row)
-    return rows
-
-
-def render_stack(theme: str) -> str:
+def render_process(theme: str) -> str:
     c = THEMES[theme]
-    lanes = [(label, accent, _lane_rows(items)) for label, accent, items in STACK]
-    body = sum(len(rows) * CHIP_ROW + 14 for _, _, rows in lanes)
-    height = int(58 + body)
+    uid = f"pr-{theme}"
+    out = sheet_open(PR_H, c, uid)
+    out += kicker(40, "02 · DELIVERY PROCESS · 全流程交付", c)
 
-    out = head(height, c)
-    out.extend(kicker(27, "TECHNICAL RADAR  ·  SKILLS & ECOSYSTEM", "PRODUCTION-GRADE TOOLKIT", c))
+    n = len(STAGES)
+    gap = 14
+    bw = (W - 2 * PAD - gap * (n - 1)) / n
+    by, bh = 64, 44
+    for i, (title, bullets) in enumerate(STAGES):
+        x = PAD + i * (bw + gap)
+        out.append(f'<rect x="{x:.1f}" y="{by}" width="{bw:.1f}" height="{bh}" rx="6" fill="{c["box"]}" stroke="{c["border"]}"/>')
+        out.append(f'<rect x="{x:.1f}" y="{by}" width="3" height="{bh}" rx="1.5" fill="{c["accent"]}"/>')
+        out.append(f'<text x="{x + 12:.1f}" y="{by + 17}" class="label">S{i + 1}</text>')
+        out.append(f'<text x="{x + 12:.1f}" y="{by + 35}" class="stage cjk">{esc(title)}</text>')
+        for j, b in enumerate(bullets):
+            out.append(f'<text x="{x + 12:.1f}" y="{by + bh + 22 + j * 18}" class="bullet cjk">{esc(b)}</text>')
+        if i < n - 1:
+            cx = x + bw + gap / 2
+            out.append(f'<path d="M{cx - 3:.1f} {by + bh / 2 - 5}l5 5l-5 5" fill="none" stroke="{c["accent"]}" stroke-width="1.4"/>')
 
-    y = 60
-    for label, accent, rows in lanes:
-        block = len(rows) * CHIP_ROW
-        out.append(
-            f'<rect x="{PAD}" y="{y + 4:.1f}" width="3" height="{max(block - 10, 8):.1f}" rx="1.5" fill="{accent}"/>'
-        )
-        out.append(f'<text x="{PAD + 14}" y="{y + 19:.1f}" class="label">{esc(label)}</text>')
-        for r, row in enumerate(rows):
-            x = float(LANE_X)
-            for name, color, width in row:
-                out.append(chip(x, y + r * CHIP_ROW + 2, name, color or c["ink"], c))
-                x += width + CHIP_GAP
-        y += block + 14
+    # feedback loop: S6 back to S1
+    ly = by + bh + 22 + 3 * 18 + 2
+    x0, x1 = PAD + bw / 2, PAD + (n - 1) * (bw + gap) + bw / 2
+    out.append(
+        f'<path d="M{x1:.1f} {ly - 10}v10H{x0:.1f}v-9" fill="none" stroke="{c["accent"]}" stroke-width="1.2" '
+        f'stroke-dasharray="3 3" marker-end="url(#arr-{uid})"/>'
+    )
+    out.append(f'<text x="{(x0 + x1) / 2:.1f}" y="{ly + 14}" class="small cjk" text-anchor="middle">线上反馈回到需求与架构 · 迭代闭环</text>')
 
+    out += title_block(PR_H, c, 2, "从需求分析到持续迭代，独立完成全流程交付")
     out.append("</svg>")
-    return chr(10).join(out)
+    return "\n".join(out)
 
 
-# ------------------------------------------------------------ selected work
+# ------------------------------------------------------- sheet 03: activity
 
-WORK_ROW_H = 46
+AC_H = 250
 
 
-def render_work(rows: list[dict], stats: dict, theme: str) -> str:
-    if not rows:
-        return ""
+def tier_of(weeks: list[int]):
+    active = sorted(v for v in weeks if v > 0)
+    if not active:
+        return lambda v: 0
+    cuts = [active[int(len(active) * q)] for q in (0.25, 0.5, 0.8)]
+    return lambda v: 0 if v == 0 else 1 + sum(v > k for k in cuts)
+
+
+def render_activity(theme: str, d: dict) -> str:
     c = THEMES[theme]
-    rows = sorted(rows, key=lambda r: r["stars"], reverse=True)
-    height = 60 + len(rows) * WORK_ROW_H + 10
-    out = head(height, c)
-    out.extend(kicker(27, "SELECTED OPEN SOURCE  ·  PUBLIC & RUNNING",
-                      f'{stats["repos"]} REPOSITORIES  ·  {stats["stars"]:,}+ STARS', c))
+    uid = f"ac-{theme}"
+    out = sheet_open(AC_H, c, uid)
+    out += kicker(40, "03 · ACTIVITY · 每周自动刷新", c)
 
-    y = 58
-    for row in rows:
-        dot = LANG_COLORS.get(row["lang"], c["faint"])
-        star_text = f'{row["stars"]:,}'
-        tile_w = max(64.0, 36 + len(star_text) * 9)
-        tile_x = W - PAD - tile_w
-        lit = row["stars"] > 0
-        tone = c["amber"] if lit else c["faint"]
-        out.append(
-            f'<rect x="{tile_x:.1f}" y="{y + 2:.1f}" width="{tile_w:.1f}" height="30" rx="7" '
-            f'fill="{tone}" fill-opacity="{c["chip_fill"] if lit else 0.06}" '
-            f'stroke="{tone}" stroke-opacity="{c["chip_stroke"] if lit else 0.25}"/>'
-        )
-        out.append(
-            f'<text x="{tile_x + tile_w / 2:.1f}" y="{y + 22:.1f}" class="stars" '
-            f'text-anchor="middle" fill="{tone}">★ {esc(star_text)}</text>'
-        )
+    # --- left: 52-week contribution bars
+    lx, lw = PAD, 500
+    out.append(f'<text x="{lx}" y="70" class="label">CONTRIBUTIONS · LAST 52 WEEKS</text>')
+    out.append(f'<text x="{lx + lw}" y="70" class="label" text-anchor="end">WEEKLY</text>')
+    weeks = d["weeks"] or [0] * 52
+    n = len(weeks)
+    top, base, maxh = 84, 150, 64
+    peak = max(weeks) or 1
+    gapb = 3
+    bwid = (lw - gapb * (n - 1)) / n
+    tier = tier_of(weeks)
+    out.append(f'<line x1="{lx}" y1="{base + 0.5}" x2="{lx + lw}" y2="{base + 0.5}" stroke="{c["rule"]}"/>')
+    for i, v in enumerate(weeks):
+        h = max(2.0, v / peak * maxh) if v else 2.0
+        x = lx + i * (bwid + gapb)
+        out.append(f'<rect x="{x:.2f}" y="{base - h:.2f}" width="{bwid:.2f}" height="{h:.2f}" rx="1.5" fill="{c["bars"][tier(v)]}"/>')
+    out.append(f'<text x="{lx}" y="{base + 16}" class="small">52 WEEKS AGO</text>')
+    out.append(f'<text x="{lx + lw}" y="{base + 16}" class="small" text-anchor="end">NOW</text>')
+    out.append(f'<text x="{lx}" y="{base + 46}" class="big">{d["contribs"]:,}</text>')
+    out.append(f'<text x="{lx + 12 + len(f"{d["contribs"]:,}") * 16}" y="{base + 46}" class="label">CONTRIBUTIONS · 52 WEEKS</text>')
 
-        out.append(f'<circle cx="{PAD + 4}" cy="{y + 13:.1f}" r="4.5" fill="{dot}"/>')
-        out.append(f'<text x="{PAD + 18}" y="{y + 18:.1f}" class="repo">{esc(row["name"])}</text>')
-        lang_x = PAD + 18 + mw(14, row["name"]) + 14
-        out.append(f'<text x="{lang_x:.1f}" y="{y + 18:.1f}" class="label">{esc(row["lang"].upper())}</text>')
-        out.append(f'<text x="{PAD + 18}" y="{y + 35:.1f}" class="body">{esc(row["blurb"])}</text>')
-        y += WORK_ROW_H
-
-    out.append("</svg>")
-    return chr(10).join(out)
-
-
-# -------------------------------------------------------------- languages
-
-LANG_COLORS = {
-    "Python": "#3572A5", "TypeScript": "#3178c6", "JavaScript": "#f1e05a",
-    "Rust": "#dea584", "Swift": "#F05138", "Shell": "#89e051", "Go": "#00ADD8",
-    "Batchfile": "#C1F12E", "HTML": "#e34c26", "CSS": "#663399", "C": "#555555",
-    "C++": "#f34b7d", "Java": "#b07219", "Objective-C++": "#6866fb",
-    "PowerShell": "#012456", "Dockerfile": "#384d54", "Makefile": "#427819",
-    "PLpgSQL": "#336790", "Go Template": "#00ADD8", "Inno Setup": "#264b99",
-    "Mako": "#7e858d", "Ruby": "#701516", "Kotlin": "#A97BFF", "Vue": "#41b883",
-}
-
-LANG_ROWS = 6
-LANG_COLS = 2
-
-
-def render_langs(totals: dict, repo_count: dict, repos: int, theme: str) -> str:
-    c = THEMES[theme]
-    total = sum(totals.values())
-    if not total:
-        return ""
-    ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)
-    shown = ranked[:LANG_ROWS * LANG_COLS]
-
-    bar_y, bar_h = 62, 18
-    row_y0 = bar_y + bar_h + 42
-    tail = ranked[LANG_ROWS * LANG_COLS:]
-    height = int(row_y0 + LANG_ROWS * 27 + (24 if tail else 8))
-
-    out = head(height, c)
-    out.extend(kicker(27, "LANGUAGE ECOSYSTEM  ·  ALL PUBLIC REPOSITORIES",
-                      f"{len(totals)} LANGUAGES  ·  {repos} REPOSITORIES", c))
-
-    bar_w = W - 2 * PAD
-    out.append(
-        f'<clipPath id="bclip"><rect x="{PAD}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="6"/></clipPath>'
-    )
-    out.append('<g clip-path="url(#bclip)">')
-    cursor = float(PAD)
-    for name, val in ranked:
-        seg = val / total * bar_w
-        out.append(
-            f'<rect x="{cursor:.2f}" y="{bar_y}" width="{max(seg, 0.8) + 0.6:.2f}" height="{bar_h}" '
-            f'fill="{LANG_COLORS.get(name, c["faint"])}"/>'
-        )
-        cursor += seg
-    out.append("</g>")
-    out.append(f'<text x="{PAD}" y="{bar_y + bar_h + 20}" class="label">BAR  =  CODE VOLUME SHARE BY BYTES</text>')
-    out.append(
-        f'<text x="{W - PAD}" y="{bar_y + bar_h + 20}" class="label" text-anchor="end">'
-        f'METERS  =  PROJECTS UTILIZED</text>'
-    )
-
-    gutter = 44.0
-    col_w = (W - 2 * PAD - gutter) / LANG_COLS
-    rule_x = PAD + col_w + gutter / 2
-    out.append(
-        f'<line x1="{rule_x:.1f}" y1="{row_y0 - 18:.1f}" x2="{rule_x:.1f}" '
-        f'y2="{row_y0 + (LANG_ROWS - 1) * 27 + 6:.1f}" stroke="{c["border"]}"/>'
-    )
-
-    name_w, meter_w = 106.0, 100.0
-    for i, (name, val) in enumerate(shown):
-        col, row = i // LANG_ROWS, i % LANG_ROWS
-        x = PAD + col * (col_w + gutter)
-        y = row_y0 + row * 27
+    # --- right: language share
+    rx, rw = 580, W - PAD - 580
+    out.append(f'<text x="{rx}" y="70" class="label">LANGUAGES · BY BYTES</text>')
+    langs = sorted(d["langs"].items(), key=lambda kv: kv[1], reverse=True)
+    total = sum(v for _, v in langs) or 1
+    shown = langs[:6]
+    out.append(f'<text x="{rx + rw}" y="70" class="label" text-anchor="end">TOP {len(shown)} OF {len(langs)}</text>')
+    bar_x, bar_w = rx + 92, rw - 92 - 46
+    y = 90
+    for name, v in shown:
+        pct = v / total * 100
         color = LANG_COLORS.get(name, c["faint"])
-        reach = repo_count.get(name, 0)
+        out.append(f'<circle cx="{rx + 4}" cy="{y - 4}" r="3.5" fill="{color}"/>')
+        out.append(f'<text x="{rx + 13}" y="{y}" class="mono" font-size="11px">{esc(name[:12])}</text>')
+        out.append(f'<rect x="{bar_x}" y="{y - 10}" width="{bar_w}" height="8" rx="4" fill="{c["box"]}" stroke="{c["border"]}" stroke-opacity="0.7"/>')
+        out.append(f'<rect x="{bar_x}" y="{y - 10}" width="{max(3.0, pct / 100 * bar_w):.1f}" height="8" rx="4" fill="{color}"/>')
+        out.append(f'<text x="{rx + rw}" y="{y}" class="muted" font-size="11px" text-anchor="end">{pct:.1f}%</text>')
+        y += 17
 
-        out.append(f'<circle cx="{x + 4:.1f}" cy="{y - 4:.1f}" r="4" fill="{color}"/>')
-        out.append(f'<text x="{x + 15:.1f}" y="{y:.1f}" class="data">{esc(name)}</text>')
+    stats = f'REPOS {d["repos"]}   ·   STARS {d["stars"]:,}   ·   LANGUAGES {len(langs)}'
+    out.append(f'<text x="{rx + rw}" y="{base + 46}" class="label" text-anchor="end">{esc(stats)}</text>')
 
-        mx = x + 15 + name_w
-        out.append(
-            f'<rect x="{mx:.1f}" y="{y - 11:.1f}" width="{meter_w}" height="8" rx="4" '
-            f'fill="{c["sunken"]}" stroke="{c["border"]}" stroke-opacity="0.6"/>'
-        )
-        fill_w = max(4.0, reach / max(repos, 1) * meter_w)
-        out.append(f'<rect x="{mx:.1f}" y="{y - 11:.1f}" width="{fill_w:.1f}" height="8" rx="4" fill="{color}"/>')
-
-        out.append(
-            f'<text x="{mx + meter_w + 46:.1f}" y="{y:.1f}" class="data" text-anchor="end" '
-            f'fill="{c["muted"]}">{val / total * 100:.1f}%</text>'
-        )
-        out.append(
-            f'<text x="{mx + meter_w + 58:.1f}" y="{y:.1f}" class="body">'
-            f'{reach} {"repo" if reach == 1 else "repos"}</text>'
-        )
-
-    if tail:
-        names, budget = [], (W - 2 * PAD) - mw(11.5, "also shipped: ")
-        for name, _ in tail:
-            piece = (", " if names else "") + name
-            if mw(11.5, piece) > budget:
-                names.append(f"+{len(tail) - len(names)} more")
-                break
-            names.append(piece if not names else piece)
-            budget -= mw(11.5, piece)
-        line = "".join(names) if names else ""
-        out.append(f'<text x="{PAD}" y="{height - 14:.1f}" class="body">also shipped: {esc(line)}</text>')
-
+    out += title_block(AC_H, c, 3, "数据来自公开仓库 · 不含私有与 fork")
     out.append("</svg>")
-    return chr(10).join(out)
+    return "\n".join(out)
 
 
 # --------------------------------------------------------------------- main
@@ -545,72 +445,23 @@ def render_langs(totals: dict, repo_count: dict, repos: int, theme: str) -> str:
 def main() -> int:
     t0 = time.time()
     ASSETS.mkdir(parents=True, exist_ok=True)
-
-    repos, _ = api(f"/users/{USER}/repos?per_page=100&type=owner")
-    owned = [r for r in repos if not r.get("fork")]
-    stats = {
-        "repos": len(owned),
-        "stars": sum(r.get("stargazers_count", 0) for r in owned),
-    }
-    print(f"  {stats['repos']} repos · {stats['stars']} stars")
-
-    totals: dict[str, int] = {}
-    repo_count: dict[str, int] = {}
-
-    def fetch_lang(repo_item):
-        if repo_item.get("archived"):
-            return None
-        try:
-            langs, _ = api(f"/repos/{USER}/{repo_item['name']}/languages")
-            return langs
-        except Exception:
-            return None
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        lang_results = pool.map(fetch_lang, owned)
-        for langs in lang_results:
-            if not langs:
-                continue
-            for name, size in langs.items():
-                totals[name] = totals.get(name, 0) + size
-                repo_count[name] = repo_count.get(name, 0) + 1
-
-    print(f"  {len(totals)} languages")
-
-    # Contributions & Cadence
-    graphql_res = fetch_contributions_graphql()
-    if graphql_res:
-        total_contribs, weeks = graphql_res
-    else:
-        weeks = weekly_commits_fallback([r["name"] for r in owned])
-        total_contribs = sum(weeks)
-
-    print(f"  {total_contribs} contributions over 52 weeks")
-
-    work = work_rows()
-    for row in work:
-        print(f"  {row['name']}: {row['lang']} · {row['stars']} stars")
+    data = collect()
 
     written = []
     for theme in THEMES:
         suffix = "" if theme == "light" else "-dark"
         for stem, svg in (
-            ("hero", render_hero(theme, stats, weeks, len(totals), total_contribs)),
-            ("stack", render_stack(theme)),
-            ("work", render_work(work, stats, theme)),
-            ("languages", render_langs(totals, repo_count, stats["repos"], theme)),
+            ("identity", render_identity(theme)),
+            ("process", render_process(theme)),
+            ("activity", render_activity(theme, data)),
         ):
-            if not svg:
-                continue
             path = ASSETS / f"{stem}{suffix}.svg"
-            path.write_text(svg + chr(10), encoding="utf-8")
+            path.write_text(svg + "\n", encoding="utf-8")
             written.append(path)
-
-    for path in written:
-        print(f"  wrote {path.relative_to(ASSETS.parent)} ({path.stat().st_size:,} B)")
-
+    for p in written:
+        print(f"  wrote {p.relative_to(ASSETS.parent)} ({p.stat().st_size:,} B)")
     print(f"Done in {time.time() - t0:.2f}s")
-    return 0 if written else 1
+    return 0
 
 
 if __name__ == "__main__":

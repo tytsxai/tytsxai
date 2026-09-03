@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="250" viewBox="0 0 880 250" role="img">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+.cjk{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",Helvetica,Arial,sans-serif}
+.kicker{font-size:10.5px;letter-spacing:2px;font-weight:700;fill:#58a6ff}
+.label{font-size:10px;letter-spacing:1.4px;font-weight:600;fill:#6e7681}
+.mono{font-size:12px;fill:#e6edf3}
+.muted{font-size:11.5px;fill:#8b949e}
+.small{font-size:10px;fill:#8b949e}
+.name{font-size:58px;font-weight:700;letter-spacing:-1px;fill:#e6edf3}
+.handle{font-size:22px;font-weight:600;fill:#8b949e}
+.role{font-size:15px;font-weight:600;fill:#e6edf3}
+.stage{font-size:13px;font-weight:700;fill:#e6edf3}
+.bullet{font-size:10.5px;fill:#8b949e}
+.big{font-size:26px;font-weight:700;letter-spacing:-0.5px;fill:#e6edf3}
+</style>
+<defs>
+<pattern id="grid-ac-dark" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#161d27" stroke-width="0.8"/></pattern>
+<clipPath id="clip-ac-dark"><rect x="0.5" y="0.5" width="879" height="249" rx="10"/></clipPath>
+<marker id="arr-ac-dark" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#58a6ff"/></marker>
+<marker id="arl-ac-dark" viewBox="0 0 8 8" refX="1" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M8 0L0 4L8 8z" fill="#58a6ff"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="879" height="249" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="879" height="249" rx="10" fill="url(#grid-ac-dark)" clip-path="url(#clip-ac-dark)"/>
+<path d="M20 30v-10h10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M860 30v-10h-10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M20 220v10h10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M860 220v10h-10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<text x="32" y="40" class="kicker">03 · ACTIVITY · 每周自动刷新</text>
+<line x1="32" y1="49" x2="848" y2="49" stroke="#21262d"/>
+<text x="32" y="70" class="label">CONTRIBUTIONS · LAST 52 WEEKS</text>
+<text x="532" y="70" class="label" text-anchor="end">WEEKLY</text>
+<line x1="32" y1="150.5" x2="532" y2="150.5" stroke="#21262d"/>
+<rect x="32.00" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="41.67" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="51.35" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="61.02" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="70.69" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="80.37" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="90.04" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="99.71" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="109.38" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="119.06" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="128.73" y="121.26" width="6.67" height="28.74" rx="1.5" fill="#9ccbff"/>
+<rect x="138.40" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="148.08" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="157.75" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="167.42" y="146.44" width="6.67" height="3.56" rx="1.5" fill="#2f6fb5"/>
+<rect x="177.10" y="101.70" width="6.67" height="48.30" rx="1.5" fill="#9ccbff"/>
+<rect x="186.77" y="145.85" width="6.67" height="4.15" rx="1.5" fill="#2f6fb5"/>
+<rect x="196.44" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="206.12" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="215.79" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="225.46" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="235.13" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="244.81" y="95.19" width="6.67" height="54.81" rx="1.5" fill="#9ccbff"/>
+<rect x="254.48" y="122.15" width="6.67" height="27.85" rx="1.5" fill="#58a6ff"/>
+<rect x="264.15" y="138.74" width="6.67" height="11.26" rx="1.5" fill="#58a6ff"/>
+<rect x="273.83" y="146.74" width="6.67" height="3.26" rx="1.5" fill="#2f6fb5"/>
+<rect x="283.50" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="293.17" y="142.30" width="6.67" height="7.70" rx="1.5" fill="#58a6ff"/>
+<rect x="302.85" y="136.07" width="6.67" height="13.93" rx="1.5" fill="#58a6ff"/>
+<rect x="312.52" y="115.93" width="6.67" height="34.07" rx="1.5" fill="#9ccbff"/>
+<rect x="322.19" y="147.93" width="6.67" height="2.07" rx="1.5" fill="#2f6fb5"/>
+<rect x="331.87" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="341.54" y="140.81" width="6.67" height="9.19" rx="1.5" fill="#58a6ff"/>
+<rect x="351.21" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="360.88" y="143.78" width="6.67" height="6.22" rx="1.5" fill="#2f6fb5"/>
+<rect x="370.56" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="380.23" y="106.15" width="6.67" height="43.85" rx="1.5" fill="#9ccbff"/>
+<rect x="389.90" y="142.89" width="6.67" height="7.11" rx="1.5" fill="#58a6ff"/>
+<rect x="399.58" y="147.04" width="6.67" height="2.96" rx="1.5" fill="#2f6fb5"/>
+<rect x="409.25" y="123.93" width="6.67" height="26.07" rx="1.5" fill="#58a6ff"/>
+<rect x="418.92" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="428.60" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="438.27" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="447.94" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="457.62" y="147.33" width="6.67" height="2.67" rx="1.5" fill="#2f6fb5"/>
+<rect x="467.29" y="114.74" width="6.67" height="35.26" rx="1.5" fill="#9ccbff"/>
+<rect x="476.96" y="86.00" width="6.67" height="64.00" rx="1.5" fill="#9ccbff"/>
+<rect x="486.63" y="123.63" width="6.67" height="26.37" rx="1.5" fill="#58a6ff"/>
+<rect x="496.31" y="143.19" width="6.67" height="6.81" rx="1.5" fill="#58a6ff"/>
+<rect x="505.98" y="147.63" width="6.67" height="2.37" rx="1.5" fill="#2f6fb5"/>
+<rect x="515.65" y="139.04" width="6.67" height="10.96" rx="1.5" fill="#58a6ff"/>
+<rect x="525.33" y="138.15" width="6.67" height="11.85" rx="1.5" fill="#58a6ff"/>
+<text x="32" y="166" class="small">52 WEEKS AGO</text>
+<text x="532" y="166" class="small" text-anchor="end">NOW</text>
+<text x="32" y="196" class="big">1,706</text>
+<text x="124" y="196" class="label">CONTRIBUTIONS · 52 WEEKS</text>
+<text x="580" y="70" class="label">LANGUAGES · BY BYTES</text>
+<text x="848" y="70" class="label" text-anchor="end">TOP 6 OF 19</text>
+<circle cx="584" cy="86" r="3.5" fill="#3572A5"/>
+<text x="593" y="90" class="mono" font-size="11px">Python</text>
+<rect x="672" y="80" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="80" width="68.5" height="8" rx="4" fill="#3572A5"/>
+<text x="848" y="90" class="muted" font-size="11px" text-anchor="end">52.7%</text>
+<circle cx="584" cy="103" r="3.5" fill="#3178c6"/>
+<text x="593" y="107" class="mono" font-size="11px">TypeScript</text>
+<rect x="672" y="97" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="97" width="42.4" height="8" rx="4" fill="#3178c6"/>
+<text x="848" y="107" class="muted" font-size="11px" text-anchor="end">32.6%</text>
+<circle cx="584" cy="120" r="3.5" fill="#f1e05a"/>
+<text x="593" y="124" class="mono" font-size="11px">JavaScript</text>
+<rect x="672" y="114" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="114" width="10.8" height="8" rx="4" fill="#f1e05a"/>
+<text x="848" y="124" class="muted" font-size="11px" text-anchor="end">8.3%</text>
+<circle cx="584" cy="137" r="3.5" fill="#89e051"/>
+<text x="593" y="141" class="mono" font-size="11px">Shell</text>
+<rect x="672" y="131" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="131" width="3.0" height="8" rx="4" fill="#89e051"/>
+<text x="848" y="141" class="muted" font-size="11px" text-anchor="end">2.0%</text>
+<circle cx="584" cy="154" r="3.5" fill="#F05138"/>
+<text x="593" y="158" class="mono" font-size="11px">Swift</text>
+<rect x="672" y="148" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="148" width="3.0" height="8" rx="4" fill="#F05138"/>
+<text x="848" y="158" class="muted" font-size="11px" text-anchor="end">1.5%</text>
+<circle cx="584" cy="171" r="3.5" fill="#dea584"/>
+<text x="593" y="175" class="mono" font-size="11px">Rust</text>
+<rect x="672" y="165" width="130" height="8" rx="4" fill="#161b22" stroke="#30363d" stroke-opacity="0.7"/>
+<rect x="672" y="165" width="3.0" height="8" rx="4" fill="#dea584"/>
+<text x="848" y="175" class="muted" font-size="11px" text-anchor="end">1.1%</text>
+<text x="848" y="196" class="label" text-anchor="end">REPOS 43   ·   STARS 515   ·   LANGUAGES 19</text>
+<rect x="472" y="212" width="376" height="26" rx="4" fill="#161b22" stroke="#30363d"/>
+<text x="481" y="223" class="label" font-size="8.5px">SHEET</text>
+<text x="481" y="234" class="mono" font-size="10.5px">03 / 03</text>
+<line x1="562" y1="212" x2="562" y2="238" stroke="#30363d"/>
+<text x="571" y="223" class="label" font-size="8.5px">REV</text>
+<text x="571" y="234" class="mono" font-size="10.5px">2026-09-03</text>
+<line x1="680" y1="212" x2="680" y2="238" stroke="#30363d"/>
+<text x="689" y="223" class="label" font-size="8.5px">ID</text>
+<text x="689" y="234" class="mono" font-size="10.5px">github.com/qilaidev</text>
+<text x="32" y="230" class="muted cjk">数据来自公开仓库 · 不含私有与 fork</text>
+</svg>

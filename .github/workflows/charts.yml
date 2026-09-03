@@ -1,6 +1,6 @@
 name: Refresh profile charts
 
-# Regenerates assets/*.svg (star history + language mix) so the profile never
+# Regenerates assets/*.svg (identity / process / activity sheets) so the profile never
 # depends on third-party card services that go rate-limited and render broken.
 # Reads public GitHub data only; writes nothing outside this repository.
 
@@ -40,7 +40,7 @@ jobs:
           python3 - <<'PY'
           import glob, xml.dom.minidom
           files = sorted(glob.glob("assets/*.svg"))
-          assert len(files) == 8, f"expected 8 svgs, got {files}"
+          assert len(files) == 6, f"expected 6 svgs, got {files}"
           for f in files:
               xml.dom.minidom.parse(f)
               print("ok", f)

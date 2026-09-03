@@ -1,34 +1,48 @@
-# qilaidev / qilai — GitHub Profile
+# qilaidev / 绮莱 (qilai) — GitHub Profile
 
-> Technical calling card for qilai (qilaidev): AI application & full-stack delivery engineer in GMT+8.
-> AI 应用落地交付 / 全栈开发。Focusing on production-ready AI systems and runnable open-source software.
+> Software engineer in GMT+8 focused on production AI applications and full-stack delivery.
+> Open to remote full-time, contract, and consulting work. Contact: wwtvn1937@gmail.com
 
 ## Who
 
-- Name / Handle: qilai (绮莱) · GitHub: qilaidev
-- Role Focus: AI Application & Delivery Engineer / Full-Stack Developer
-- Tech Domain: Agent Workflows, Tool Calling, MCP, RAG, Async State Machines, Full-Stack & Native macOS
-- Location / Timezone: GMT+8 (Shanghai) · Remote & Onsite
-- Contact: wwtvn1937@gmail.com
+- Name / handle: 绮莱 qilai · GitHub: qilaidev
+- Role: software engineer — AI application engineering, AI forward deployed engineering, full-stack delivery
+- Experience: 4 years of hands-on AI delivery (LLM applications, AI agents, multi-agent systems, automation) with production projects
+- Timezone: GMT+8; covers APAC hours, partial overlap with US/EU teams
+- Languages: Chinese (native), English (working)
+- Contact: wwtvn1937@gmail.com (email only)
 
-## Core Capabilities
+## Capabilities
 
-- AI & Agent Engineering: Agent orchestration, Function/Tool calling, Structured JSON outputs, MCP integration, and RAG hybrid recall (vector + fulltext + rerank).
-- Resilient System Architecture: Async state machines, idempotent retries, rate limiting, and human-in-the-loop fallback paths.
-- Cross-Platform & Languages: Python (FastAPI, PyTorch), TypeScript/JavaScript (Node.js, React, Next.js), Rust (native utilities, reverse engineering), and Swift / SwiftUI (native macOS apps).
-- End-to-End Delivery: Complete ownership from DB schema and API design to UI/UX, Docker deployment, and GPU serving.
+- LLM & agents: tool calling, structured output, context management, RAG, task orchestration, multi-agent collaboration
+- Engineering practice: state persistence, async state machines, idempotent retries, failure fallbacks; observable and debuggable systems
+- Delivery scope: requirements, architecture, implementation, AI integration, deployment, iteration — end to end
 
-## Featured Repositories
+## Stack
 
-- IDM-Activation-Script-Chinese — Windows utility toolkit with high adoption, GBK/CP936 compatibility & registry safety.
-- cleanplate — Local-first AI video watermark removal backend (FastAPI + ComfyUI DiffuEraser + async queue).
-- PromptPanel — Native macOS prompt & snippet launcher (Swift / SwiftUI, local-first).
-- bilibili-cleaner — Account bulk data management & automated cleaner (FastAPI + Web UI + Docker).
-- macfriends-cli — macOS WeChat relationship inspector (Rust + ObjC++, local-only).
-- bazi-master — Full-stack divination & LLM reading platform (React + Express + PostgreSQL + Prisma).
+- Primary: TypeScript, React, Electron, Python, FastAPI, PostgreSQL, Redis
+- Also: Rust, Swift/SwiftUI, Node.js/Express, Prisma, SQLAlchemy, SQLite, Docker, GitHub Actions, Linux, Nginx, Cloudflare Workers, MCP, Anthropic API, OpenAI API, ComfyUI
+- Selection principle: stability, maintainability, cost, and business return over novelty
+
+## Principles
+
+- 不追新，追稳 — stability over novelty
+- Build resilient systems so AI survives production
+- Break chaos into systems, then hand the systems to machines
+
+## Repositories (evidence for the claims above)
+
+- cleanplate — async job queue, worker decoupling, provider fallback (FastAPI + ComfyUI DiffuEraser + FFmpeg fallback)
+- bazi-master — LLM reading pipeline with provider abstraction, full-stack React/Express/Prisma/PostgreSQL/Redis
+- metaphysics-engine — stateless computation engine exposed as HTTP API + CLI + MCP, OpenAPI snapshot guarded in CI
+- quant-agent-cli — agent-callable, risk-first CLI: JSON Schema input, structured error codes, dry-run/testnet gates
+- mac-machina — natural-language tool calling over a local macOS bridge, optional Cloudflare Worker agent layer
+- async-code — derivative of ObservedObserver/async-code: parallel Claude Code / Codex CLI runs in Docker, reviewable patches
+- bilibili-cleaner, x-account-cleaner — bulk operations with review gates, rate limits, idempotent deletes
+- PromptPanel — native macOS prompt/snippet launcher, local-first (Swift/SwiftUI)
+- IDM-Activation-Script-Chinese — widely used Windows script toolkit with registry backup and rollback
 
 ## Keywords
 
-AI Application Engineer, Delivery Engineer, Full-Stack Developer, LLM Engineering, Agent Workflow,
-Tool Calling, MCP, RAG, Hybrid Search, Async State Machine, Idempotency, Python, FastAPI, TypeScript,
-Node.js, React, Next.js, Rust, Swift, SwiftUI, PostgreSQL, Redis, Docker, Open Source, qilaidev, qilai
+AI application engineer, forward deployed engineer, FDE, AI agent, multi-agent, LLM, tool calling, structured output, RAG, MCP,
+async state machine, idempotency, TypeScript, React, Electron, Python, FastAPI, PostgreSQL, Redis, full-stack, remote, contract, consulting, qilaidev, qilai, 绮莱

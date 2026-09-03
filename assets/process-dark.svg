@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="246" viewBox="0 0 880 246" role="img">
+<style>
+text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+.cjk{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",Helvetica,Arial,sans-serif}
+.kicker{font-size:10.5px;letter-spacing:2px;font-weight:700;fill:#58a6ff}
+.label{font-size:10px;letter-spacing:1.4px;font-weight:600;fill:#6e7681}
+.mono{font-size:12px;fill:#e6edf3}
+.muted{font-size:11.5px;fill:#8b949e}
+.small{font-size:10px;fill:#8b949e}
+.name{font-size:58px;font-weight:700;letter-spacing:-1px;fill:#e6edf3}
+.handle{font-size:22px;font-weight:600;fill:#8b949e}
+.role{font-size:15px;font-weight:600;fill:#e6edf3}
+.stage{font-size:13px;font-weight:700;fill:#e6edf3}
+.bullet{font-size:10.5px;fill:#8b949e}
+.big{font-size:26px;font-weight:700;letter-spacing:-0.5px;fill:#e6edf3}
+</style>
+<defs>
+<pattern id="grid-pr-dark" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#161d27" stroke-width="0.8"/></pattern>
+<clipPath id="clip-pr-dark"><rect x="0.5" y="0.5" width="879" height="245" rx="10"/></clipPath>
+<marker id="arr-pr-dark" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#58a6ff"/></marker>
+<marker id="arl-pr-dark" viewBox="0 0 8 8" refX="1" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M8 0L0 4L8 8z" fill="#58a6ff"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="879" height="245" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="879" height="245" rx="10" fill="url(#grid-pr-dark)" clip-path="url(#clip-pr-dark)"/>
+<path d="M20 30v-10h10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M860 30v-10h-10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M20 216v10h10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<path d="M860 216v10h-10" fill="none" stroke="#6e7681" stroke-width="1"/>
+<text x="32" y="40" class="kicker">02 · DELIVERY PROCESS · 全流程交付</text>
+<line x1="32" y1="49" x2="848" y2="49" stroke="#21262d"/>
+<rect x="32.0" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="32.0" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="44.0" y="81" class="label">S1</text>
+<text x="44.0" y="99" class="stage cjk">需求分析</text>
+<text x="44.0" y="130" class="bullet cjk">边界与验收标准</text>
+<text x="44.0" y="148" class="bullet cjk">数据与合规约束</text>
+<text x="44.0" y="166" class="bullet cjk">风险与可行性</text>
+<path d="M160.3 81.0l5 5l-5 5" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<rect x="170.3" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="170.3" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="182.3" y="81" class="label">S2</text>
+<text x="182.3" y="99" class="stage cjk">架构设计</text>
+<text x="182.3" y="130" class="bullet cjk">状态模型与状态机</text>
+<text x="182.3" y="148" class="bullet cjk">幂等与重试策略</text>
+<text x="182.3" y="166" class="bullet cjk">降级与兜底路径</text>
+<path d="M298.7 81.0l5 5l-5 5" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<rect x="308.7" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="308.7" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="320.7" y="81" class="label">S3</text>
+<text x="320.7" y="99" class="stage cjk">开发实现</text>
+<text x="320.7" y="130" class="bullet cjk">TypeScript · Python</text>
+<text x="320.7" y="148" class="bullet cjk">API 契约与测试</text>
+<text x="320.7" y="166" class="bullet cjk">结构化日志</text>
+<path d="M437.0 81.0l5 5l-5 5" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<rect x="447.0" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="447.0" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="459.0" y="81" class="label">S4</text>
+<text x="459.0" y="99" class="stage cjk">AI 能力集成</text>
+<text x="459.0" y="130" class="bullet cjk">工具调用 · 结构化输出</text>
+<text x="459.0" y="148" class="bullet cjk">RAG · 上下文管理</text>
+<text x="459.0" y="166" class="bullet cjk">多 Agent 编排</text>
+<path d="M575.3 81.0l5 5l-5 5" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<rect x="585.3" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="585.3" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="597.3" y="81" class="label">S5</text>
+<text x="597.3" y="99" class="stage cjk">部署上线</text>
+<text x="597.3" y="130" class="bullet cjk">Docker · CI/CD</text>
+<text x="597.3" y="148" class="bullet cjk">可观测与告警</text>
+<text x="597.3" y="166" class="bullet cjk">灰度与回滚</text>
+<path d="M713.7 81.0l5 5l-5 5" fill="none" stroke="#58a6ff" stroke-width="1.4"/>
+<rect x="723.7" y="64" width="124.3" height="44" rx="6" fill="#161b22" stroke="#30363d"/>
+<rect x="723.7" y="64" width="3" height="44" rx="1.5" fill="#58a6ff"/>
+<text x="735.7" y="81" class="label">S6</text>
+<text x="735.7" y="99" class="stage cjk">持续迭代</text>
+<text x="735.7" y="130" class="bullet cjk">线上排障</text>
+<text x="735.7" y="148" class="bullet cjk">评估与提示词迭代</text>
+<text x="735.7" y="166" class="bullet cjk">成本与效果复盘</text>
+<path d="M785.8 176v10H94.2v-9" fill="none" stroke="#58a6ff" stroke-width="1.2" stroke-dasharray="3 3" marker-end="url(#arr-pr-dark)"/>
+<text x="440.0" y="200" class="small cjk" text-anchor="middle">线上反馈回到需求与架构 · 迭代闭环</text>
+<rect x="472" y="208" width="376" height="26" rx="4" fill="#161b22" stroke="#30363d"/>
+<text x="481" y="219" class="label" font-size="8.5px">SHEET</text>
+<text x="481" y="230" class="mono" font-size="10.5px">02 / 03</text>
+<line x1="562" y1="208" x2="562" y2="234" stroke="#30363d"/>
+<text x="571" y="219" class="label" font-size="8.5px">REV</text>
+<text x="571" y="230" class="mono" font-size="10.5px">2026-09-03</text>
+<line x1="680" y1="208" x2="680" y2="234" stroke="#30363d"/>
+<text x="689" y="219" class="label" font-size="8.5px">ID</text>
+<text x="689" y="230" class="mono" font-size="10.5px">github.com/qilaidev</text>
+<text x="32" y="226" class="muted cjk">从需求分析到持续迭代，独立完成全流程交付</text>
+</svg>
