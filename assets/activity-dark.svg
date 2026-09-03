@@ -34,7 +34,7 @@ text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberatio
 <rect x="32.00" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="41.67" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="51.35" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
-<rect x="61.02" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
+<rect x="61.02" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
 <rect x="70.69" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
 <rect x="80.37" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="90.04" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
@@ -42,7 +42,7 @@ text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberatio
 <rect x="109.38" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="119.06" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
 <rect x="128.73" y="121.26" width="6.67" height="28.74" rx="1.5" fill="#9ccbff"/>
-<rect x="138.40" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="138.40" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#2f6fb5"/>
 <rect x="148.08" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
 <rect x="157.75" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
 <rect x="167.42" y="146.44" width="6.67" height="3.56" rx="1.5" fill="#2f6fb5"/>
@@ -53,8 +53,8 @@ text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberatio
 <rect x="215.79" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="225.46" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="235.13" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
-<rect x="244.81" y="95.19" width="6.67" height="54.81" rx="1.5" fill="#9ccbff"/>
-<rect x="254.48" y="122.15" width="6.67" height="27.85" rx="1.5" fill="#58a6ff"/>
+<rect x="244.81" y="94.89" width="6.67" height="55.11" rx="1.5" fill="#9ccbff"/>
+<rect x="254.48" y="122.44" width="6.67" height="27.56" rx="1.5" fill="#58a6ff"/>
 <rect x="264.15" y="138.74" width="6.67" height="11.26" rx="1.5" fill="#58a6ff"/>
 <rect x="273.83" y="146.74" width="6.67" height="3.26" rx="1.5" fill="#2f6fb5"/>
 <rect x="283.50" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
@@ -71,7 +71,7 @@ text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberatio
 <rect x="389.90" y="142.89" width="6.67" height="7.11" rx="1.5" fill="#58a6ff"/>
 <rect x="399.58" y="147.04" width="6.67" height="2.96" rx="1.5" fill="#2f6fb5"/>
 <rect x="409.25" y="123.93" width="6.67" height="26.07" rx="1.5" fill="#58a6ff"/>
-<rect x="418.92" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
+<rect x="418.92" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#2f6fb5"/>
 <rect x="428.60" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="438.27" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1c2330"/>
 <rect x="447.94" y="148.00" width="6.67" height="2.00" rx="1.5" fill="#1f4b82"/>
@@ -82,10 +82,10 @@ text{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberatio
 <rect x="496.31" y="143.19" width="6.67" height="6.81" rx="1.5" fill="#58a6ff"/>
 <rect x="505.98" y="147.63" width="6.67" height="2.37" rx="1.5" fill="#2f6fb5"/>
 <rect x="515.65" y="139.04" width="6.67" height="10.96" rx="1.5" fill="#58a6ff"/>
-<rect x="525.33" y="138.15" width="6.67" height="11.85" rx="1.5" fill="#58a6ff"/>
+<rect x="525.33" y="137.85" width="6.67" height="12.15" rx="1.5" fill="#58a6ff"/>
 <text x="32" y="166" class="small">52 WEEKS AGO</text>
 <text x="532" y="166" class="small" text-anchor="end">NOW</text>
-<text x="32" y="196" class="big">1,706</text>
+<text x="32" y="196" class="big">1,707</text>
 <text x="124" y="196" class="label">CONTRIBUTIONS · 52 WEEKS</text>
 <text x="580" y="70" class="label">LANGUAGES · BY BYTES</text>
 <text x="848" y="70" class="label" text-anchor="end">TOP 6 OF 19</text>
