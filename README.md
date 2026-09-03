@@ -55,13 +55,3 @@
     <img src="assets/activity.svg" alt="近 52 周贡献节奏与公开仓库语言占比，每周自动刷新" width="880" />
   </picture>
 </p>
-
-## 工作偏好
-
-偏好与产品、业务紧密协作的小团队或独立交付场景。可覆盖亚太时段，也可配合欧美团队的部分重叠时间。工作语言：中文（母语）、英文（可作为工作语言）。
-
-其他长期关注与兴趣：AI Agent、元宇宙、密码学；哲学、物理、科幻、修仙、山野。不跟世界比赛，慢慢品味这一生。
-
-## English
-
-Software engineer in GMT+8, open to remote full-time, contract, and consulting work. 4 years of hands-on delivery of LLM applications, AI agents, multi-agent systems, and automation, owning the full cycle from requirements to production. Current focus: AI forward deployed engineering and enterprise AI agents. Primary stack: TypeScript, React, Electron, Python, FastAPI, PostgreSQL, Redis.
