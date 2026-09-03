@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="136" viewBox="0 0 430 136" role="img">
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Noto Sans SC",Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+.kicker{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:10.5px;letter-spacing:2px;font-weight:700;fill:#0969da}
+.label{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:10px;letter-spacing:1.4px;font-weight:600;fill:#8c959f}
+.body{font-size:12px;fill:#57606a}
+.ink{font-size:12px;fill:#1f2328}
+.name{font-size:52px;font-weight:700;letter-spacing:-1px;fill:#1f2328}
+.handle{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:20px;font-weight:600;fill:#57606a}
+.role{font-size:15px;font-weight:600;fill:#1f2328}
+.num{font-size:26px;font-weight:700;letter-spacing:-0.5px}
+.repo{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:14px;font-weight:700;fill:#0969da}
+.chip{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:11px;font-weight:500;fill:#1f2328}
+.tag{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:9.5px;font-weight:600}
+</style>
+<rect x="0.5" y="0.5" width="429" height="135" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<text x="18" y="34" class="repo">PromptPanel</text>
+<text x="412" y="34" class="chip" font-weight="700" text-anchor="end" fill="#bf6a02">★ 5</text>
+<text x="376.2" y="34" class="label" text-anchor="end">SWIFT</text>
+<circle cx="330.2" cy="30" r="4" fill="#F05138"/>
+<text x="18" y="62" class="body">macOS 原生的提示词与片段启动器，全局快捷键唤起，纯本地存储。</text>
+<rect x="18.0" y="102.0" width="42.5" height="18" rx="5" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-opacity="0.3"/><text x="25.0" y="114.5" class="tag" fill="#0969da">Swift</text>
+<rect x="66.5" y="102.0" width="53.9" height="18" rx="5" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-opacity="0.3"/><text x="73.5" y="114.5" class="tag" fill="#0969da">SwiftUI</text>
+<rect x="126.4" y="102.0" width="76.7" height="18" rx="5" fill="#0969da" fill-opacity="0.07" stroke="#0969da" stroke-opacity="0.3"/><text x="133.4" y="114.5" class="tag" fill="#0969da">Local-First</text>
+</svg>
